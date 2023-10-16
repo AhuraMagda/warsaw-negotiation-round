@@ -1,11 +1,9 @@
 import React from "react"
-import NavBar from "./components/NavBar"
-import Footer from "./components/Footer"
+import Layout from "./components/Layout";
 
 function Participation(props) {
   return (
-    <>
-        <NavBar />
+    <Layout>
         <header>
             <h1>PARTICIPATION</h1>
         </header>
@@ -26,8 +24,7 @@ function Participation(props) {
                 </div>
             </section>
         </main>
-        <Footer />
-    </>
+    </Layout>
   )
 };
 

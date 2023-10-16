@@ -9,4 +9,9 @@
  */
 module.exports = {
   plugins: [],
+  siteMetadata: {
+    title: 'Warsaw Negotiation Round',
+    description: 'information site',
+    copyright: 'This website is copyright 2023 Warsaw Negotiation Round'
+  }
 }

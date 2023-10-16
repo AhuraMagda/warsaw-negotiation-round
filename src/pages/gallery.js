@@ -1,11 +1,9 @@
 import React from "react"
-import NavBar from "./components/NavBar"
-import Footer from "./components/Footer"
+import Layout from "./components/Layout";
 
 function Gallery(props) {
   return (
-    <>
-        <NavBar />
+    <Layout>
         <header>
             <h1>GALLERY</h1>
         </header>
@@ -29,8 +27,8 @@ function Gallery(props) {
                 </div>
             </section>
         </main>
-        <Footer />
-    </>
+    </Layout >
+
   )
 };
 
