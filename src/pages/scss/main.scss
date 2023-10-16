@@ -1,0 +1,214 @@
+@import './config';
+
+
+/* Global */
+* {
+    color: $color-text--dark
+}
+
+button {
+    background-color: $color-accent;
+    color: $color-text--light;
+    font-family: 'Open Sans', sans-serif;
+    padding: 10px;
+    margin: 5px;
+}
+
+section {
+    @include flexCenter(column);
+}
+
+main {
+    height: fit-content;
+    min-height: 100vh;
+    @include flexCenter(column)
+}
+
+/* Navbar */
+
+nav {
+    background-color: $color-main;
+    height: 100px;
+    @include flexCenter;
+    position: sticky;
+    border-bottom: 20px solid $color-accent;
+    
+    ul {
+        display: flex;
+        li {
+            list-style: none;
+            padding: 5px 10px;
+            a {
+                cursor: pointer;
+                color: $color-accent;
+                font-family: 'Open Sans', sans-serif;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+
+/* Home header */
+
+.home-header {
+    height: 700px;
+    width: 100%;
+    position: relative;
+    @include flexCenter(column);
+
+    @include tablet {
+        flex-direction: row;
+    }
+
+    p {
+        width: 200px;
+    }
+
+    &__photo img{
+        width: 150%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        animation: move 10s alternate infinite linear;
+        opacity: 0.2;
+        z-index: -1;
+    }
+};
+
+@keyframes move {
+    0%, 100% {
+        left: 0;
+    }
+    50% {
+        left: -100px;
+    }
+}
+
+/* Counter */
+.counter {
+    height: 200px;
+
+    #{&}__container {
+        background-color: $color-accent;
+        color: $color-text--light;
+        padding: 20px;
+        font-size: 3rem;
+    }
+}
+
+/* Find more */
+
+.findmore {
+    height: 400px;
+
+    @include tablet {
+        flex-direction: row;
+    }
+
+    #{&}__buttons {
+        @include flexCenter(column);
+
+        button {
+            background-color: $color-main;
+            width: 200px;
+        }
+    }
+}
+
+/* Signing */
+
+.signing {
+    height: 300px;
+
+    @include tablet {
+        flex-direction: row;
+    }
+}
+
+/* Socials */
+
+.socials {
+    width: 100%;
+    @include flexCenter();
+    background-color: $color-main;
+    color: $color-text--light;
+    height: 50px;
+}
+
+/* Footer */
+
+footer {
+    background-color: $color-main;
+    color: $color-text--light;
+    @include flexCenter(column);
+    padding: 5px;
+}
+
+// CONTACT.HTML
+.center {
+    @include flexCenter();
+}
+
+.contact {
+    h1 {
+        background-color: $color-accent;
+        color: $color-text--light;
+        padding: 10px 20px;
+    }
+
+    &__form {
+        background-color: $color-accent;
+        width: 100%;
+        max-width: 500px;
+        padding: 20px;
+        margin: 10px;
+
+            &__table {
+
+                input {
+                    width: 100%;
+                }
+
+                textarea {
+                    width: 100%;
+                }
+
+                button {
+                    border: 1px solid white;
+                }
+        }
+    }
+}
+
+
+// PARTICIPATION.HTML
+
+.participation {
+    #{&}__steps {
+        display: flex;
+        &__button {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            font-size: 2rem;
+            margin: 0px 10px;
+        }
+    }
+}
+
+.active-step {
+    background-color: black;
+    color: white;
+}
+
+.gallery {
+    @include flexCenter();
+    flex-wrap: wrap;
+    &__card {
+        padding: 10px;
+        img {
+            height: 200px;
+        }
+    }
+}
