@@ -1,8 +1,10 @@
 import * as React from "react"
 import Layout from "./components/Layout";
-import "./scss/main.css";
+import { graphql } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-export default function App() {
+export default function Home({ data }) {
+  console.log(data)
   return (
     <Layout>
       <header class="home-header">
@@ -16,7 +18,8 @@ export default function App() {
           <button>I WANT TO PARTICIPATE</button>
         </div>
         <div class="home-header__photo">
-          <img src="/images/warszawa.png" alt=""/>
+        <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} alt="banner"/>
+          {/* <img src="/images/warszawa.png" alt=""/> */}
         </div>
       </header>
 
@@ -42,3 +45,13 @@ export default function App() {
     </Layout>
   )
 }
+
+export const query = graphql`
+  query Layout {
+    file(relativePath: { eq: "warszawa2.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FIXED)
+      }
+    }
+  }
+`
