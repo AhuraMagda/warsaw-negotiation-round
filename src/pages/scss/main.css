@@ -79,22 +79,22 @@ nav ul li a {
 .home-header p {
   width: 200px;
 }
-.home-header__photo img {
-  width: 150%;
+.home-header__photo {
+  width: 200%;
   position: absolute;
   left: 0;
   bottom: 0;
-  animation: move 10s alternate infinite linear;
+  animation: move 20s linear infinite;
   opacity: 0.2;
   z-index: -1;
 }
 
 @keyframes move {
-  0%, 100% {
+  0% {
     left: 0;
   }
-  50% {
-    left: -100px;
+  100% {
+    left: -100%;
   }
 }
 /* Counter */

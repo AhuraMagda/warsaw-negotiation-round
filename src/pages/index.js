@@ -50,7 +50,7 @@ export const query = graphql`
   query Layout {
     file(relativePath: { eq: "warszawa2.png" }) {
       childImageSharp {
-        gatsbyImageData(layout: CONSTRAINED)
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
   }
