@@ -148,6 +148,11 @@ nav ul li a {
   background-color: black;
   color: white;
   height: 50px;
+  padding: 50px;
+}
+.socials__icon {
+  height: 50px;
+  margin: 0px 10px;
 }
 
 /* Footer */

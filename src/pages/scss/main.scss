@@ -134,6 +134,12 @@ nav {
     background-color: $color-main;
     color: $color-text--light;
     height: 50px;
+    padding: 50px;
+    
+    &__icon {
+        height: 50px;
+        margin: 0px 10px;
+    }
 }
 
 /* Footer */
