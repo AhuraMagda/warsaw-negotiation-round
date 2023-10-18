@@ -97,34 +97,52 @@ nav {
     }
 }
 
-/* Find more */
+/* Prev editions slider*/
 
-.findmore {
+.prev-editions {
     height: 400px;
 
     @include tablet {
         flex-direction: row;
     }
 
-    #{&}__buttons {
-        @include flexCenter(column);
+    #{&}__slider {
+        position: relative;
+        padding: 10px 60px;
+        background-color: red;
+        height: fit-content;
+        @include flexCenter;
 
-        button {
-            background-color: $color-main;
+        &__slide {
+            height: 200px;
             width: 200px;
         }
+        
+        &__arrow-left {
+            height: 40px;
+            left: 0;
+            margin: auto 10px;
+            position: absolute;
+            width: 40px;
+            top: 0;
+            bottom: 0;
+        }
+          
+        &__arrow-right {
+            height: 40px;
+            margin: auto 10px;
+            position: absolute;
+            right: 0;
+            width: 40px;
+            top: 0;
+            bottom: 0;
+          }
+
     }
 }
 
-/* Signing */
 
-.signing {
-    height: 300px;
 
-    @include tablet {
-        flex-direction: row;
-    }
-}
 
 /* Socials */
 

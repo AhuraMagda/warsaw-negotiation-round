@@ -108,34 +108,47 @@ nav ul li a {
   font-size: 3rem;
 }
 
-/* Find more */
-.findmore {
+/* Prev editions slider*/
+.prev-editions {
   height: 400px;
 }
 @media (min-width: 800px) {
-  .findmore {
+  .prev-editions {
     flex-direction: row;
   }
 }
-.findmore .findmore__buttons {
+.prev-editions .prev-editions__slider {
+  position: relative;
+  padding: 10px 60px;
+  background-color: red;
+  height: -moz-fit-content;
+  height: fit-content;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
 }
-.findmore .findmore__buttons button {
-  background-color: black;
+.prev-editions .prev-editions__slider__slide {
+  height: 200px;
   width: 200px;
 }
-
-/* Signing */
-.signing {
-  height: 300px;
+.prev-editions .prev-editions__slider__arrow-left {
+  height: 40px;
+  left: 0;
+  margin: auto 10px;
+  position: absolute;
+  width: 40px;
+  top: 0;
+  bottom: 0;
 }
-@media (min-width: 800px) {
-  .signing {
-    flex-direction: row;
-  }
+.prev-editions .prev-editions__slider__arrow-right {
+  height: 40px;
+  margin: auto 10px;
+  position: absolute;
+  right: 0;
+  width: 40px;
+  top: 0;
+  bottom: 0;
 }
 
 /* Socials */

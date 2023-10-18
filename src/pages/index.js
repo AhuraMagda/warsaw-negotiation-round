@@ -18,8 +18,7 @@ export default function Home({ data }) {
           <button>I WANT TO PARTICIPATE</button>
         </div>
         <div class="home-header__photo">
-        <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} alt="banner"/>
-          {/* <img src="/images/warszawa.png" alt=""/> */}
+          <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} alt="warsaw skyline"/>
         </div>
       </header>
 
@@ -30,15 +29,14 @@ export default function Home({ data }) {
           </div>
         </section>
   
-        <section class="findmore">
-          <div class="findmore__photo">
-            -------PHOTOS-------
-          </div>
-          <div class="findmore__buttons">
-            <button>ABOUT US </button>
-            <button>PARTICIPATION </button>
-            <button>GALLERY </button>
-            <button>CONTACT</button>
+        <section class="prev-editions">
+          <div class="prev-editions__slider">
+            <div className="prev-editions__slider__slide">
+                <h3>Edition 2021</h3>
+                <p>Nie ma fal nie ma fal nie ma fal nie ma fal nie ma fal nie ma fal nie ma faaaaal nie ma</p>
+            </div>
+            <img className="prev-editions__slider__arrow-left" src="./icons/icon-slider-arrow-left.png" />
+            <img className="prev-editions__slider__arrow-right" src="./icons/icon-slider-arrow-right.png" />
           </div>
         </section>
       </main>
