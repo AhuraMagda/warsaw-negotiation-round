@@ -7,10 +7,10 @@ function Footer() {
     return (
         <footer className="footer">
             <div className="footer__socials">
-                <img className="footer__socials__icon" src="./icons/icon-facebook.png" alt="facebook"/>
-                <img className="footer__socials__icon" src="./icons/icon-instagram.png" alt="facebook"/>
-                <img className="footer__socials__icon" src="./icons/icon-linkedin.png" alt="facebook"/>
-                <img className="footer__socials__icon" src="./icons/icon-phone.png" alt="facebook"/>
+                <a href=""><img className="footer__socials__icon" src="./icons/icon-facebook.png" alt="facebook"/></a>
+                <a href=""><img className="footer__socials__icon" src="./icons/icon-instagram.png" alt="instagram"/></a>
+                <a href=""><img className="footer__socials__icon" src="./icons/icon-linkedin.png" alt="linkedin"/></a>
+                <a href=""><img className="footer__socials__icon" src="./icons/icon-phone.png" alt="phone"/></a>
             </div>
             <div className="footer__details">
                 <p>{date}</p>

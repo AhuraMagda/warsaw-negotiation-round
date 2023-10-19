@@ -1,6 +1,7 @@
 import * as React from "react"
 import Layout from "./components/Layout";
 import Slider from "./components/Slider";
+import Counter from "./components/Counter";
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
@@ -25,9 +26,7 @@ export default function Home({ data }) {
 
       <main>
         <section className="counter">
-          <div className="counter__container">
-            TOURNAMENT IN... 111 days 11 hours 11 minutes
-          </div>
+          <Counter />
         </section>
   
         <section className="prev-editions">
