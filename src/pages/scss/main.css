@@ -152,7 +152,7 @@ nav ul li a {
 }
 
 /* Socials */
-.socials {
+.footer__socials {
   width: 100%;
   display: flex;
   align-items: center;
@@ -163,9 +163,26 @@ nav ul li a {
   height: 50px;
   padding: 50px;
 }
-.socials__icon {
+.footer__socials__icon {
   height: 50px;
   margin: 0px 10px;
+}
+.footer__details {
+  display: flex;
+}
+.footer__details p {
+  color: white;
+  font-size: 0.8rem;
+  padding: 25px 5px 20px 5px;
+  text-align: center;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.footer__details a {
+  color: white;
+}
+.footer__details a:hover {
+  color: #FFCA29;
 }
 
 /* Footer */
