@@ -25,24 +25,40 @@ main {
 
 /* Navbar */
 
-nav {
+.nav {
     background-color: $color-main;
-    height: 100px;
+    height: 10vh;
     @include flexCenter;
     position: fixed;
     top: 0;
-    width: 100%;
-    // border-bottom: 20px solid $color-accent;
     justify-content: space-around;
-    
-    .nav__logo {
+    z-index: 2;
+    width: 100%;
+
+    &__logo {
         width: 200px;
     }
 
-    ul {
-        display: flex;
+    &__menu {
+        @include flexCenter;
+        top: 10vh;
+        height: 60vh;
+        @include phone {
+            position: absolute;
+            transform: translate(100%);
+            right: 0;
+        }
+
+        &__active {
+            @include phone {
+                background-color: rgb(0, 0, 0);
+                transform: translate(0%);
+                flex-direction: column;
+                width: 100%;
+            }
+        }
+
         li {
-            display: none;
             list-style: none;
             padding: 5px 10px;
             a {
@@ -53,8 +69,54 @@ nav {
             }
         }
     }
+
+
+    .hamburger {
+        @include tablet {
+            display: none;
+        }
+        
+        height: 50px;
+        margin: 5px 10px;
+        width: 50px;
+        z-index: 5;
+        cursor: pointer;
+
+
+        div {
+            background-color: $color-accent;
+            border-radius: 3.2px;
+            height: 2px;
+            margin-top: 12px;
+            position: relative;
+            transition: all 0.3s ease-in-out;
+            width: 40px;
+        }
+        
+        &__top-bun__clicked {
+            margin-top: 16px;
+            transform: rotate(-45deg) translateX(-6.4px) translateY(15px);
+        }
+        
+        &__meat__clicked {
+            margin-top: -7.2px;
+            transform: rotate(45deg) translate(5px) translateY(-3.2px);
+        }
+        
+        &__bottom-bun__clicked {
+            opacity: 0;
+            transform: rotate(45deg);
+        }
+    }
 }
 
+/* Nav Hamburger */
+
+// #toggle {
+//     display: none;
+//   }
+  
+  
 
 /* Home header */
 

@@ -25,3 +25,9 @@ $tablet: 800px;
         @content;
     }
 };
+
+@mixin phone {
+    @media (max-width: $tablet) {
+        @content;
+    }
+};

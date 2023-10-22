@@ -6,7 +6,6 @@ import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 export default function Home({ data }) {
-  console.log(data)
   return (
     <Layout>
       <header className="home-header">
