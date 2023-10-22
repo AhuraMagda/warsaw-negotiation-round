@@ -1,5 +1,6 @@
 import React from "react";
-
+import rightArrow from "../../images/icons/icon-slider-arrow-right.png";
+import leftArrow from "../../images/icons/icon-slider-arrow-left.png";
 
 const editions = [{
     name: "Edition 2020",
@@ -45,8 +46,8 @@ const changeSlide = (direction, array) => {
                         <p>{editions[activeSlide].description}</p>
                     </div>
 
-            <img onClick={()=>{changeSlide("left", editions)}} className="prev-editions__slider__arrow-left" src="./icons/icon-slider-arrow-left.png" />
-            <img onClick={()=>{changeSlide("right", editions)}}className="prev-editions__slider__arrow-right" src="./icons/icon-slider-arrow-right.png" />
+            <img onClick={()=>{changeSlide("left", editions)}} className="prev-editions__slider__arrow-left" src={leftArrow} />
+            <img onClick={()=>{changeSlide("right", editions)}} className="prev-editions__slider__arrow-right" src={rightArrow} />
           </div>
     )
 }
