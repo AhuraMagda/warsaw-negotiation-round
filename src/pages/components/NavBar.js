@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import React from "react";
 
-function NavBar() { 
+function NavBar({ data }) { 
     const [clicked, setClicked] = React.useState("");
     const [active, setActive] = React.useState("")
 
@@ -22,7 +22,7 @@ function NavBar() {
 
             <ul className={`nav__menu nav__menu${active}`}>      
                 <li><Link to="/">HOME</Link></li>
-                <li><a href="./aboutus.html">ABOUT US</a></li>
+                <li><Link to="/aboutus">ABOUT US</Link></li>
                 <li><Link to="/contact">CONTACT</Link></li>
                 <li><Link to="/participation">PARTICIPATION</Link></li>
                 <li><Link to="/gallery">GALLERY</Link></li>

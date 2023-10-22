@@ -26,9 +26,12 @@ section {
   flex-direction: column;
 }
 
-main {
-  height: -moz-fit-content;
-  height: fit-content;
+body {
+  min-height: 100vh;
+}
+
+.container {
+  min-height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,7 +46,7 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  position: fixed;
+  position: sticky;
   top: 0;
   justify-content: space-around;
   z-index: 2;
@@ -279,6 +282,7 @@ footer {
   justify-content: center;
   flex-direction: column;
   padding: 5px;
+  height: 20vh;
 }
 
 .center {

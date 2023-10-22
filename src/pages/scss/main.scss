@@ -18,8 +18,12 @@ section {
     @include flexCenter(column);
 }
 
-main {
-    height: fit-content;
+body {
+    min-height: 100vh;
+}
+
+.container {
+    min-height: 70vh;
     @include flexCenter(column)
 }
 
@@ -29,7 +33,7 @@ main {
     background-color: $color-main;
     height: 10vh;
     @include flexCenter;
-    position: fixed;
+    position: sticky;
     top: 0;
     justify-content: space-around;
     z-index: 2;
@@ -278,6 +282,7 @@ footer {
     color: $color-text--light;
     @include flexCenter(column);
     padding: 5px;
+    height: 20vh;
 }
 
 // CONTACT.HTML

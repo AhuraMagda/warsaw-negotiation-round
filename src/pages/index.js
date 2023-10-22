@@ -2,8 +2,8 @@ import * as React from "react"
 import Layout from "./components/Layout";
 import Slider from "./components/Slider";
 import Counter from "./components/Counter";
-import { graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { graphql } from "gatsby";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 export default function Home({ data }) {
   return (
@@ -28,9 +28,6 @@ export default function Home({ data }) {
               around the world.
             </p>
             <button>I WANT TO PARTICIPATE</button>
-          </div>
-          <div className="intro__photo">
-            <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} alt="warsaw skyline"/>
           </div>
         </section>
 
