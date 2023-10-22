@@ -47,9 +47,9 @@ body {
   background-color: black;
   height: 10vh;
   justify-content: space-around;
-  position: sticky;
+  position: fixed;
   top: 0;
-  width: 100%;
+  width: 100vw;
   z-index: 2;
 }
 .nav__logo {
@@ -126,6 +126,7 @@ body {
 /* Home header */
 .home-header {
   height: 100vh;
+  width: 100vw;
   overflow-x: hidden;
   position: relative;
   display: flex;
