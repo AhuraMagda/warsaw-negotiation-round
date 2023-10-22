@@ -23,7 +23,7 @@ body {
 }
 
 .container {
-    min-height: 70vh;
+    min-height: 80vh;
     @include flexCenter(column)
 }
 
@@ -328,6 +328,7 @@ footer {
 .participation {
     #{&}__steps {
         display: flex;
+        flex-wrap: wrap;
         &__button {
             height: 100px;
             width: 100px;

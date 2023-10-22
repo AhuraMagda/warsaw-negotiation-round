@@ -31,7 +31,7 @@ body {
 }
 
 .container {
-  min-height: 70vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -317,6 +317,7 @@ footer {
 
 .participation .participation__steps {
   display: flex;
+  flex-wrap: wrap;
 }
 .participation .participation__steps__button {
   height: 100px;
