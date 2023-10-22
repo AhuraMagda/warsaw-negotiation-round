@@ -4,7 +4,7 @@ import React from "react";
 function NavBar() {
     return (
         <nav>
-            <p>IMAGE</p>
+            <img className="nav__logo" src="./logo-white.png"/>
             <ul>      
                 <li><Link to="/">HOME</Link></li>
                 <li><a href="./aboutus.html">ABOUT US</a></li>

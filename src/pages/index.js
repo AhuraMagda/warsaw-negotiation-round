@@ -11,13 +11,7 @@ export default function Home({ data }) {
     <Layout>
       <header className="home-header">
         <div className="home-header__text">
-          <p>
-            Warsaw Negotiation Round 2024 is the 15th edition of one of the most
-            prestigious international negotiation tournaments. The WNR year after
-            year unites students of top law, economics and business schools from
-            around the world.
-          </p>
-          <button>I WANT TO PARTICIPATE</button>
+          <h1>BEST SOMETHING EVENT</h1>
         </div>
         <div className="home-header__photo">
           <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} alt="warsaw skyline"/>
@@ -25,6 +19,23 @@ export default function Home({ data }) {
       </header>
 
       <main>
+
+        <section className="intro">
+          <div className="intro__text">
+            <p>
+              Warsaw Negotiation Round 2024 is the 15th edition of one of the most
+              prestigious international negotiation tournaments. The WNR year after
+              year unites students of top law, economics and business schools from
+              around the world.
+            </p>
+            <button>I WANT TO PARTICIPATE</button>
+          </div>
+          <div className="intro__photo">
+            <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} alt="warsaw skyline"/>
+          </div>
+        </section>
+
+
         <section className="counter">
           <Counter />
         </section>

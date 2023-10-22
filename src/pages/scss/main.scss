@@ -20,7 +20,6 @@ section {
 
 main {
     height: fit-content;
-    min-height: 100vh;
     @include flexCenter(column)
 }
 
@@ -30,12 +29,20 @@ nav {
     background-color: $color-main;
     height: 100px;
     @include flexCenter;
-    position: sticky;
-    border-bottom: 20px solid $color-accent;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    // border-bottom: 20px solid $color-accent;
+    justify-content: space-around;
     
+    .nav__logo {
+        width: 200px;
+    }
+
     ul {
         display: flex;
         li {
+            display: none;
             list-style: none;
             padding: 5px 10px;
             a {
@@ -52,12 +59,34 @@ nav {
 /* Home header */
 
 .home-header {
-    height: 700px;
-    width: 100%;
-    overflow: hidden;
+    height: 100vh;
+    // width: 100%;
+    overflow-x: hidden;
     position: relative;
     @include flexCenter(column);
 
+    h1 {
+        text-align: center;
+    }
+
+    &__photo {
+        width: 600%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        animation: moveS 30s linear infinite;
+        opacity: 0.1;
+        z-index: -1;
+        @include tablet {
+            width: 200%;
+            animation: moveM 20s linear infinite;
+        }
+    }
+}
+
+.intro {
+    @include flexCenter(column);
+    padding: 50px 0px;
     @include tablet {
         flex-direction: row;
     }
@@ -66,18 +95,18 @@ nav {
         width: 200px;
     }
 
-    &__photo {
-        width: 200%;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        animation: move 20s linear infinite;
-        opacity: 0.1;
-        z-index: -1;
-    }
 };
 
-@keyframes move {
+@keyframes moveS {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -300%;
+    }
+}
+
+@keyframes moveM {
     0% {
         left: 0;
     }
@@ -88,13 +117,12 @@ nav {
 
 /* Counter */
 .counter {
-    height: 200px;
 
     #{&}__container {
         background-color: $color-accent;
         color: $color-text--light;
         padding: 20px;
-        font-size: 3rem;
+        font-size: clamp(2rem, 10vw, 3rem);
     }
 }
 
@@ -110,13 +138,14 @@ nav {
     #{&}__slider {
         position: relative;
         padding: 10px 60px;
-        background-color: red;
+        background-color: #7d7d7d;
         height: fit-content;
         @include flexCenter;
 
         &__slide {
             height: 200px;
             width: 200px;
+            @include flexCenter(column);
         }
         
         &__arrow-left {
@@ -137,8 +166,7 @@ nav {
             width: 40px;
             top: 0;
             bottom: 0;
-          }
-
+        }
     }
 }
 
