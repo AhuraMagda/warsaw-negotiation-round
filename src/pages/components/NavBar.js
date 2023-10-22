@@ -7,7 +7,7 @@ function NavBar({ data }) {
 
     const toggleBurger = () => {
         setClicked(prevClicked => prevClicked === "" ? "__clicked" : "");
-        setActive(prevActive => prevActive === "" ? "__active" : "");
+        setActive(prevActive => prevActive === "" ? "nav__menu__active" : "");
     }
 
     return (
@@ -20,7 +20,7 @@ function NavBar({ data }) {
                 <div className={`hamburger__bottom-bun${clicked}`}></div>
             </div>
 
-            <ul className={`nav__menu nav__menu${active}`}>      
+            <ul className={`nav__menu ${active}`}>      
                 <li><Link to="/">HOME</Link></li>
                 <li><Link to="/aboutus">ABOUT US</Link></li>
                 <li><Link to="/contact">CONTACT</Link></li>
