@@ -336,12 +336,21 @@ footer {
             font-size: 2rem;
             margin: 0px 10px;
         }
+        &__text {
+            color: red;
+        }
     }
 }
 
 .active-step {
-    background-color: black;
-    color: white;
+    &__button {
+        background-color: black;
+        color: white;
+    }
+    &__text {
+        display: block;
+        color: red;
+    }
 }
 
 .gallery {

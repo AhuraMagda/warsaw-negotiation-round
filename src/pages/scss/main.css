@@ -326,10 +326,17 @@ footer {
   font-size: 2rem;
   margin: 0px 10px;
 }
+.participation .participation__steps__text {
+  color: red;
+}
 
-.active-step {
+.active-step__button {
   background-color: black;
   color: white;
+}
+.active-step__text {
+  display: block;
+  color: red;
 }
 
 .gallery {

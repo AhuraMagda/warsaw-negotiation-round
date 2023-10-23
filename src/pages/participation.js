@@ -9,19 +9,9 @@ function Participation(props) {
         setActiveStep(step)
     }
 
-    const steps = [1, 2, 3, 4, 5]
+    const steps = [1, 2, 3, 4, 5];
+    const stepsDesc = ["aaa", 'bbb', 'ccc', 'ddd', 'eee'];
 
-    // const buttons = [<button onClick={changeDot} className="participation__steps__button">1</button>,
-    // <button onClick={changeDot} className="participation__steps__button active-step">2</button>,
-    // <button onClick={changeDot} className="participation__steps__button">3</button>,
-    // <button onClick={changeDot} className="participation__steps__button">4</button>,
-    // <button onClick={changeDot} className="participation__steps__button">5</button>]
-    
-    // function changeDot(event) {
-    //     buttons.forEach(button => button.classList.remove("active-step"))
-    //     const clickedButton = event.target
-    //     clickedButton.classList.add("active-step")
-    // };
 
     return (
     <Layout>
@@ -35,14 +25,17 @@ function Participation(props) {
                         return <button
                             key={step}
                             onClick={() => changeStep(step)}
-                            className={`participation__steps__button ${activeStep === step ? "active-step" : ""}`}
+                            className={`participation__steps__button ${activeStep === step ? "active-step__button" : ""}`}
                             >
                             {step}
                         </button>
                     })}
+
                 </div>
                 <div className="participation__scenarios">
-                    <p>coś tutaj</p>
+                    <p>
+                        {stepsDesc[activeStep-1]}
+                    </p>
                 </div>
                 <div className="participation__image">
                     -----IMG-------
