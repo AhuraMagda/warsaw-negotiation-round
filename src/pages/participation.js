@@ -16,7 +16,7 @@ function Participation(props) {
     return (
     <Layout>
         <header>
-            <h1>PARTICIPATION</h1>
+            <h1>PARTICIPATION steps</h1>
         </header>
         <main>
             <section className="participation">

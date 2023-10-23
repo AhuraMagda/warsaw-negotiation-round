@@ -243,13 +243,16 @@ body {
 /* Socials */
 
 .footer {
+    background-color: $color-main;
+    color: $color-text--light;
+    @include flexCenter(column);
+    padding: 5px;
+
     &__socials {
         width: 100%;
         @include flexCenter();
-        background-color: $color-main;
         color: $color-text--light;
-        height: 50px;
-        padding: 50px;
+        padding: 20px;
         
         &__icon {
             height: 50px;
@@ -276,22 +279,14 @@ body {
 }
 
 
-/* Footer */
-
-footer {
-    background-color: $color-main;
-    color: $color-text--light;
-    @include flexCenter(column);
-    padding: 5px;
-    height: 20vh;
-}
-
 // CONTACT.HTML
 .center {
     @include flexCenter();
 }
 
 .contact {
+    margin-top: 10vh;
+
     h1 {
         background-color: $color-accent;
         color: $color-text--light;
