@@ -250,6 +250,7 @@ section {
     color: $color-text--light;
     @include flexCenter(column);
     padding: 5px;
+    width: 100%;
 
     &__socials {
         width: 100%;
