@@ -246,15 +246,16 @@ section {
 /* Socials */
 
 .footer {
-    width: 100vw;
+    background-color: $color-main;
+    color: $color-text--light;
+    @include flexCenter(column);
+    padding: 5px;
 
     &__socials {
         width: 100%;
         @include flexCenter();
-        background-color: $color-main;
         color: $color-text--light;
-        height: 50px;
-        padding: 50px;
+        padding: 20px;
         
         &__icon {
             height: 50px;
@@ -281,22 +282,14 @@ section {
 }
 
 
-/* Footer */
-
-footer {
-    background-color: $color-main;
-    color: $color-text--light;
-    @include flexCenter(column);
-    padding: 5px;
-    margin-top: auto;
-}
-
 // CONTACT.HTML
 .center {
     @include flexCenter();
 }
 
 .contact {
+    margin-top: 10vh;
+
     h1 {
         background-color: $color-accent;
         color: $color-text--light;
@@ -341,12 +334,21 @@ footer {
             font-size: 2rem;
             margin: 0px 10px;
         }
+        &__text {
+            color: red;
+        }
     }
 }
 
 .active-step {
-    background-color: black;
-    color: white;
+    &__button {
+        background-color: black;
+        color: white;
+    }
+    &__text {
+        display: block;
+        color: red;
+    }
 }
 
 .gallery {

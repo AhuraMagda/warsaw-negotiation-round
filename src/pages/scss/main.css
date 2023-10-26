@@ -247,7 +247,13 @@ section {
 
 /* Socials */
 .footer {
-  width: 100vw;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5px;
 }
 .footer__socials {
   width: 100%;
@@ -255,10 +261,8 @@ section {
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  background-color: black;
   color: white;
-  height: 50px;
-  padding: 50px;
+  padding: 20px;
 }
 .footer__socials__icon {
   height: 50px;
@@ -282,18 +286,6 @@ section {
   color: #FFCA29;
 }
 
-/* Footer */
-footer {
-  background-color: black;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 5px;
-  margin-top: auto;
-}
-
 .center {
   display: flex;
   align-items: center;
@@ -301,6 +293,9 @@ footer {
   flex-direction: row;
 }
 
+.contact {
+  margin-top: 10vh;
+}
 .contact h1 {
   background-color: #FFCA29;
   color: white;
@@ -334,10 +329,17 @@ footer {
   font-size: 2rem;
   margin: 0px 10px;
 }
+.participation .participation__steps__text {
+  color: red;
+}
 
-.active-step {
+.active-step__button {
   background-color: black;
   color: white;
+}
+.active-step__text {
+  display: block;
+  color: red;
 }
 
 .gallery {
