@@ -93,6 +93,9 @@ section {
   font-family: "Open Sans", sans-serif;
   text-decoration: none;
 }
+.nav__menu li a:hover {
+  text-decoration: underline;
+}
 .nav .hamburger {
   height: 50px;
   margin: 5px 10px;

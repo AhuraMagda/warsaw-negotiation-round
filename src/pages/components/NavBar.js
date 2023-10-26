@@ -11,6 +11,10 @@ function NavBar({ data }) {
         setActive(prevActive => prevActive === "" ? "nav__menu__active" : "");
     }
 
+    const activeStyle = {
+        textDecoration: "underline",
+    }
+
     return (
         <nav className={`nav`}>
             <img className="nav__logo" src={logo}/>
@@ -22,11 +26,11 @@ function NavBar({ data }) {
             </div>
 
             <ul className={`nav__menu ${active}`}>      
-                <li><Link to="/">HOME</Link></li>
-                <li><Link to="/aboutus">ABOUT US</Link></li>
-                <li><Link to="/contact">CONTACT</Link></li>
-                <li><Link to="/participation">PARTICIPATION</Link></li>
-                <li><Link to="/gallery">GALLERY</Link></li>
+                <li><Link to="/" activeStyle={activeStyle}>HOME</Link></li>
+                <li><Link to="/aboutus" activeStyle={activeStyle}>ABOUT US</Link></li>
+                <li><Link to="/contact" activeStyle={activeStyle}>CONTACT</Link></li>
+                <li><Link to="/participation" activeStyle={activeStyle}>PARTICIPATION</Link></li>
+                <li><Link to="/gallery" activeStyle={activeStyle}>GALLERY</Link></li>
             </ul>
 
         </nav>
