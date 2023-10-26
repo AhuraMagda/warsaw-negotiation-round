@@ -14,18 +14,21 @@ button {
     margin: 5px;
 }
 
+.site-wrapper {
+    min-height: 100vh;
+    @include flexCenter(column)
+}
+
+.content-wrapper {
+    margin-top: 10vh;
+    @include flexCenter(column);
+    flex-grow: 1;
+}
+
 section {
     @include flexCenter(column);
 }
 
-body {
-    min-height: 100vh;
-}
-
-.container {
-    min-height: 80vh;
-    @include flexCenter(column)
-}
 
 /* Navbar */
 
@@ -243,6 +246,8 @@ body {
 /* Socials */
 
 .footer {
+    width: 100vw;
+
     &__socials {
         width: 100%;
         @include flexCenter();
@@ -283,7 +288,7 @@ footer {
     color: $color-text--light;
     @include flexCenter(column);
     padding: 5px;
-    height: 20vh;
+    margin-top: auto;
 }
 
 // CONTACT.HTML

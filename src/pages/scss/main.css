@@ -19,19 +19,24 @@ button {
   margin: 5px;
 }
 
-section {
+.site-wrapper {
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
-body {
-  min-height: 100vh;
+.content-wrapper {
+  margin-top: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
-.container {
-  min-height: 80vh;
+section {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -241,6 +246,9 @@ body {
 }
 
 /* Socials */
+.footer {
+  width: 100vw;
+}
 .footer__socials {
   width: 100%;
   display: flex;
@@ -283,7 +291,7 @@ footer {
   justify-content: center;
   flex-direction: column;
   padding: 5px;
-  height: 20vh;
+  margin-top: auto;
 }
 
 .center {

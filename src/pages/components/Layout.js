@@ -6,13 +6,13 @@ import "../scss/main.css";
 
 function Layout({ children }) {
   return (
-    <>
+    <div className="site-wrapper">
         <NavBar />
-          <div className="container">
+          <div className="content-wrapper">
             {children}
           </div>
         <Footer />
-    </>
+    </div>
   )
 };
 
