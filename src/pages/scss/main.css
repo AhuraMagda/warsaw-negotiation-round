@@ -29,6 +29,7 @@ button {
 
 .content-wrapper {
   margin-top: 10vh;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,7 +55,7 @@ section {
   justify-content: space-around;
   position: fixed;
   top: 0;
-  width: 100vw;
+  width: 100%;
   z-index: 2;
 }
 .nav__logo {
@@ -132,9 +133,9 @@ section {
 
 /* Nav Hamburger */
 /* Home header */
-.home-header {
-  height: 100vh;
-  width: 100vw;
+.home__header {
+  height: 90vh;
+  width: 100%;
   overflow-x: hidden;
   position: relative;
   display: flex;
@@ -142,10 +143,10 @@ section {
   justify-content: center;
   flex-direction: column;
 }
-.home-header h1 {
+.home__header h1 {
   text-align: center;
 }
-.home-header__photo {
+.home__header__photo {
   width: 600%;
   position: absolute;
   left: 0;
@@ -155,13 +156,12 @@ section {
   z-index: -1;
 }
 @media (min-width: 800px) {
-  .home-header__photo {
+  .home__header__photo {
     width: 200%;
     animation: moveM 20s linear infinite;
   }
 }
-
-.intro {
+.home__intro {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -169,12 +169,76 @@ section {
   padding: 50px 0px;
 }
 @media (min-width: 800px) {
-  .intro {
+  .home__intro {
     flex-direction: row;
   }
 }
-.intro p {
+.home__intro__text {
+  max-width: 300px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.home__intro__text p {
+  text-align: center;
+}
+.home__intro__text__btn {
+  background-color: #FFCA29;
+  color: white;
+  padding: 10px;
+}
+.home__counter .home__counter__container {
+  background-color: #FFCA29;
+  color: white;
+  padding: 20px;
+  font-size: clamp(2rem, 10vw, 3rem);
+}
+.home__prev-editions {
+  height: 400px;
+}
+@media (min-width: 800px) {
+  .home__prev-editions {
+    flex-direction: row;
+  }
+}
+.home__prev-editions .home__prev-editions__slider {
+  position: relative;
+  padding: 10px 60px;
+  background-color: #7d7d7d;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.home__prev-editions .home__prev-editions__slider__slide {
+  height: 200px;
   width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.home__prev-editions .home__prev-editions__slider__arrow-left {
+  height: 40px;
+  left: 0;
+  margin: auto 10px;
+  position: absolute;
+  width: 40px;
+  top: 0;
+  bottom: 0;
+}
+.home__prev-editions .home__prev-editions__slider__arrow-right {
+  height: 40px;
+  margin: auto 10px;
+  position: absolute;
+  right: 0;
+  width: 40px;
+  top: 0;
+  bottom: 0;
 }
 
 @keyframes moveS {
@@ -193,62 +257,6 @@ section {
     left: -100%;
   }
 }
-/* Counter */
-.counter .counter__container {
-  background-color: #FFCA29;
-  color: white;
-  padding: 20px;
-  font-size: clamp(2rem, 10vw, 3rem);
-}
-
-/* Prev editions slider*/
-.prev-editions {
-  height: 400px;
-}
-@media (min-width: 800px) {
-  .prev-editions {
-    flex-direction: row;
-  }
-}
-.prev-editions .prev-editions__slider {
-  position: relative;
-  padding: 10px 60px;
-  background-color: #7d7d7d;
-  height: -moz-fit-content;
-  height: fit-content;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-}
-.prev-editions .prev-editions__slider__slide {
-  height: 200px;
-  width: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.prev-editions .prev-editions__slider__arrow-left {
-  height: 40px;
-  left: 0;
-  margin: auto 10px;
-  position: absolute;
-  width: 40px;
-  top: 0;
-  bottom: 0;
-}
-.prev-editions .prev-editions__slider__arrow-right {
-  height: 40px;
-  margin: auto 10px;
-  position: absolute;
-  right: 0;
-  width: 40px;
-  top: 0;
-  bottom: 0;
-}
-
-/* Socials */
 .footer {
   background-color: black;
   color: white;
@@ -297,28 +305,28 @@ section {
   flex-direction: row;
 }
 
-.contact {
-  margin-top: 10vh;
-}
 .contact h1 {
   background-color: #FFCA29;
   color: white;
   padding: 10px 20px;
 }
-.contact__form {
+.contact__wrapper {
+  margin-top: 10vh;
+}
+.contact__wrapper__form {
   background-color: #FFCA29;
   width: 100%;
   max-width: 500px;
   padding: 20px;
   margin: 10px;
 }
-.contact__form__table input {
+.contact__wrapper__form__table input {
   width: 100%;
 }
-.contact__form__table textarea {
+.contact__wrapper__form__table textarea {
   width: 100%;
 }
-.contact__form__table button {
+.contact__wrapper__form__table button {
   border: 1px solid white;
 }
 

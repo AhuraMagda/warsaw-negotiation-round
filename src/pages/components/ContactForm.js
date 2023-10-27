@@ -8,8 +8,8 @@ function ContactForm() {
      <form 
         action="send-email.php"
         method="POST"
-        className="contact__form">
-        <div className="contact__form__table">
+        className="contact__wrapper__form">
+        <div className="contact__wrapper__form__table">
             <div>
                 <label for="name">Full name</label>
                 <input 

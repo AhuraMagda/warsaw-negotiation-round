@@ -23,7 +23,7 @@ function Counter() {
    }, [])
 
     return (
-        <div className="counter__container">
+        <div className="home__counter__container">
             TOURNAMENT IN... {`${days} day${days === 1 ? "" : "s"}, ${hours} hour${hours === 1 ? "" : "s"}, ${minutes} minute${minutes === 1 ? "" : "s"}, ${seconds} second${seconds === 1 ? "" : "s"}`}
         </div>
     )

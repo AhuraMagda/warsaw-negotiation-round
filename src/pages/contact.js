@@ -5,12 +5,12 @@ import ContactForm from "./components/ContactForm";
 
 function Contact(props) {
   return (
-    <Layout>
+    <Layout page="contact">
         <header>
             <h1>CONTACT</h1>
         </header>
         <main>
-            <section className="contact">
+            <section className="contact__wrapper">
                 <p>Do you have any question about the Warsaw Negotiation Round? </p>
                 <p>Feel free to contact us! We will be happy to answer any questions you may have. 
                     Simply fill in the form, or select the department you would like to contact and write an e-mail.</p>
