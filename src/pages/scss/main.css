@@ -339,7 +339,7 @@ section {
   padding: 10px 20px;
 }
 .contact__wrapper {
-  margin-top: 10vh;
+  margin-top: 50px;
 }
 .contact__wrapper p {
   max-width: 600px;
@@ -349,7 +349,7 @@ section {
   width: 100%;
   max-width: 500px;
   padding: 20px;
-  margin: 10px;
+  margin: 20px 10px;
 }
 .contact__wrapper__form__table input {
   width: 100%;
