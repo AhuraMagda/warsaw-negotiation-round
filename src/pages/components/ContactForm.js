@@ -6,7 +6,7 @@ import React from "react";
 function ContactForm() {
     return (
      <form 
-        action="send-email.php"
+        action="/functions/send-email.php"
         method="POST"
         className="contact__wrapper__form">
         <div className="contact__wrapper__form__table">
