@@ -2,7 +2,7 @@ import { Link } from "gatsby";
 import React from "react";
 import logo from "../../images/logo-white.png"
 
-function NavBar({ data }) { 
+function NavBar() { 
     const [clicked, setClicked] = React.useState("");
     const [active, setActive] = React.useState("")
 

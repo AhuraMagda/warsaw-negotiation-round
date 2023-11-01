@@ -11,7 +11,8 @@ export default function Home({ data }) {
     <Layout page="home">
       <header className="home__header">
         <div className="home__header__text">
-          <h1>WARSAW NEGOTIATION ROUND</h1>
+          <h1>WARSAW <br />NEGOTIATION <br />ROUND</h1>
+          <h2>April 15th 2023</h2>
         </div>
         <div className="home__header__photo">
           <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} alt="warsaw skyline"/>
@@ -31,7 +32,6 @@ export default function Home({ data }) {
             <Link to="/participation"><button className="home__intro__text__btn">I WANT TO PARTICIPATE</button></Link>
           </div>
         </section>
-
 
         <section className="home__counter">
           <Counter />

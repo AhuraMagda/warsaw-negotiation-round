@@ -1,37 +1,7 @@
 @import './config';
 
 
-/* Global */
-* {
-    color: $color-text--dark
-}
-
-button {
-    background-color: $color-accent;
-    color: $color-text--light;
-    font-family: 'Open Sans', sans-serif;
-    padding: 10px;
-    margin: 5px;
-}
-
-.site-wrapper {
-    min-height: 100vh;
-    @include flexCenter(column)
-}
-
-.content-wrapper {
-    margin-top: 10vh;
-    width: 100%;
-    @include flexCenter(column);
-    flex-grow: 1;
-}
-
-section {
-    @include flexCenter(column);
-}
-
-
-/* Navbar */
+// NAVBAR
 
 .nav {
     @include flexCenter;
@@ -122,138 +92,7 @@ section {
     }
 }
 
-/* Nav Hamburger */
-
-// #toggle {
-//     display: none;
-//   }
-  
-  
-
-/* Home header */
-
-.home {
-    &__header {
-    height: 90vh;
-    width: 100%;
-    overflow-x: hidden;
-    position: relative;
-    @include flexCenter(column);
-
-        h1 {
-            text-align: center;
-        }
-
-        &__photo {
-            width: 600%;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            animation: moveS 30s linear infinite;
-            opacity: 0.1;
-            z-index: -1;
-            @include tablet {
-                width: 200%;
-                animation: moveM 20s linear infinite;
-            }
-        }
-    }
-    &__intro {
-        @include flexCenter(column);
-        padding: 50px 0px;
-        @include tablet {
-            flex-direction: row;
-        }
-    
-        &__text {
-            max-width: 300px;
-            padding: 10px;
-            @include flexCenter(column);
-    
-            p {
-                text-align: center;
-            }
-    
-            &__btn {
-                background-color: $color-accent;
-                color: white;
-                padding: 10px;
-            }
-        }
-    
-    };
-    &__counter {
-        #{&}__container {
-            background-color: $color-accent;
-            color: $color-text--light;
-            padding: 20px;
-            font-size: clamp(2rem, 10vw, 3rem);
-        }
-    }
-    &__prev-editions {
-        height: 400px;
-    
-        @include tablet {
-            flex-direction: row;
-        }
-    }
-}
-
-.slider {
-    position: relative;
-    padding: 10px 60px;
-    background-color: #7d7d7d;
-    height: fit-content;
-    @include flexCenter;
-
-    &__slide {
-        height: 200px;
-        width: 200px;
-        @include flexCenter(column);
-    }
-    
-    &__arrow-left {
-        height: 40px;
-        left: 0;
-        margin: auto 10px;
-        position: absolute;
-        width: 40px;
-        top: 0;
-        bottom: 0;
-    }
-      
-    &__arrow-right {
-        height: 40px;
-        margin: auto 10px;
-        position: absolute;
-        right: 0;
-        width: 40px;
-        top: 0;
-        bottom: 0;
-    }
-}
-
-
-
-@keyframes moveS {
-    0% {
-        left: 0;
-    }
-    100% {
-        left: -300%;
-    }
-}
-
-@keyframes moveM {
-    0% {
-        left: 0;
-    }
-    100% {
-        left: -100%;
-    }
-}
-
-// Footer
+// FOOTER
 
 .footer {
     background-color: $color-main;
@@ -292,6 +131,152 @@ section {
     }
 }
 
+/* HOME PAGE - index.js */
+
+.home {
+    &__header {
+    height: 90vh;
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    @include flexCenter(column);
+
+        &__text {
+            @include flexCenter(column);
+        }
+        h1 {
+            font-weight: 600;
+            text-align: center;
+            padding-bottom: 2rem;
+        }
+
+        h2 {
+            background-color: black;
+            color: $color-accent;
+            font-size: 1rem;
+            font-weight: 400;
+            width: fit-content;
+            padding: 2px 5px;
+        }
+
+        &__photo {
+            width: 600%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            animation: moveS 30s linear infinite;
+            opacity: 0.1;
+            z-index: -1;
+            @include tablet {
+                width: 200%;
+                animation: moveM 20s linear infinite;
+            }
+        }
+    }
+
+    &__intro {
+        @include flexCenter(column);
+        padding: 100px 0px;
+        @include tablet {
+            flex-direction: row;
+        }
+    
+        &__text {
+            max-width: 300px;
+            padding: 10px;
+            @include flexCenter(column);
+    
+            p {
+                padding-bottom: 30px;
+                text-align: center;
+            }
+    
+            &__btn {
+                background-color: $color-accent;
+                color: white;
+                padding: 10px;
+            }
+        }
+    
+    };
+    &__counter {
+        #{&}__container {
+            background-color: $color-accent;
+            color: $color-text--light;
+            padding: 20px;
+            @include flexCenter();
+        }
+        p {
+            font-size: clamp(1rem, 5vw, 3rem);
+        }
+        img {
+            height: 80px;
+        }
+    }
+    &__prev-editions {
+        height: 400px;
+    
+        @include tablet {
+            flex-direction: row;
+        }
+    }
+}
+
+// HOME PAGE - background img animation
+
+@keyframes moveS {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -300%;
+    }
+}
+
+@keyframes moveM {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -100%;
+    }
+}
+
+// SLIDER
+
+.slider {
+    position: relative;
+    padding: 10px 60px;
+    background-color: #7d7d7d;
+    height: fit-content;
+    @include flexCenter;
+
+    &__slide {
+        height: 200px;
+        width: 200px;
+        @include flexCenter(column);
+    }
+    
+    &__arrow-left {
+        height: 40px;
+        left: 0;
+        margin: auto 10px;
+        position: absolute;
+        width: 40px;
+        top: 0;
+        bottom: 0;
+    }
+      
+    &__arrow-right {
+        height: 40px;
+        margin: auto 10px;
+        position: absolute;
+        right: 0;
+        width: 40px;
+        top: 0;
+        bottom: 0;
+    }
+}
 
 // CONTACT PAGE
 
@@ -333,7 +318,7 @@ section {
     }
 }
 
-// PARTICIPATION.HTML
+// PARTICIPATION PAGE
 
 .participation {
     #{&}__steps {
@@ -352,7 +337,7 @@ section {
     }
     .slider {
         background-color: white;
-        
+
         &__slide__h3 {
             background-color: $color-accent;
             padding: 20px 30px;
@@ -362,8 +347,7 @@ section {
 
 }
 
-
-
+// PARTICIPATION PAGE - big screen steps
 .active-step {
     &__button {
         background-color: black;
@@ -375,6 +359,8 @@ section {
     }
 }
 
+
+//  GALLERY PAGE
 .gallery {
     @include flexCenter();
     flex-wrap: wrap;

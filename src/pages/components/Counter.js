@@ -1,5 +1,5 @@
 import React from "react";
-
+import iconCalendar from "../../images/icons/icon-calendar.png"
 
 
 
@@ -24,7 +24,17 @@ function Counter() {
 
     return (
         <div className="home__counter__container">
-            TOURNAMENT IN... {`${days} day${days === 1 ? "" : "s"}, ${hours} hour${hours === 1 ? "" : "s"}, ${minutes} minute${minutes === 1 ? "" : "s"}, ${seconds} second${seconds === 1 ? "" : "s"}`}
+            <div>
+                <h3>TOURNAMENT IN... </h3>
+                <p>
+                    {`${days}\u00A0day${days === 1 ? "" : "s"}, 
+                    ${hours}\u00A0hour${hours === 1 ? "" : "s"}, 
+                    ${minutes}\u00A0minute${minutes === 1 ? "" : "s"}, 
+                    ${seconds}\u00A0second${seconds === 1 ? "" : "s"}`
+                    }
+                </p>
+            </div>
+            <img src={iconCalendar} alt="calendar"/>
         </div>
     )
 }

@@ -3,7 +3,6 @@ import React from "react";
 import iconFacebook from "../../images/icons/icon-facebook.png"
 import iconInstagram from "../../images/icons/icon-instagram.png"
 import iconLinkedin from "../../images/icons/icon-linkedin.png"
-import iconPhone from "../../images/icons/icon-phone.png"
 
 const date = `© ${new Date().getFullYear()} Warsaw Negotiation Round`;
 
@@ -14,7 +13,6 @@ function Footer() {
                 <a href="https://www.facebook.com/theWNR"><img className="footer__socials__icon" src={iconFacebook} alt="facebook"/></a>
                 <a href="https://www.instagram.com/warsawnegotiationround"><img className="footer__socials__icon" src={iconInstagram} alt="instagram"/></a>
                 <a href="https://www.linkedin.com/company/thewnr/"><img className="footer__socials__icon" src={iconLinkedin} alt="linkedin"/></a>
-                <a href=""><img className="footer__socials__icon" src={iconPhone} alt="phone"/></a>
             </div>
             <div className="footer__details">
                 <p>{date}</p>

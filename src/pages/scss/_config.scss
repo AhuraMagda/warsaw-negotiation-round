@@ -1,10 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Open Sans', sans-serif;
-    border: none;
-    box-sizing: border-box;
-}
+// Colors and sizes
 
 $color-main: black;
 $color-accent: #FFCA29;
@@ -13,11 +7,14 @@ $color-text--dark: black;
 
 $tablet: 800px;
 
+
+// Mixins
+
 @mixin flexCenter($direction: row) {
-    display: flex;
     align-items: center;
-    justify-content: center;
+    display: flex;
     flex-direction: $direction;
+    justify-content: center;
 }
 
 @mixin tablet {
@@ -31,3 +28,39 @@ $tablet: 800px;
         @content;
     }
 };
+
+
+/* Global */
+
+* {
+    border: none;
+    box-sizing: border-box;
+    color: $color-text--dark;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    background-color: $color-accent;
+    color: $color-text--light;
+    font-family: 'Open Sans', sans-serif;
+    padding: 10px;
+    margin: 5px;
+}
+
+.site-wrapper {
+    min-height: 100vh;
+    @include flexCenter(column)
+}
+
+.content-wrapper {
+    margin-top: 10vh;
+    width: 100%;
+    @include flexCenter(column);
+    flex-grow: 1;
+}
+
+section {
+    @include flexCenter(column);
+}
