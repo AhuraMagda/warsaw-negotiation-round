@@ -27,15 +27,15 @@ const changeSlide = (direction, array) => {
 }
 
     return (
-        <div className="home__prev-editions__slider">
+        <div className="slider">
 
-                    <div className="home__prev-editions__slider__slide">
+                    <div className="slider__slide">
                         <h3>{prevEditionsData[activeSlide].year}</h3>
                         <p>{prevEditionsData[activeSlide].description}</p>
                     </div>
 
-            <img onClick={()=>{changeSlide("left", prevEditionsData)}} className="home__prev-editions__slider__arrow-left" src={leftArrow} />
-            <img onClick={()=>{changeSlide("right", prevEditionsData)}} className="home__prev-editions__slider__arrow-right" src={rightArrow} />
+            <img onClick={()=>{changeSlide("left", prevEditionsData)}} className="slider__arrow-left" src={leftArrow} />
+            <img onClick={()=>{changeSlide("right", prevEditionsData)}} className="slider__arrow-right" src={rightArrow} />
           </div>
     )
 }

@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "./components/Layout";
+import Slider from "./components/Slider";
 
 function Participation(props) {
 
@@ -10,7 +11,13 @@ function Participation(props) {
     }
 
     const steps = [1, 2, 3, 4, 5];
-    const stepsDesc = ["aaa", 'bbb', 'ccc', 'ddd', 'eee'];
+    const stepsDesc = [
+        "Gather a team of three, consisting of at least 2 people from the same university.", 
+        'Prepare a CVs from each team member and cover letter.', 
+        'Fill out the participation survey. Available in January, stay tuned.', 
+        'Wait for the results. If the team is qualified book your flights and apply for a visa (if needed).', 
+        'See you in Warsaw on April 19-21, 2024 during the final of the Warsaw Negotiation Round.'
+    ];
 
 
     return (
@@ -37,10 +44,9 @@ function Participation(props) {
                         {stepsDesc[activeStep-1]}
                     </p>
                 </div>
-                <div className="participation__image">
-                    -----IMG-------
-                </div>
             </section>
+
+            <Slider />
         </main>
     </Layout>
     )

@@ -196,43 +196,42 @@ section {
         @include tablet {
             flex-direction: row;
         }
-    
-        #{&}__slider {
-            position: relative;
-            padding: 10px 60px;
-            background-color: #7d7d7d;
-            height: fit-content;
-            @include flexCenter;
-    
-            &__slide {
-                height: 200px;
-                width: 200px;
-                @include flexCenter(column);
-            }
-            
-            &__arrow-left {
-                height: 40px;
-                left: 0;
-                margin: auto 10px;
-                position: absolute;
-                width: 40px;
-                top: 0;
-                bottom: 0;
-            }
-              
-            &__arrow-right {
-                height: 40px;
-                margin: auto 10px;
-                position: absolute;
-                right: 0;
-                width: 40px;
-                top: 0;
-                bottom: 0;
-            }
-        }
     }
 }
 
+.slider {
+    position: relative;
+    padding: 10px 60px;
+    background-color: #7d7d7d;
+    height: fit-content;
+    @include flexCenter;
+
+    &__slide {
+        height: 200px;
+        width: 200px;
+        @include flexCenter(column);
+    }
+    
+    &__arrow-left {
+        height: 40px;
+        left: 0;
+        margin: auto 10px;
+        position: absolute;
+        width: 40px;
+        top: 0;
+        bottom: 0;
+    }
+      
+    &__arrow-right {
+        height: 40px;
+        margin: auto 10px;
+        position: absolute;
+        right: 0;
+        width: 40px;
+        top: 0;
+        bottom: 0;
+    }
+}
 
 @keyframes moveS {
     0% {

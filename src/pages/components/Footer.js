@@ -11,9 +11,9 @@ function Footer() {
     return (
         <footer className="footer">
             <div className="footer__socials">
-                <a href=""><img className="footer__socials__icon" src={iconFacebook} alt="facebook"/></a>
-                <a href=""><img className="footer__socials__icon" src={iconInstagram} alt="instagram"/></a>
-                <a href=""><img className="footer__socials__icon" src={iconLinkedin} alt="linkedin"/></a>
+                <a href="https://www.facebook.com/theWNR"><img className="footer__socials__icon" src={iconFacebook} alt="facebook"/></a>
+                <a href="https://www.instagram.com/warsawnegotiationround"><img className="footer__socials__icon" src={iconInstagram} alt="instagram"/></a>
+                <a href="https://www.linkedin.com/company/thewnr/"><img className="footer__socials__icon" src={iconLinkedin} alt="linkedin"/></a>
                 <a href=""><img className="footer__socials__icon" src={iconPhone} alt="phone"/></a>
             </div>
             <div className="footer__details">
