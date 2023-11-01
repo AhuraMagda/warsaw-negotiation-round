@@ -341,6 +341,9 @@ section {
 .contact__wrapper {
   margin-top: 10vh;
 }
+.contact__wrapper p {
+  max-width: 600px;
+}
 .contact__wrapper__form {
   background-color: #FFCA29;
   width: 100%;

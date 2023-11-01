@@ -11,7 +11,7 @@ function Contact(props) {
         </header>
         <main>
             <section className="contact__wrapper">
-                <p>Do you have any question about the Warsaw Negotiation Round? </p>
+                <p><b>Do you have any question about the Warsaw Negotiation Round?</b></p>
                 <p>Feel free to contact us! We will be happy to answer any questions you may have. 
                     Simply fill in the form, or select the department you would like to contact and write an e-mail.</p>
                 <ContactForm />
