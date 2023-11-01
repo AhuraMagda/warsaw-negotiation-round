@@ -233,6 +233,8 @@ section {
     }
 }
 
+
+
 @keyframes moveS {
     0% {
         left: 0;
@@ -348,7 +350,19 @@ section {
             color: red;
         }
     }
+    .slider {
+        background-color: white;
+        
+        &__slide__h3 {
+            background-color: $color-accent;
+            padding: 20px 30px;
+            border-radius: 50%;
+        }
+    }
+
 }
+
+
 
 .active-step {
     &__button {

@@ -57,4 +57,28 @@ const prevEditionsData = [{
 
 ];
 
-export default prevEditionsData;
+
+
+const participationData = [{
+    step: 1,
+    description: "Gather a team of three, consisting of at least 2 people from the same university."
+},
+{
+    step: 2,
+    description: 'Prepare a CVs from each team member and cover letter.'
+},
+{
+    step: 3,
+    description: 'Fill out the participation survey. Available in January, stay tuned.'
+},
+{
+    step: 4,
+    description: 'Wait for the results. If the team is qualified book your flights and apply for a visa (if needed).'
+},
+{
+    step: 5,
+    description: 'See you in Warsaw on April 19-21, 2024 during the final of the Warsaw Negotiation Round.'
+}
+]
+
+export { prevEditionsData, participationData};

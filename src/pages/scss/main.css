@@ -345,6 +345,14 @@ section {
 .participation .participation__steps__text {
   color: red;
 }
+.participation .slider {
+  background-color: white;
+}
+.participation .slider__slide__h3 {
+  background-color: #FFCA29;
+  padding: 20px 30px;
+  border-radius: 50%;
+}
 
 .active-step__button {
   background-color: black;

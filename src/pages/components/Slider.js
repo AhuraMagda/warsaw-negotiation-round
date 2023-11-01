@@ -28,7 +28,7 @@ const changeSlide = (direction, array) => {
         <div className="slider">
 
                     <div className="slider__slide">
-                        <h3>{slideData[activeSlide][h3Prop]}</h3>
+                        <h3 className="slider__slide__h3">{slideData[activeSlide][h3Prop]}</h3>
                         <p>{slideData[activeSlide][pProp]}</p>
                     </div>
 
