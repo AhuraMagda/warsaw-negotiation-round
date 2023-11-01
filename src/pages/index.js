@@ -4,6 +4,7 @@ import Slider from "./components/Slider";
 import Counter from "./components/Counter";
 import { graphql, Link } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
+import prevEditionsData from "../../data/prev-editions-data";
 
 export default function Home({ data }) {
   return (
@@ -37,7 +38,7 @@ export default function Home({ data }) {
         </section>
   
         <section className="home__prev-editions">
-          <Slider />
+          <Slider slideData={prevEditionsData} h3Prop="year" pProp="description" />
         </section>
       </main>
     </Layout>
