@@ -10,7 +10,7 @@ export default function Home({ data }) {
     <Layout page="home">
       <header className="home__header">
         <div className="home__header__text">
-          <h1>BEST SOMETHING EVENT</h1>
+          <h1>WARSAW NEGOTIATION ROUND</h1>
         </div>
         <div className="home__header__photo">
           <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} alt="warsaw skyline"/>

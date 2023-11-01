@@ -6,7 +6,7 @@ import React from "react";
 function Counter() {
 
     const [currentdate, setCurrentDate] = React.useState(new Date()); 
-    const eventDate = new Date("2023-11-13T17:00:00")
+    const eventDate = new Date("2024-04-19T17:00:00")
 
     const timeRemaining = eventDate - currentdate
 
