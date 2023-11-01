@@ -2,14 +2,11 @@ import React from "react"
 import Layout from "./components/Layout";
 import Slider from "./components/Slider";
 import {participationData} from "../../data/prev-editions-data";
+import { useMediaQuery } from 'react-responsive';
 
 function Participation() {
-
-    const [activeStep, setActiveStep] = React.useState(2);
-
-    const changeStep = (step) => {
-        setActiveStep(step)
-    }
+    const isSmallScreen = useMediaQuery({ maxWidth: 767 })
+    const isMediumScreen = useMediaQuery({ minWidth: 768})
 
     const steps = [1, 2, 3, 4, 5];
     const stepsDesc = [
@@ -19,6 +16,11 @@ function Participation() {
         'Wait for the results. If the team is qualified book your flights and apply for a visa (if needed).', 
         'See you in Warsaw on April 19-21, 2024 during the final of the Warsaw Negotiation Round.'
     ];
+
+    const [activeStep, setActiveStep] = React.useState(2);
+    const changeStep = (step) => {
+        setActiveStep(step)
+    }
 
     const buttons = steps.map(step => {
         return <button
@@ -30,9 +32,6 @@ function Participation() {
         </button>
     })
 
-
-
-
     return (
     <Layout>
         <header>
@@ -40,7 +39,12 @@ function Participation() {
         </header>
         <main>
             <section className="participation">
+                { isSmallScreen && 
+                    <Slider slideData={participationData} h3Prop="step" pProp="description" />
+                }
 
+                {isMediumScreen && 
+                <>
                 <div className="participation__steps">
                     {buttons}
                 </div>
@@ -49,8 +53,9 @@ function Participation() {
                         {stepsDesc[activeStep-1]}
                     </p>
                 </div>
+                </>}
 
-                <Slider slideData={participationData} h3Prop="step" pProp="description" />
+                
             </section>
 
             
