@@ -4,7 +4,7 @@ import iconFacebook from "../../images/icons/icon-facebook.png"
 import iconInstagram from "../../images/icons/icon-instagram.png"
 import iconLinkedin from "../../images/icons/icon-linkedin.png"
 
-const date = `© ${new Date().getFullYear()} Warsaw Negotiation Round`;
+const copyrightDate = `© ${new Date().getFullYear()} Warsaw Negotiation Round`;
 
 function Footer() {
     return (
@@ -15,7 +15,7 @@ function Footer() {
                 <a href="https://www.linkedin.com/company/thewnr/"><img className="footer__socials__icon" src={iconLinkedin} alt="linkedin"/></a>
             </div>
             <div className="footer__details">
-                <p>{date}</p>
+                <p>{copyrightDate}</p>
                 <p>Website by <a href="https://github.com/AhuraMagda" target="_blank">M.Lubaszka</a></p>
             </div>
         </footer>

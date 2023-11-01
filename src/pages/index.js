@@ -38,6 +38,7 @@ export default function Home({ data }) {
         </section>
   
         <section className="home__prev-editions">
+          <h2>Previous Winners</h2>
           <Slider slideData={prevEditionsData} h3Prop="year" pProp="description" />
         </section>
       </main>

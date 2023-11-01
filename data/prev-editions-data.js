@@ -1,4 +1,4 @@
-const prevEditionsData = [{
+const prevEditionsDataRaw = [{
     year: "2010",
     description: "HHL Leipzig, Germany"
 },
@@ -57,6 +57,9 @@ const prevEditionsData = [{
 
 ];
 
+const prevEditionsData = prevEditionsDataRaw.map(edition => {
+    return {...edition, year: `\uD83C\uDFC6 ${edition.year} \uD83C\uDFC6`}
+})
 
 
 const participationData = [{
