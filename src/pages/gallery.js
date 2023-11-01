@@ -9,7 +9,7 @@ function Gallery(props) {
         </header>
         <main>
             <section className="gallery">
-                <div className="gallery__card">
+                {/* <div className="gallery__card">
                     <h2>VENUES</h2>
                     <img src="./random.jpg" alt=""/>
                 </div>
@@ -24,7 +24,8 @@ function Gallery(props) {
                 <div className="gallery__card">
                     <h2>PREVIOUS EDITION</h2>
                     <img src="./random.jpg" alt=""/>
-                </div>
+                </div> */}
+                <h2>Page in progress...</h2>
             </section>
         </main>
     </Layout >

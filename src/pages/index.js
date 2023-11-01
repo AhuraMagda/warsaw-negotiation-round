@@ -4,7 +4,7 @@ import Slider from "./components/Slider";
 import Counter from "./components/Counter";
 import { graphql, Link } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
-import {prevEditionsData} from "../../data/prev-editions-data";
+import {prevEditionsData} from "../../data/data";
 
 export default function Home({ data }) {
   return (

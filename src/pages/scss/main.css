@@ -256,6 +256,7 @@ section {
   font-size: clamp(1rem, 5vw, 3rem);
 }
 .home__counter img {
+  margin-left: 10px;
   height: 80px;
 }
 .home__prev-editions {
@@ -360,6 +361,7 @@ section {
 .participation .participation__steps {
   display: flex;
   flex-wrap: wrap;
+  padding: 50px 0px;
 }
 .participation .participation__steps__button {
   height: 100px;
@@ -367,9 +369,6 @@ section {
   border-radius: 50%;
   font-size: 2rem;
   margin: 0px 10px;
-}
-.participation .participation__steps__text {
-  color: red;
 }
 .participation .slider {
   background-color: white;
