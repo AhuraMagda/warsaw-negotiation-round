@@ -236,6 +236,11 @@
         padding: 20px;
        }
 
+       p {
+        padding: 0px 20px 20px 20px;
+        max-width: 400px;
+       }
+
        .slider {
         background-color: rgb(240, 240, 240);
         border-radius: 10px;
@@ -399,4 +404,51 @@
             height: 200px;
         }
     }
+}
+
+
+// ABOUT US PAGE
+
+.about-us {
+    &__header {
+        @include flexCenter();
+        position: relative;
+        width: 100vw;
+        h1 {
+            background-color: white;
+            font-size: clamp(1rem, 10vw, 2rem);
+            padding: 10px;
+            text-align: center;
+            width: fit-content;
+    
+            &::before {
+                content: "";
+                background-color: $color-accent;
+                bottom: 0;
+                height: 2px;
+                left: 0;
+                margin: auto;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                z-index: -1;
+            }
+        }
+    }
+
+    &__article {
+        padding: 20px;
+        @include flexCenter();
+        flex-wrap: wrap;
+
+        &__text {
+            padding: 0px 10px;
+            max-width: 400px;
+        }
+
+        img {
+            height: 300px;
+        }
+    }
+
 }

@@ -277,6 +277,10 @@ section {
 .home__prev-editions h2 {
   padding: 20px;
 }
+.home__prev-editions p {
+  padding: 0px 20px 20px 20px;
+  max-width: 400px;
+}
 .home__prev-editions .slider {
   background-color: rgb(240, 240, 240);
   border-radius: 10px;
@@ -414,4 +418,48 @@ section {
 }
 .gallery__card img {
   height: 200px;
+}
+
+.about-us__header {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  width: 100vw;
+}
+.about-us__header h1 {
+  background-color: white;
+  font-size: clamp(1rem, 10vw, 2rem);
+  padding: 10px;
+  text-align: center;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.about-us__header h1::before {
+  content: "";
+  background-color: #FFCA29;
+  bottom: 0;
+  height: 2px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+.about-us__article {
+  padding: 20px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.about-us__article__text {
+  padding: 0px 10px;
+  max-width: 400px;
+}
+.about-us__article img {
+  height: 300px;
 }/*# sourceMappingURL=main.css.map */
