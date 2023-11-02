@@ -13,6 +13,7 @@
     width: 100%;
     z-index: 2;
 
+
     &__logo {
         width: 200px;
     }
@@ -416,7 +417,7 @@
         width: 100vw;
         h1 {
             background-color: white;
-            font-size: clamp(1rem, 10vw, 2rem);
+            font-size: clamp(.8rem, 5vw, 1.5rem);
             padding: 10px;
             text-align: center;
             width: fit-content;

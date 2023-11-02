@@ -430,7 +430,7 @@ section {
 }
 .about-us__header h1 {
   background-color: white;
-  font-size: clamp(1rem, 10vw, 2rem);
+  font-size: clamp(0.8rem, 5vw, 1.5rem);
   padding: 10px;
   text-align: center;
   width: -moz-fit-content;
