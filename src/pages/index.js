@@ -12,7 +12,7 @@ export default function Home({ data }) {
       <header className="home__header">
         <div className="home__header__text">
           <h1>WARSAW <br />NEGOTIATION <br />ROUND</h1>
-          <h2>April 15th 2023</h2>
+          <h2>April 15th - 21st 2023</h2>
         </div>
         <div className="home__header__photo">
           <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} alt="warsaw skyline"/>
@@ -29,8 +29,9 @@ export default function Home({ data }) {
               year unites students of top law, economics and business schools from
               around the world.
             </p>
-            <Link to="/participation"><button className="home__intro__text__btn">I WANT TO PARTICIPATE</button></Link>
           </div>
+          <Link to="/participation"><button className="home__intro__btn">I WANT TO PARTICIPATE</button></Link>
+          
         </section>
 
         <section className="home__counter">

@@ -13,7 +13,6 @@ button {
   color: white;
   font-family: "Open Sans", sans-serif;
   padding: 10px;
-  margin: 5px;
 }
 
 .site-wrapper {
@@ -238,25 +237,37 @@ section {
   padding-bottom: 30px;
   text-align: center;
 }
-.home__intro__text__btn {
+.home__intro__btn {
   background-color: #FFCA29;
   color: white;
   padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: -2px 3px 2px rgb(205, 204, 204);
+  margin: 6px;
+}
+.home__intro__btn:hover {
+  text-decoration: underline;
+}
+.home__intro__btn:active {
+  box-shadow: 0px 0px;
+  margin: 8px 8px 4px 4px;
 }
 .home__counter .home__counter__container {
   background-color: #FFCA29;
   color: white;
-  padding: 20px;
+  padding: 30px;
   align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  width: 100vw;
 }
 .home__counter p {
   font-size: clamp(1rem, 5vw, 3rem);
 }
 .home__counter img {
-  margin-left: 10px;
+  margin-left: 30px;
   height: 80px;
 }
 .home__prev-editions {

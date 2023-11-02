@@ -190,27 +190,41 @@
                 padding-bottom: 30px;
                 text-align: center;
             }
-    
-            &__btn {
-                background-color: $color-accent;
-                color: white;
-                padding: 10px;
+        }
+
+        &__btn {
+            background-color: $color-accent;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: -2px 3px 2px rgb(205, 204, 204);
+            margin: 6px;
+            
+            &:hover {
+                text-decoration: underline;
+            }
+
+            &:active {
+                box-shadow: 0px 0px;
+                margin: 8px 8px 4px 4px;
             }
         }
-    
     };
+
     &__counter {
         #{&}__container {
             background-color: $color-accent;
             color: $color-text--light;
-            padding: 20px;
+            padding: 30px;
             @include flexCenter();
+            width: 100vw;
         }
         p {
             font-size: clamp(1rem, 5vw, 3rem);
         }
         img {
-            margin-left: 10px;
+            margin-left: 30px;
             height: 80px;
         }
     }

@@ -28,7 +28,10 @@ function Counter() {
                 <h3>TOURNAMENT IN... </h3>
                 <p>
                     {`${days}\u00A0day${days === 1 ? "" : "s"}, 
-                    ${hours}\u00A0hour${hours === 1 ? "" : "s"}, 
+                    ${hours}\u00A0hour${hours === 1 ? "" : "s"},
+                    `}
+                </p>
+                <p>{`
                     ${minutes}\u00A0minute${minutes === 1 ? "" : "s"}, 
                     ${seconds}\u00A0second${seconds === 1 ? "" : "s"}`
                     }
