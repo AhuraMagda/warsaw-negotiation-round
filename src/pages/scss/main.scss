@@ -411,6 +411,9 @@
 // ABOUT US PAGE
 
 .about-us {
+    width: 100vw;
+    max-width: 900px;
+
     &__header {
         @include flexCenter();
         position: relative;
@@ -441,14 +444,19 @@
         padding: 20px;
         @include flexCenter();
         flex-wrap: wrap;
+        width: 100%;
+        border-top: 2px solid $color-accent;
 
         &__text {
             padding: 0px 10px;
             max-width: 400px;
+            margin: 10px;
         }
 
         img {
-            height: 300px;
+            width: 90%;
+            max-width: 400px;
+            margin: 10px;
         }
     }
 
