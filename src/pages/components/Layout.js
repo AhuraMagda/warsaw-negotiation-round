@@ -4,11 +4,11 @@ import Footer from "./Footer";
 import "../scss/main.css";
 
 
-function Layout({ children, page }) {
+function Layout({ children}) {
   return (
     <div className="site-wrapper">
         <NavBar />
-          <div className={`content-wrapper ${page}`}>
+          <div className={`content-wrapper`}>
             {children}
           </div>
         <Footer />

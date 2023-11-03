@@ -1,14 +1,13 @@
 import React from "react"
 import Layout from "./components/Layout";
 import ContactForm from "./components/ContactForm";
+import ComponentHeader from "./components/ComponentHeader";
 
 
 function Contact(props) {
   return (
-    <Layout page="contact">
-        <header>
-            <h1>CONTACT</h1>
-        </header>
+    <Layout>
+        <ComponentHeader>CONTACT</ComponentHeader>
         <main>
             <section className="contact__wrapper">
                 <p><b>Do you have any question about the Warsaw Negotiation Round?</b></p>

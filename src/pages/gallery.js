@@ -1,30 +1,13 @@
-import * as React from "react";
+import React from "react";
 import Layout from "./components/Layout";
+import ComponentHeader from "./components/ComponentHeader";
 
-function Gallery(props) {
+function Gallery() {
   return (
     <Layout>
-        <header>
-            <h1>GALLERY</h1>
-        </header>
+        <ComponentHeader>GALLERY</ComponentHeader>
         <main>
             <section className="gallery">
-                {/* <div className="gallery__card">
-                    <h2>VENUES</h2>
-                    <img src="./random.jpg" alt=""/>
-                </div>
-                <div className="gallery__card">
-                    <h2>PARTICIPANTS</h2>
-                    <img src="./random.jpg" alt=""/>
-                </div>
-                <div className="gallery__card">
-                    <h2>PARTNERS</h2>
-                    <img src="./random.jpg" alt=""/>
-                </div>
-                <div className="gallery__card">
-                    <h2>PREVIOUS EDITION</h2>
-                    <img src="./random.jpg" alt=""/>
-                </div> */}
                 <h2>Page in progress...</h2>
             </section>
         </main>

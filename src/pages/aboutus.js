@@ -6,17 +6,13 @@ import img2 from "../images/about-us-images/aboutus-negocjator.png";
 import img3 from "../images/about-us-images/aboutus-participants.jpg";
 import img4 from "../images/about-us-images/aboutus-venues.jpg";
 
-
+import ComponentHeader from "./components/ComponentHeader";
 
 
 function Aboutus(props) {
     return (
         <Layout>
-            <header className="about-us__header">
-                <h1>
-                    FIND OUT MORE ABOUT THE WARSAW NEGOTIATION ROUND
-                </h1>
-            </header>
+            <ComponentHeader>FIND OUT MORE ABOUT THE WARSAW NEGOTIATION ROUND</ComponentHeader>
             <main className="about-us">
                 <article className="about-us__article">
                     <img src={img1} />

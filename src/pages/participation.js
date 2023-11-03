@@ -3,19 +3,13 @@ import Layout from "./components/Layout";
 import Slider from "./components/Slider";
 import { participationData } from "../../data/data";
 import { useMediaQuery } from 'react-responsive';
+import ComponentHeader from "./components/ComponentHeader";
 
 function Participation() {
     const isSmallScreen = useMediaQuery({ maxWidth: 767 })
     const isMediumScreen = useMediaQuery({ minWidth: 768})
 
     const steps = [1, 2, 3, 4, 5];
-    // const stepsDesc = [
-    //     "Gather a team of three, consisting of at least 2 people from the same university.", 
-    //     'Prepare a CVs from each team member and cover letter.', 
-    //     'Fill out the participation survey. Available in January, stay tuned.', 
-    //     'Wait for the results. If the team is qualified book your flights and apply for a visa (if needed).', 
-    //     'See you in Warsaw on April 19-21, 2024 during the final of the Warsaw Negotiation Round.'
-    // ];
 
     const stepsDesc = participationData.map(step => step.description)
 
@@ -36,9 +30,7 @@ function Participation() {
 
     return (
     <Layout>
-        <header>
-            <h1>Steps to participate</h1>
-        </header>
+        <ComponentHeader>HOW TO PARTICIPATE</ComponentHeader>
         <main>
             <section className="participation">
                 { isSmallScreen && 

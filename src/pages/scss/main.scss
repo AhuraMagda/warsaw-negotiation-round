@@ -1,6 +1,35 @@
 @import './config';
 
 
+// component header
+
+.component-header {
+
+        @include flexCenter();
+        position: relative;
+        width: 100vw;
+        h1 {
+            background-color: white;
+            font-size: clamp(.8rem, 5vw, 1.5rem);
+            padding: 10px;
+            text-align: center;
+            width: fit-content;
+    
+            &::before {
+                content: "";
+                background-color: $color-accent;
+                bottom: 0;
+                height: 2px;
+                left: 0;
+                margin: auto;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                z-index: -1;
+            }
+        }
+}
+
 // NAVBAR
 
 .nav {
@@ -283,7 +312,7 @@
 
     &__slide {
         max-width: 200px;
-        padding: 20px 20px;
+        padding: 10px 10px;
         @include flexCenter(column);
     }
     
@@ -315,11 +344,6 @@
 }
 
 .contact {
-    h1 {
-        background-color: $color-accent;
-        color: $color-text--light;
-        padding: 10px 20px;
-    }
     &__wrapper {
         margin-top: 50px;
         
@@ -414,38 +438,12 @@
     width: 100vw;
     max-width: 900px;
 
-    &__header {
-        @include flexCenter();
-        position: relative;
-        width: 100vw;
-        h1 {
-            background-color: white;
-            font-size: clamp(.8rem, 5vw, 1.5rem);
-            padding: 10px;
-            text-align: center;
-            width: fit-content;
-    
-            &::before {
-                content: "";
-                background-color: $color-accent;
-                bottom: 0;
-                height: 2px;
-                left: 0;
-                margin: auto;
-                position: absolute;
-                top: 0;
-                width: 100%;
-                z-index: -1;
-            }
-        }
-    }
-
     &__article {
         padding: 20px;
         @include flexCenter();
         flex-wrap: wrap;
         width: 100%;
-        border-top: 2px solid $color-accent;
+        border-top: 2px solid #e4e4e4y;
 
         &__text {
             padding: 0px 10px;
