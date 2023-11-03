@@ -15,7 +15,7 @@ function Contact(props) {
                     Simply fill in the form, or select the department you would like to contact and write an e-mail.</p>
                 <ContactForm />
                 <div className="contact__info">
-                    <p>OUR DEPARTMENTS:</p>
+                    <p><b>OUR DEPARTMENTS:</b></p>
                     <p>Cooperation Department: warsawnegotiations@gmail.com</p>
                     <p>Experts Department: wnr.experts@gmail.com</p>
                     <p>Participants Department: </p>

@@ -353,7 +353,6 @@
         &__form {
             background-color: $color-accent;
             width: 100%;
-            max-width: 500px;
             padding: 20px;
             margin: 20px 10px;
 
@@ -372,6 +371,9 @@
                     }
             }
         }
+    }
+    &__info {
+        width: 100%;
     }
 }
 

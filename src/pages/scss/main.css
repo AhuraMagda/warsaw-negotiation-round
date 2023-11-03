@@ -382,7 +382,6 @@ section {
 .contact__wrapper__form {
   background-color: #FFCA29;
   width: 100%;
-  max-width: 500px;
   padding: 20px;
   margin: 20px 10px;
 }
@@ -394,6 +393,9 @@ section {
 }
 .contact__wrapper__form__table button {
   border: 1px solid white;
+}
+.contact__info {
+  width: 100%;
 }
 
 .participation .participation__steps {
