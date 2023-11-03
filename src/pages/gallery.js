@@ -1,14 +1,23 @@
 import React from "react";
 import Layout from "./components/Layout";
 import ComponentHeader from "./components/ComponentHeader";
+import { graphql } from "gatsby";
+import { GatsbyImage } from "gatsby-plugin-image";
 
-function Gallery() {
+
+
+function Gallery({ data }) {
+
   return (
     <Layout>
         <ComponentHeader>GALLERY</ComponentHeader>
         <main>
             <section className="gallery">
-                <h2>Page in progress...</h2>
+                {data.gallery.edges.map(image => (
+                  <div className="gallery__card" key={image.node.id}>
+                    <GatsbyImage image={image.node.childImageSharp.gatsbyImageData} alt="students"/>
+                  </div>
+                ))}
             </section>
         </main>
     </Layout >
@@ -17,3 +26,21 @@ function Gallery() {
 };
 
 export default Gallery;
+
+
+export const pageQuery = graphql `
+query {
+  gallery: allFile(
+    filter: {extension: {regex: "/(jpg)|(jpeg)|(png)/"}, relativeDirectory: {eq: "gallery"}}
+  ) {
+    edges {
+      node {
+        id
+        base
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH)
+        }
+      }
+    }
+  }
+}`

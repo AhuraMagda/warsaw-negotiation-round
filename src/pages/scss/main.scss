@@ -458,13 +458,14 @@
 
 //  GALLERY PAGE
 .gallery {
-    @include flexCenter();
-    flex-wrap: wrap;
+    padding: 10px;
+    display: grid;
+    
+    grid-template: auto / 1fr 1fr 1fr;
+
+
     &__card {
-        padding: 10px;
-        img {
-            height: 200px;
-        }
+        width: 400px;
     }
 }
 

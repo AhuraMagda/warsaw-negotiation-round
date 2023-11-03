@@ -1,3 +1,4 @@
+// Previous editions winners
 const prevEditionsDataRaw = [{
     year: "2010",
     description: "HHL Leipzig, Germany"
@@ -61,7 +62,7 @@ const prevEditionsData = prevEditionsDataRaw.map(edition => {
     return {...edition, year: `\uD83C\uDFC6 ${edition.year} \uD83C\uDFC6`}
 })
 
-
+// Steps how to participate
 const participationData = [{
     step: 1,
     description: "Step 1 - Gather a team of three, consisting of at least 2 people from the same university."
@@ -83,5 +84,11 @@ const participationData = [{
     description: 'Step 5 - See you in Warsaw on April 19-21, 2024 during the final of the Warsaw Negotiation Round.'
 }
 ]
+
+
+// images to the gallery
+
+
+
 
 export { prevEditionsData, participationData};
