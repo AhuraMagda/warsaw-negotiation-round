@@ -339,16 +339,15 @@
 
 // CONTACT PAGE
 
-.center {
-    @include flexCenter();
-}
-
 .contact {
     &__wrapper {
         margin-top: 50px;
-        
-        p {
-            max-width: 600px;
+        width: 100vw;
+        max-width: 800px;
+        padding: 20px;
+
+        h2 {
+            margin-bottom: 10px;
         }
 
         &__form {
@@ -443,7 +442,7 @@
         @include flexCenter();
         flex-wrap: wrap;
         width: 100%;
-        border-top: 2px solid #e4e4e4y;
+        border-top: 2px solid #e4e4e4;
 
         &__text {
             padding: 0px 10px;
