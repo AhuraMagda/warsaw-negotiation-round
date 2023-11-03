@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Global */
 * {
   border: none;
@@ -381,18 +382,52 @@ section {
 }
 .contact__wrapper__form {
   background-color: #FFCA29;
-  width: 100%;
-  padding: 20px;
+  border-radius: 10px;
   margin: 20px 10px;
+  padding: 20px;
+  width: 100%;
 }
 .contact__wrapper__form__table input {
   width: 100%;
+  border-radius: 5px;
 }
 .contact__wrapper__form__table textarea {
   width: 100%;
+  border-radius: 5px;
 }
 .contact__wrapper__form__table button {
-  border: 1px solid white;
+  background-color: black;
+  border-radius: 5px;
+  color: #FFCA29;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 15px;
+  position: relative;
+  padding: 10px 0px;
+  width: 100px;
+  text-align: center;
+  transition: all 0.2s linear 0s;
+}
+.contact__wrapper__form__table button::before {
+  content: "➡";
+  font-size: 15px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+  top: 0;
+  opacity: 0;
+  height: 100%;
+  width: 40px;
+  transition: all 0.2s linear 0s;
+}
+.contact__wrapper__form__table button:hover {
+  text-indent: -20px;
+}
+.contact__wrapper__form__table button:hover:before {
+  opacity: 1;
+  text-indent: 0px;
 }
 .contact__info {
   width: 100%;
