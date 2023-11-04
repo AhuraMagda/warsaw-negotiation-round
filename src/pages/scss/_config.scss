@@ -1,65 +1,63 @@
 // Colors and sizes
 
 $color-main: black;
-$color-accent: #FFCA29;
+$color-accent: #ffca29;
 $color-text--light: white;
 $color-text--dark: black;
 
 $tablet: 800px;
 
-
 // Mixins
 
 @mixin flexCenter($direction: row) {
-    align-items: center;
-    display: flex;
-    flex-direction: $direction;
-    justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
 }
 
 @mixin tablet {
-    @media (min-width: $tablet) {
-        @content;
-    }
-};
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
 
 @mixin phone {
-    @media (max-width: $tablet) {
-        @content;
-    }
-};
-
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
 
 /* Global */
 
 * {
-    border: none;
-    box-sizing: border-box;
-    color: $color-text--dark;
-    font-family: 'Open Sans', sans-serif;
-    margin: 0;
-    padding: 0;
+  border: none;
+  box-sizing: border-box;
+  color: $color-text--dark;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 button {
-    background-color: $color-accent;
-    color: $color-text--light;
-    font-family: 'Open Sans', sans-serif;
-    padding: 10px;
+  background-color: $color-accent;
+  color: $color-text--light;
+  font-family: "Open Sans", sans-serif;
+  padding: 10px;
 }
 
 .site-wrapper {
-    min-height: 100vh;
-    @include flexCenter(column)
+  min-height: 100vh;
+  @include flexCenter(column);
 }
 
 .content-wrapper {
-    margin-top: 10vh;
-    width: 100%;
-    @include flexCenter(column);
-    flex-grow: 1;
+  margin-top: 10vh;
+  width: 100%;
+  @include flexCenter(column);
+  flex-grow: 1;
 }
 
 section {
-    @include flexCenter(column);
+  @include flexCenter(column);
 }
