@@ -19,22 +19,27 @@ function Gallery({ data }) {
     setIsBigImg(false)
   }
   
+  const allPhotos = data.gallery.edges.map((image) => (
+    <div
+      onClick={()=>{showImg(image.node.childImageSharp.gatsbyImageData)}} 
+      className="gallery__card" key={image.node.id}
+    >
+      <GatsbyImage     
+        image={image.node.childImageSharp.gatsbyImageData}
+        alt="students"
+      />
+    </div>
+  ))
+
   return (
     <Layout>
       <ComponentHeader>GALLERY</ComponentHeader>
       <main>
         <section className="gallery">
-          {data.gallery.edges.map((image) => (
-            <div
-              onClick={()=>{showImg(image.node.childImageSharp.gatsbyImageData)}} 
-              className="gallery__card" key={image.node.id}
-            >
-              <GatsbyImage     
-                image={image.node.childImageSharp.gatsbyImageData}
-                alt="students"
-              />
-            </div>
-          ))}
+
+          {allPhotos.slice(0, 4)}
+
+
           {isBigImg && 
           <div 
             onClick={()=>{hideImg()}}
