@@ -19,34 +19,30 @@ export default function Gallery({ data }) {
     setIsBigImg(false);
   };
 
-
   const allPhotosData = data.gallery.edges.map((image, index) => ({
     id: index,
     image: image.node.childImageSharp.gatsbyImageData,
-    key: image.node.id
+    key: image.node.id,
   }));
 
-  const allPhotosDisplay = allPhotosData.map(({id, image, key}) => (
+  const allPhotosToDisplay = allPhotosData.map(({ id, image, key }) => (
     <div
-    onClick={() => {
-      showImg(id);
-    }}
-    className="gallery__card"
-    key={key}
-  >
-    <GatsbyImage
-      image={image}
-      alt="students"
-    />
-  </div>
-  ))
+      onClick={() => {
+        showImg(id);
+      }}
+      className="gallery__card"
+      key={key}
+    >
+      <GatsbyImage image={image} alt="students" />
+    </div>
+  ));
 
   return (
     <Layout>
       <ComponentHeader>GALLERY</ComponentHeader>
       <main>
         <section className="gallery">
-          {allPhotosDisplay.slice(0, 4)}
+          {allPhotosToDisplay.slice(0, 4)}
 
           {isBigImg && (
             <div
