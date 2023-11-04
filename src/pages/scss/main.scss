@@ -449,13 +449,22 @@
 
 //  GALLERY PAGE
 .gallery {
-  padding: 10px;
+  grid-gap: 10px;
   display: grid;
-
-  grid-template: auto / 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  width: 90vw;
+  height: fit-content;
+  padding: 30px 0px;
+  max-width: 1000px;
 
   &__card {
-    width: 400px;
+    aspect-ratio: 1;
+    width: auto;
+    position: relative;
+    overflow: hidden;
+    & > div {
+      position: static;
+    }
   }
 }
 

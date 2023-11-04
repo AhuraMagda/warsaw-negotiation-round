@@ -10,7 +10,7 @@
 }
 
 button {
-  background-color: #FFCA29;
+  background-color: #ffca29;
   color: white;
   font-family: "Open Sans", sans-serif;
   padding: 10px;
@@ -59,7 +59,7 @@ section {
 }
 .component-header h1::before {
   content: "";
-  background-color: #FFCA29;
+  background-color: #ffca29;
   bottom: 0;
   height: 2px;
   left: 0;
@@ -115,7 +115,7 @@ section {
 }
 .nav__menu li a {
   cursor: pointer;
-  color: #FFCA29;
+  color: #ffca29;
   font-family: "Open Sans", sans-serif;
   text-decoration: none;
 }
@@ -135,7 +135,7 @@ section {
   }
 }
 .nav .hamburger div {
-  background-color: #FFCA29;
+  background-color: #ffca29;
   border-radius: 3.2px;
   height: 2px;
   margin-top: 12px;
@@ -194,7 +194,7 @@ section {
   color: white;
 }
 .footer__details a:hover {
-  color: #FFCA29;
+  color: #ffca29;
 }
 
 /* HOME PAGE - index.js */
@@ -221,7 +221,7 @@ section {
 }
 .home__header h2 {
   background-color: black;
-  color: #FFCA29;
+  color: #ffca29;
   font-size: 1rem;
   font-weight: 400;
   width: -moz-fit-content;
@@ -268,7 +268,7 @@ section {
   text-align: center;
 }
 .home__intro__btn {
-  background-color: #FFCA29;
+  background-color: #ffca29;
   color: white;
   padding: 10px;
   cursor: pointer;
@@ -284,7 +284,7 @@ section {
   margin: 8px 8px 4px 4px;
 }
 .home__counter .home__counter__container {
-  background-color: #FFCA29;
+  background-color: #ffca29;
   color: white;
   padding: 30px;
   align-items: center;
@@ -381,7 +381,7 @@ section {
   margin-bottom: 10px;
 }
 .contact__wrapper__form {
-  background-color: #FFCA29;
+  background-color: #ffca29;
   border-radius: 10px;
   margin: 20px 10px;
   padding: 20px;
@@ -398,7 +398,7 @@ section {
 .contact__wrapper__form__table button {
   background-color: black;
   border-radius: 5px;
-  color: #FFCA29;
+  color: #ffca29;
   cursor: pointer;
   display: inline-block;
   margin-top: 15px;
@@ -449,7 +449,7 @@ section {
   background-color: white;
 }
 .participation .slider__slide__h3 {
-  background-color: #FFCA29;
+  background-color: #ffca29;
   padding: 20px 30px;
   border-radius: 50%;
 }
@@ -464,12 +464,23 @@ section {
 }
 
 .gallery {
-  padding: 10px;
+  grid-gap: 10px;
   display: grid;
-  grid-template: auto/1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  width: 90vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 30px 0px;
+  max-width: 1000px;
 }
 .gallery__card {
-  width: 400px;
+  aspect-ratio: 1;
+  width: auto;
+  position: relative;
+  overflow: hidden;
+}
+.gallery__card > div {
+  position: static;
 }
 
 .about-us {
