@@ -12,7 +12,7 @@ export default function Gallery({ data }) {
   const showImg = (index) => {
     setActiveImgIndex(index);
     setIsBigImg(true);
-    console.log(index)
+    console.log(index);
   };
 
   const hideImg = () => {
@@ -34,21 +34,17 @@ export default function Gallery({ data }) {
     </div>
   ));
 
-  const allPhotosArrOfObj = data.gallery.edges.map(((image, index) => (
-    {id: index, image: image.node.childImageSharp.gatsbyImageData}
-  )))
+  const allPhotosData = data.gallery.edges.map((image, index) => ({
+    id: index,
+    image: image.node.childImageSharp.gatsbyImageData,
+  }));
 
-  console.log(allPhotosArrOfObj)
 
   return (
     <Layout>
       <ComponentHeader>GALLERY</ComponentHeader>
       <main>
         <section className="gallery">
-
-          
-
-
           {allPhotos.slice(0, 4)}
 
           {isBigImg && (
@@ -58,7 +54,11 @@ export default function Gallery({ data }) {
               }}
               className="gallery__big-img"
             >
-              <Slider slideData={allPhotosArrOfObj} imgProp={"image"} activeImgIndex={activeImgIndex}/>
+              <Slider
+                slideData={allPhotosData}
+                imgProp={"image"}
+                activeImgIndex={activeImgIndex}
+              />
             </div>
           )}
         </section>

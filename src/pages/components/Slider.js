@@ -3,7 +3,6 @@ import rightArrow from "../../images/icons/icon-slider-arrow-right.png";
 import leftArrow from "../../images/icons/icon-slider-arrow-left.png";
 import { GatsbyImage } from "gatsby-plugin-image";
 
-
 function Slider({ slideData, h3Prop, pProp, imgProp, activeImgIndex }) {
   const [activeSlide, setActiveSlide] = React.useState(0);
 
@@ -23,16 +22,14 @@ function Slider({ slideData, h3Prop, pProp, imgProp, activeImgIndex }) {
     }
   };
 
-  React.useEffect(()=> {
-    setActiveSlide(activeImgIndex)
-  }, [])
+  React.useEffect(() => {
+    setActiveSlide(activeImgIndex);
+  }, []);
 
   return (
     <div className="slider">
       {slideData && (
         <div className="slider__slide">
-
-
           {imgProp && (
             <div className="slider__slide__img">
               <GatsbyImage
@@ -41,10 +38,6 @@ function Slider({ slideData, h3Prop, pProp, imgProp, activeImgIndex }) {
               />
             </div>
           )}
-
-
-
-
 
           {h3Prop && (
             <h3 className="slider__slide__h3">
@@ -58,7 +51,7 @@ function Slider({ slideData, h3Prop, pProp, imgProp, activeImgIndex }) {
       <img
         onClick={(event) => {
           changeSlide("left", slideData);
-          event.stopPropagation()
+          event.stopPropagation();
         }}
         className="slider__arrow-left"
         src={leftArrow}
@@ -66,7 +59,7 @@ function Slider({ slideData, h3Prop, pProp, imgProp, activeImgIndex }) {
       <img
         onClick={(event) => {
           changeSlide("right", slideData);
-          event.stopPropagation()
+          event.stopPropagation();
         }}
         className="slider__arrow-right"
         src={rightArrow}
