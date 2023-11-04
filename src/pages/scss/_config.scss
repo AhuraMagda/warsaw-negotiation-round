@@ -5,7 +5,9 @@ $color-accent: #ffca29;
 $color-text--light: white;
 $color-text--dark: black;
 
-$tablet: 800px;
+$big: 800px;
+$medium: 600px;
+$small: 400px;
 
 // Mixins
 
@@ -16,14 +18,20 @@ $tablet: 800px;
   justify-content: center;
 }
 
-@mixin tablet {
-  @media (min-width: $tablet) {
+@mixin small {
+  @media (min-width: $small) {
     @content;
   }
 }
 
-@mixin phone {
-  @media (max-width: $tablet) {
+@mixin medium {
+  @media (min-width: $medium) {
+    @content;
+  }
+}
+
+@mixin big {
+  @media (min-width: $big) {
     @content;
   }
 }

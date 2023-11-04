@@ -48,7 +48,7 @@
     @include flexCenter;
     top: 10vh;
     height: 60vh;
-    @include phone {
+    @include small {
       background-color: rgb(0, 0, 0);
       flex-direction: column;
       position: absolute;
@@ -57,7 +57,7 @@
     }
 
     &__active {
-      @include phone {
+      @include small {
         transform: translate(0%);
         width: 100%;
       }
@@ -80,7 +80,7 @@
   }
 
   .hamburger {
-    @include tablet {
+    @include medium {
       display: none;
     }
 
@@ -192,7 +192,7 @@
       animation: moveS 30s linear infinite;
       opacity: 0.1;
       z-index: -1;
-      @include tablet {
+      @include medium {
         width: 200%;
         animation: moveM 20s linear infinite;
       }
@@ -202,7 +202,7 @@
   &__intro {
     @include flexCenter(column);
     padding: 100px 0px;
-    @include tablet {
+    @include medium {
       flex-direction: row;
     }
 
@@ -451,11 +451,23 @@
 .gallery {
   grid-gap: 10px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   width: 90vw;
   height: fit-content;
   padding: 30px 0px;
   max-width: 1000px;
+
+  @include small {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include medium {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include big {
+    grid-template-columns: repeat(4, 1fr);
+  }
 
   &__card {
     aspect-ratio: 1;
