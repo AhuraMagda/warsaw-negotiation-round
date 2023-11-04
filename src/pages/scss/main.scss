@@ -313,6 +313,11 @@
     max-width: 200px;
     padding: 10px 10px;
     @include flexCenter(column);
+
+    &__img {
+      width: 300px;
+      height: 200px;
+    }
   }
 
   &__arrow-left {
@@ -323,6 +328,7 @@
     width: 40px;
     top: 0;
     bottom: 0;
+    z-index: 2;
   }
 
   &__arrow-right {
@@ -333,6 +339,7 @@
     width: 40px;
     top: 0;
     bottom: 0;
+    z-index: 2;
   }
 }
 

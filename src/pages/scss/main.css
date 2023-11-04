@@ -354,6 +354,10 @@ section {
   flex-direction: column;
   justify-content: center;
 }
+.slider__slide__img {
+  width: 300px;
+  height: 200px;
+}
 .slider__arrow-left {
   height: 40px;
   left: 0;
@@ -362,6 +366,7 @@ section {
   width: 40px;
   top: 0;
   bottom: 0;
+  z-index: 2;
 }
 .slider__arrow-right {
   height: 40px;
@@ -371,6 +376,7 @@ section {
   width: 40px;
   top: 0;
   bottom: 0;
+  z-index: 2;
 }
 
 .contact__wrapper {

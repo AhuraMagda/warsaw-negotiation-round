@@ -3,33 +3,42 @@ import Layout from "./components/Layout";
 import ComponentHeader from "./components/ComponentHeader";
 import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
+import Slider from "./components/Slider";
 
-function Gallery({ data }) {
-  
-  const [isBigImg, setIsBigImg] = React.useState(false)
-  const [activeImg, setActiveImg] = React.useState("")
+export default function Gallery({ data }) {
+  const [isBigImg, setIsBigImg] = React.useState(false);
+  const [activeImgIndex, setActiveImgIndex] = React.useState(0);
 
-  const showImg = (image) => {
-    console.log("clicked")
-    setActiveImg(image)
-    setIsBigImg(true)
-  }
+  const showImg = (index) => {
+    setActiveImgIndex(index);
+    setIsBigImg(true);
+    console.log(index)
+  };
 
   const hideImg = () => {
-    setIsBigImg(false)
-  }
-  
-  const allPhotos = data.gallery.edges.map((image) => (
+    setIsBigImg(false);
+  };
+
+  const allPhotos = data.gallery.edges.map((image, index) => (
     <div
-      onClick={()=>{showImg(image.node.childImageSharp.gatsbyImageData)}} 
-      className="gallery__card" key={image.node.id}
+      onClick={() => {
+        showImg(index);
+      }}
+      className="gallery__card"
+      key={image.node.id}
     >
-      <GatsbyImage     
+      <GatsbyImage
         image={image.node.childImageSharp.gatsbyImageData}
         alt="students"
       />
     </div>
-  ))
+  ));
+
+  const allPhotosArrOfObj = data.gallery.edges.map(((image, index) => (
+    {id: index, image: image.node.childImageSharp.gatsbyImageData}
+  )))
+
+  console.log(allPhotosArrOfObj)
 
   return (
     <Layout>
@@ -37,27 +46,26 @@ function Gallery({ data }) {
       <main>
         <section className="gallery">
 
+          
+
+
           {allPhotos.slice(0, 4)}
 
-
-          {isBigImg && 
-          <div 
-            onClick={()=>{hideImg()}}
-            className="gallery__big-img">
-            <GatsbyImage
-              
-              image={activeImg}
-              alt="students"
-            />
-          </div>
- }
+          {isBigImg && (
+            <div
+              onClick={() => {
+                hideImg();
+              }}
+              className="gallery__big-img"
+            >
+              <Slider slideData={allPhotosArrOfObj} imgProp={"image"} activeImgIndex={activeImgIndex}/>
+            </div>
+          )}
         </section>
       </main>
     </Layout>
   );
 }
-
-export default Gallery;
 
 export const pageQuery = graphql`
   query {
