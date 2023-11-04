@@ -19,7 +19,7 @@ $small: 400px;
 }
 
 @mixin small {
-  @media (min-width: $small) {
+  @media (max-width: $small) {
     @content;
   }
 }

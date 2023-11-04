@@ -45,22 +45,25 @@
   }
 
   &__menu {
-    @include flexCenter;
+    @include flexCenter(column);
     top: 10vh;
     height: 60vh;
-    @include small {
-      background-color: rgb(0, 0, 0);
-      flex-direction: column;
-      position: absolute;
-      right: 0;
-      transform: translate(100%);
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    right: 0;
+    transform: translate(100%);
+
+    @include big {
+      position: static;
+      flex-direction: row;
+      transform: translate(0%);
+      height: fit-content;
     }
 
+
     &__active {
-      @include small {
         transform: translate(0%);
         width: 100%;
-      }
     }
 
     li {
@@ -80,15 +83,16 @@
   }
 
   .hamburger {
-    @include medium {
-      display: none;
-    }
 
     height: 50px;
     margin: 5px 10px;
     width: 50px;
     z-index: 5;
     cursor: pointer;
+
+    @include big {
+      display: none;
+    }
 
     div {
       background-color: $color-accent;
