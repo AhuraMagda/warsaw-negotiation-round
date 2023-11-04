@@ -475,7 +475,7 @@ section {
   padding: 30px 0px;
   max-width: 1000px;
 }
-@media (max-width: 400px) {
+@media (min-width: 400px) {
   .gallery {
     grid-template-columns: repeat(2, 1fr);
   }
