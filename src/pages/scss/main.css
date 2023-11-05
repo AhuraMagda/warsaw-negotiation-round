@@ -259,14 +259,21 @@ section {
   justify-content: center;
   padding-bottom: 70px;
 }
-@media (min-width: 600px) {
+@media (min-width: 800px) {
   .home__intro {
     flex-direction: row;
+    padding: 150px 20px;
   }
 }
 .home__intro__photo {
   width: 100%;
   height: auto;
+}
+@media (min-width: 800px) {
+  .home__intro__photo {
+    width: 50%;
+    max-width: 500px;
+  }
 }
 .home__intro__text {
   max-width: 450px;
@@ -281,7 +288,12 @@ section {
   padding: 70px 20px 30px 20px;
   font-size: 1.2rem;
 }
-.home__intro__btn {
+@media (min-width: 800px) {
+  .home__intro__text p {
+    padding: 20px 20px 20px 40px;
+  }
+}
+.home__intro__text__btn {
   background-color: #ffca29;
   color: white;
   padding: 20px;
@@ -291,10 +303,10 @@ section {
   box-shadow: -2px 3px 2px rgb(205, 204, 204);
   margin: 6px;
 }
-.home__intro__btn:hover {
+.home__intro__text__btn:hover {
   text-decoration: underline;
 }
-.home__intro__btn:active {
+.home__intro__text__btn:active {
   box-shadow: 0px 0px;
   margin: 8px 8px 4px 4px;
 }

@@ -213,12 +213,19 @@
   &__intro {
     @include flexCenter(column);
     padding-bottom: 70px;
-    @include medium {
+
+    @include big {
       flex-direction: row;
+      padding: 150px 20px;
     }
+
     &__photo {
       width: 100%;
       height: auto;
+      @include big {
+        width: 50%;
+        max-width: 500px;
+      }
     }
 
     &__text {
@@ -230,28 +237,33 @@
         max-width: 400px;
         padding: 70px 20px 30px 20px;
         font-size: 1.2rem;
+        @include big {
+          padding: 20px 20px 20px 40px;
+        }
+      }
+
+      &__btn {
+        background-color: $color-accent;
+        color: white;
+        padding: 20px;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 5px;
+        box-shadow: -2px 3px 2px rgb(205, 204, 204);
+        margin: 6px;
+  
+        &:hover {
+          text-decoration: underline;
+        }
+  
+        &:active {
+          box-shadow: 0px 0px;
+          margin: 8px 8px 4px 4px;
+        }
       }
     }
 
-    &__btn {
-      background-color: $color-accent;
-      color: white;
-      padding: 20px;
-      font-size: 1rem;
-      cursor: pointer;
-      border-radius: 5px;
-      box-shadow: -2px 3px 2px rgb(205, 204, 204);
-      margin: 6px;
-
-      &:hover {
-        text-decoration: underline;
-      }
-
-      &:active {
-        box-shadow: 0px 0px;
-        margin: 8px 8px 4px 4px;
-      }
-    }
+    
   }
 
   &__counter {

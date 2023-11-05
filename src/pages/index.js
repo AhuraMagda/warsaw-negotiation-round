@@ -46,10 +46,11 @@ export default function Home({ data }) {
               year after year unites students of top law, economics and business
               schools from around the world.
             </p>
+            <Link to="/participation">
+              <button className="home__intro__text__btn">I WANT TO PARTICIPATE</button>
+            </Link>
           </div>
-          <Link to="/participation">
-            <button className="home__intro__btn">I WANT TO PARTICIPATE</button>
-          </Link>
+
         </section>
 
         <section className="home__counter">
