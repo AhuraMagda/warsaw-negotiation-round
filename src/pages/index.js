@@ -6,11 +6,11 @@ import { graphql, Link } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { prevEditionsData } from "../../data/data";
 
-
 export default function Home({ data }) {
-  const warsawSkylinePhoto = data.warsawSkyline.childImageSharp.gatsbyImageData
-  const homepageStudentsPhoto = data.homepageStudents.childImageSharp.gatsbyImageData
-  const logoLetters = data.logoLetters.childImageSharp.gatsbyImageData
+  const warsawSkylinePhoto = data.warsawSkyline.childImageSharp.gatsbyImageData;
+  const homepageStudentsPhoto =
+    data.homepageStudents.childImageSharp.gatsbyImageData;
+  const logoLetters = data.logoLetters.childImageSharp.gatsbyImageData;
 
   return (
     <Layout page="home">
@@ -24,20 +24,14 @@ export default function Home({ data }) {
           <h2>April, 19th - 21st 2024</h2>
         </div>
         <div className="home__header__photo">
-          <GatsbyImage
-            image={warsawSkylinePhoto}
-            alt="Warsaw skyline"
-          />
+          <GatsbyImage image={warsawSkylinePhoto} alt="Warsaw skyline" />
         </div>
       </header>
 
       <main>
         <section className="home__intro">
           <div className="home__intro__photo">
-            <GatsbyImage
-              image={homepageStudentsPhoto}
-              alt="Working students"
-            />
+            <GatsbyImage image={homepageStudentsPhoto} alt="Working students" />
           </div>
 
           <div className="home__intro__text">
@@ -48,10 +42,11 @@ export default function Home({ data }) {
               schools from around the world.
             </p>
             <Link to="/participation">
-              <button className="home__intro__text__btn">I WANT TO PARTICIPATE</button>
+              <button className="home__intro__text__btn">
+                I WANT TO PARTICIPATE
+              </button>
             </Link>
           </div>
-
         </section>
 
         <section className="home__counter">
@@ -59,14 +54,14 @@ export default function Home({ data }) {
         </section>
 
         <section className="home__prev-editions">
-          
           <div className="home__prev-editions__text">
             <h2>Previous Editions</h2>
             <p>
               The first edition of the project took place in 2010 and has
               continued uninterruptedly to the present day. This year marks the
-              15th anniversary edition of the tournament. Go&nbsp;through the history
-              of the project, and see all the universities that have won the WNR.
+              15th anniversary edition of the tournament. Go&nbsp;through the
+              history of the project, and see all the universities that have won
+              the WNR.
             </p>
           </div>
           <div className="home__prev-editions__winners">
@@ -74,14 +69,12 @@ export default function Home({ data }) {
               <GatsbyImage image={logoLetters} />
             </div>
 
-            
             <Slider
               slideData={prevEditionsData}
               h3Prop="year"
               pProp="description"
             />
           </div>
-
         </section>
       </main>
     </Layout>
@@ -95,7 +88,9 @@ export const query = graphql`
         gatsbyImageData(layout: FULL_WIDTH)
       }
     }
-    homepageStudents: file(relativePath: { eq: "homepage/homepage-students.jpg" }) {
+    homepageStudents: file(
+      relativePath: { eq: "homepage/homepage-students.jpg" }
+    ) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH)
       }

@@ -4,6 +4,7 @@ import ComponentHeader from "./components/ComponentHeader";
 import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import Slider from "./components/Slider";
+import { makePhotosArray } from "./helpers/gallery-helpers/makePhotosArr";
 
 export default function Gallery({ data }) {
   const [isBigImg, setIsBigImg] = React.useState(false);
@@ -19,20 +20,6 @@ export default function Gallery({ data }) {
     setIsBigImg(false);
   };
 
-  const allPhotos = data.gallery.edges.map((image, index) => (
-    <div
-      onClick={() => {
-        showImg(index);
-      }}
-      className="gallery__card"
-      key={image.node.id}
-    >
-      <GatsbyImage
-        image={image.node.childImageSharp.gatsbyImageData}
-        alt="students"
-      />
-    </div>
-  ));
 
   const allPhotosData = data.gallery.edges.map((image, index) => ({
     id: index,
@@ -40,17 +27,7 @@ export default function Gallery({ data }) {
     key: image.node.id,
   }));
 
-  const allPhotosToDisplay = allPhotosData.map(({ id, image, key }) => (
-    <div
-      onClick={() => {
-        showImg(id);
-      }}
-      className="gallery__card"
-      key={key}
-    >
-      <GatsbyImage image={image} alt="students" />
-    </div>
-  ));
+  const allPhotosToDisplay = makePhotosArray(allPhotosData, showImg)
 
   return (
     <Layout>
