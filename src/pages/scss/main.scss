@@ -58,17 +58,20 @@
       list-style: none;
 
       a {
-      font-size: 1.5rem;
-      cursor: pointer;
-      color: $color-accent;
-      font-family: "Open Sans", sans-serif;
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: $color-accent;
+        font-family: "Open Sans", sans-serif;
+        text-decoration: none;
+        @include big {
+          font-size: 1rem;
+        }
+    
+        &:hover {
+          text-decoration: underline;
+        }
       }
-     }
-  }
+    }
 
     @include big {
       position: static;
@@ -77,15 +80,13 @@
       height: fit-content;
     }
 
-
     &__active {
-        transform: translate(0%);
-        width: 100%;
+      transform: translate(0%);
+      width: 100%;
     }
   }
-  
-  .hamburger {
 
+  .hamburger {
     height: 50px;
     margin: 5px 10px;
     width: 50px;
@@ -211,27 +212,32 @@
 
   &__intro {
     @include flexCenter(column);
-    padding: 100px 0px;
+    padding-bottom: 70px;
     @include medium {
       flex-direction: row;
     }
+    &__photo {
+      width: 100%;
+      height: auto;
+    }
 
     &__text {
-      max-width: 300px;
-      padding: 10px;
+      max-width: 450px;
       @include flexCenter(column);
 
-
       p {
-        padding-bottom: 30px;
-        text-align: center;
+        width: 100%;
+        max-width: 400px;
+        padding: 70px 20px 30px 20px;
+        font-size: 1.2rem;
       }
     }
 
     &__btn {
       background-color: $color-accent;
       color: white;
-      padding: 10px;
+      padding: 20px;
+      font-size: 1rem;
       cursor: pointer;
       border-radius: 5px;
       box-shadow: -2px 3px 2px rgb(205, 204, 204);
@@ -261,7 +267,7 @@
     }
     img {
       margin-left: 30px;
-      height: 80px;
+      height: 60px;
     }
   }
   &__prev-editions {
@@ -273,8 +279,9 @@
     }
 
     p {
-      padding: 0px 20px 20px 20px;
+      padding: 0px 20px 50px 20px;
       max-width: 400px;
+      font-size: 1.2rem;
     }
 
     .slider {

@@ -8,6 +8,9 @@ import { prevEditionsData } from "../../data/data";
 
 
 export default function Home({ data }) {
+  const warsawSkylinePhoto = data.warsawSkyline.childImageSharp.gatsbyImageData
+  const homepageStudentsPhoto = data.homepageStudents.childImageSharp.gatsbyImageData
+
   return (
     <Layout page="home">
       <header className="home__header">
@@ -21,14 +24,21 @@ export default function Home({ data }) {
         </div>
         <div className="home__header__photo">
           <GatsbyImage
-            image={data.file.childImageSharp.gatsbyImageData}
-            alt="warsaw skyline"
+            image={warsawSkylinePhoto}
+            alt="Warsaw skyline"
           />
         </div>
       </header>
 
       <main>
         <section className="home__intro">
+          <div className="home__intro__photo">
+            <GatsbyImage
+              image={homepageStudentsPhoto}
+              alt="Working students"
+            />
+          </div>
+
           <div className="home__intro__text">
             <p>
               Warsaw Negotiation Round 2024 is the 15th edition of one of the
@@ -67,7 +77,12 @@ export default function Home({ data }) {
 
 export const query = graphql`
   query Layout {
-    file(relativePath: { eq: "warszawa2.png" }) {
+    warsawSkyline: file(relativePath: { eq: "homepage/warszawa2.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH)
+      }
+    }
+    homepageStudents: file(relativePath: { eq: "homepage/homepage-students.jpg" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH)
       }
