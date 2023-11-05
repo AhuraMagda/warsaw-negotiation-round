@@ -205,10 +205,10 @@ section {
   width: 100%;
   overflow-x: hidden;
   position: relative;
-  align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  padding-top: 15vh;
 }
 .home__header__text {
   align-items: center;
@@ -217,14 +217,15 @@ section {
   justify-content: center;
 }
 .home__header h1 {
-  font-weight: 600;
+  font-weight: 700;
+  font-size: clamp(2rem, 10vw, 4rem);
   text-align: center;
   padding-bottom: 2rem;
 }
 .home__header h2 {
   background-color: black;
   color: #ffca29;
-  font-size: 1rem;
+  font-size: clamp(1rem, 5vw, 2rem);
   font-weight: 400;
   width: -moz-fit-content;
   width: fit-content;

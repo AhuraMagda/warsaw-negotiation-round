@@ -24,7 +24,7 @@ function Slider({ slideData, h3Prop, pProp, imgProp, activeImgIndex }) {
 
   React.useEffect(() => {
     setActiveSlide(activeImgIndex ? activeImgIndex : 0);
-  }, []);
+  }, [activeImgIndex]);
 
   return (
     <div className="slider">

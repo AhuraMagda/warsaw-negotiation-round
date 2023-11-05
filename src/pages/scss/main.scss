@@ -168,13 +168,17 @@
     width: 100%;
     overflow-x: hidden;
     position: relative;
-    @include flexCenter(column);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15vh;
 
     &__text {
       @include flexCenter(column);
     }
     h1 {
-      font-weight: 600;
+      font-weight: 700;
+      font-size: clamp(2rem, 10vw, 4rem);
       text-align: center;
       padding-bottom: 2rem;
     }
@@ -182,7 +186,7 @@
     h2 {
       background-color: black;
       color: $color-accent;
-      font-size: 1rem;
+      font-size: clamp(1rem, 5vw, 2rem);
       font-weight: 400;
       width: fit-content;
       padding: 2px 5px;
