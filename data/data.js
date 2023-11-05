@@ -1,5 +1,5 @@
 // Previous editions winners
-const prevEditionsDataRaw = [{
+const prevEditionsData = [{
     year: "2010",
     description: "HHL Leipzig, Germany"
 },
@@ -58,9 +58,6 @@ const prevEditionsDataRaw = [{
 
 ];
 
-const prevEditionsData = prevEditionsDataRaw.map(edition => {
-    return {...edition, year: `\uD83C\uDFC6 ${edition.year} \uD83C\uDFC6`}
-})
 
 // Steps how to participate
 const participationData = [{

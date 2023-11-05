@@ -10,6 +10,7 @@ import { prevEditionsData } from "../../data/data";
 export default function Home({ data }) {
   const warsawSkylinePhoto = data.warsawSkyline.childImageSharp.gatsbyImageData
   const homepageStudentsPhoto = data.homepageStudents.childImageSharp.gatsbyImageData
+  const logoLetters = data.logoLetters.childImageSharp.gatsbyImageData
 
   return (
     <Layout page="home">
@@ -68,12 +69,19 @@ export default function Home({ data }) {
               of the project, and see all the universities that have won the WNR.
             </p>
           </div>
+          <div className="home__prev-editions__winners">
+            <div className="home__prev-editions__winners__img">
+              <GatsbyImage image={logoLetters} />
+            </div>
 
-          <Slider
-            slideData={prevEditionsData}
-            h3Prop="year"
-            pProp="description"
-          />
+            
+            <Slider
+              slideData={prevEditionsData}
+              h3Prop="year"
+              pProp="description"
+            />
+          </div>
+
         </section>
       </main>
     </Layout>
@@ -88,6 +96,11 @@ export const query = graphql`
       }
     }
     homepageStudents: file(relativePath: { eq: "homepage/homepage-students.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH)
+      }
+    }
+    logoLetters: file(relativePath: { eq: "homepage/logo-letters.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH)
       }
