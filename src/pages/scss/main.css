@@ -452,6 +452,7 @@ section {
   border-radius: 50%;
   font-size: 2rem;
   margin: 0px 10px;
+  cursor: pointer;
 }
 .participation .slider {
   background-color: white;
@@ -474,10 +475,9 @@ section {
 .gallery {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   height: -moz-fit-content;
   height: fit-content;
-  max-width: 1000px;
   padding: 30px 0px;
   position: relative;
   width: 90vw;
@@ -494,7 +494,7 @@ section {
 }
 @media (min-width: 800px) {
   .gallery {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 .gallery__card {

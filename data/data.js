@@ -86,9 +86,4 @@ const participationData = [{
 ]
 
 
-// images to the gallery
-
-
-
-
 export { prevEditionsData, participationData};

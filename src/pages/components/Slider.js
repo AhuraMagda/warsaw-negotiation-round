@@ -23,13 +23,18 @@ function Slider({ slideData, h3Prop, pProp, imgProp, activeImgIndex }) {
   };
 
   React.useEffect(() => {
-    setActiveSlide(activeImgIndex);
+    setActiveSlide(activeImgIndex ? activeImgIndex : 0);
   }, []);
 
   return (
     <div className="slider">
       {slideData && (
         <div className="slider__slide">
+
+
+
+
+
           {imgProp && (
             <div className="slider__slide__img">
               <GatsbyImage
@@ -39,13 +44,20 @@ function Slider({ slideData, h3Prop, pProp, imgProp, activeImgIndex }) {
             </div>
           )}
 
+
+
+
+
           {h3Prop && (
             <h3 className="slider__slide__h3">
               {slideData[activeSlide][h3Prop]}
             </h3>
           )}
 
+
           {pProp && <p>{slideData[activeSlide][pProp]}</p>}
+
+
         </div>
       )}
       <img

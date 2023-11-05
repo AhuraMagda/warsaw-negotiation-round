@@ -57,7 +57,7 @@ export default function Gallery({ data }) {
       <ComponentHeader>GALLERY</ComponentHeader>
       <main>
         <section className="gallery">
-          {allPhotosToDisplay.slice(0, 4)}
+          {allPhotosToDisplay}
 
           {isBigImg && (
             <div

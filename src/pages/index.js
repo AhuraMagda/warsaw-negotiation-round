@@ -6,6 +6,7 @@ import { graphql, Link } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { prevEditionsData } from "../../data/data";
 
+
 export default function Home({ data }) {
   return (
     <Layout page="home">
@@ -16,7 +17,7 @@ export default function Home({ data }) {
             NEGOTIATION <br />
             ROUND
           </h1>
-          <h2>April 15th - 21st 2023</h2>
+          <h2>April, 19th - 21st 2024</h2>
         </div>
         <div className="home__header__photo">
           <GatsbyImage
@@ -50,7 +51,7 @@ export default function Home({ data }) {
           <p>
             The first edition of the project took place in 2010 and has
             continued uninterruptedly to the present day. This year marks the
-            15th anniversary edition of the tournament. Go through the history
+            15th anniversary edition of the tournament. Go&nbsp;through the history
             of the project, and see all the universities that have won the WNR.
           </p>
           <Slider

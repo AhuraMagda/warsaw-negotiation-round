@@ -24,7 +24,7 @@ function Counter() {
   return (
     <div className="home__counter__container">
       <div>
-        <h3>TOURNAMENT IN... </h3>
+        <h3>TOURNAMENT BEGINS IN... </h3>
         <p>
           {`${days}\u00A0day${days === 1 ? "" : "s"}, 
                     ${hours}\u00A0hour${hours === 1 ? "" : "s"},
