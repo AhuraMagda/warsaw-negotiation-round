@@ -98,6 +98,20 @@ section {
   right: 0;
   transform: translate(100%);
 }
+.nav__menu li {
+  padding: 20px;
+  list-style: none;
+}
+.nav__menu li a {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #ffca29;
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+}
+.nav__menu li a:hover {
+  text-decoration: underline;
+}
 @media (min-width: 800px) {
   .nav__menu {
     position: static;
@@ -110,19 +124,6 @@ section {
 .nav__menu__active {
   transform: translate(0%);
   width: 100%;
-}
-.nav__menu li {
-  list-style: none;
-  padding: 5px 10px;
-}
-.nav__menu li a {
-  cursor: pointer;
-  color: #ffca29;
-  font-family: "Open Sans", sans-serif;
-  text-decoration: none;
-}
-.nav__menu li a:hover {
-  text-decoration: underline;
 }
 .nav .hamburger {
   height: 50px;
