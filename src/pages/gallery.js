@@ -2,9 +2,9 @@ import React from "react";
 import Layout from "./components/Layout";
 import ComponentHeader from "./components/ComponentHeader";
 import { graphql } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
 import Slider from "./components/Slider";
 import { makePhotosArray } from "./helpers/gallery-helpers/makePhotosArr";
+import { makeArrOfObj } from "./helpers/gallery-helpers/makeArrOfObj";
 
 export default function Gallery({ data }) {
   const [isBigImg, setIsBigImg] = React.useState(false);
@@ -20,14 +20,9 @@ export default function Gallery({ data }) {
     setIsBigImg(false);
   };
 
+  const allPhotosData = makeArrOfObj(data);
 
-  const allPhotosData = data.gallery.edges.map((image, index) => ({
-    id: index,
-    image: image.node.childImageSharp.gatsbyImageData,
-    key: image.node.id,
-  }));
-
-  const allPhotosToDisplay = makePhotosArray(allPhotosData, showImg)
+  const allPhotosToDisplay = makePhotosArray(allPhotosData, showImg);
 
   return (
     <Layout>
