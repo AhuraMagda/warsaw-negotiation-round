@@ -282,24 +282,35 @@
       height: 60px;
     }
   }
-  &__prev-editions {
-    padding: 50px 0px;
-    min-height: 400px;
 
-    h2 {
-      padding: 20px;
+
+  &__prev-editions {
+    @include flexCenter(column);
+    @include big {
+      flex-direction: row;
+      padding: 150px 20px;
     }
 
-    p {
-      padding: 0px 20px 50px 20px;
+    &__text {
       max-width: 400px;
-      font-size: 1.2rem;
+      padding: 0px 20px 50px 20px;
+      h2 {
+        padding-bottom: 20px;
+      }
+  
+      p {
+        font-size: 1.2rem;
+      }
     }
 
     .slider {
       background-color: rgb(240, 240, 240);
       border-radius: 10px;
       min-height: 200px;
+      @include big {
+        width: 100%;
+        max-width: 500px;
+      }
 
       h3 {
         padding-bottom: 15px;

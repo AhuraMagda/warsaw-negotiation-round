@@ -58,13 +58,17 @@ export default function Home({ data }) {
         </section>
 
         <section className="home__prev-editions">
-          <h2>Previous Editions</h2>
-          <p>
-            The first edition of the project took place in 2010 and has
-            continued uninterruptedly to the present day. This year marks the
-            15th anniversary edition of the tournament. Go&nbsp;through the history
-            of the project, and see all the universities that have won the WNR.
-          </p>
+          
+          <div className="home__prev-editions__text">
+            <h2>Previous Editions</h2>
+            <p>
+              The first edition of the project took place in 2010 and has
+              continued uninterruptedly to the present day. This year marks the
+              15th anniversary edition of the tournament. Go&nbsp;through the history
+              of the project, and see all the universities that have won the WNR.
+            </p>
+          </div>
+
           <Slider
             slideData={prevEditionsData}
             h3Prop="year"

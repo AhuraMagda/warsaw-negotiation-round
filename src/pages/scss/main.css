@@ -328,21 +328,37 @@ section {
   height: 60px;
 }
 .home__prev-editions {
-  padding: 50px 0px;
-  min-height: 400px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.home__prev-editions h2 {
-  padding: 20px;
+@media (min-width: 800px) {
+  .home__prev-editions {
+    flex-direction: row;
+    padding: 150px 20px;
+  }
 }
-.home__prev-editions p {
-  padding: 0px 20px 50px 20px;
+.home__prev-editions__text {
   max-width: 400px;
+  padding: 0px 20px 50px 20px;
+}
+.home__prev-editions__text h2 {
+  padding-bottom: 20px;
+}
+.home__prev-editions__text p {
   font-size: 1.2rem;
 }
 .home__prev-editions .slider {
   background-color: rgb(240, 240, 240);
   border-radius: 10px;
   min-height: 200px;
+}
+@media (min-width: 800px) {
+  .home__prev-editions .slider {
+    width: 100%;
+    max-width: 500px;
+  }
 }
 .home__prev-editions .slider h3 {
   padding-bottom: 15px;
