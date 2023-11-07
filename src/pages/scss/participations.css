@@ -1,0 +1,131 @@
+/* Global */
+* {
+  border: none;
+  box-sizing: border-box;
+  color: black;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background-color: #ffca29;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  padding: 10px;
+}
+
+.site-wrapper {
+  min-height: 100vh;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content-wrapper {
+  margin-top: 10vh;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.participation {
+  margin: 50px 0px;
+  width: 100%;
+  max-width: 1200px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.participation__steps__container {
+  margin: 50px 0px;
+  max-width: 900px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.participation__steps__container__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 0px;
+}
+.participation__steps__container__buttons button {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  font-size: 2rem;
+  margin: 0px 10px;
+  cursor: pointer;
+}
+.participation__steps__container__buttons .active-step__button {
+  background-color: black;
+  color: white;
+}
+.participation__steps__container__buttons .active-step__text {
+  display: block;
+  color: red;
+}
+.participation__steps__container__description {
+  width: 100%;
+  font-size: 1.8rem;
+  align-self: start;
+}
+.participation__steps__container .slider {
+  background-color: white;
+}
+.participation__steps__container .slider__slide__h3 {
+  background-color: #ffca29;
+  padding: 20px 30px;
+  border-radius: 50%;
+}
+
+.participation__tables {
+  width: 100%;
+  max-width: 900px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 50px 0px;
+  padding: 30px 10px;
+}
+.participation__tables a {
+  background-color: white;
+  margin: 10px 0px;
+  width: 80%;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+.participation__tables h2 {
+  padding: 10px 0px;
+}
+.participation__tables__scenarios {
+  background-color: #ffca29;
+}
+.participation__tables__form {
+  background-color: black;
+}
+.participation__tables__form h2 {
+  color: white;
+  text-align: center;
+}
+.participation__tables__form p {
+  color: white;
+}
+.participation__tables__form a {
+  color: black;
+}/*# sourceMappingURL=participations.css.map */

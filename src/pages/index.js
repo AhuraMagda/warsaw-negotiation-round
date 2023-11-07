@@ -13,6 +13,7 @@ export default function Home({ data }) {
   const logoLetters = data.logoLetters.childImageSharp.gatsbyImageData;
 
   return (
+    //TODO divide components
     <Layout page="home">
       <header className="home__header">
         <div className="home__header__text">

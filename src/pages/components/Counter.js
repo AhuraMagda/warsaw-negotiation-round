@@ -2,6 +2,7 @@ import React from "react";
 import iconCalendar from "../../images/icons/icon-calendar.png";
 
 function Counter() {
+  //TODO make helpers
   const [currentdate, setCurrentDate] = React.useState(new Date());
   const eventDate = new Date("2024-04-19T17:00:00");
 

@@ -62,23 +62,23 @@ const prevEditionsData = [{
 // Steps how to participate
 const participationData = [{
     step: 1,
-    description: "Step 1 - Gather a team of three, consisting of at least 2 people from the same university."
+    description: "Gather a team of three, consisting of at least 2 people from the same university."
 },
 {
     step: 2,
-    description: 'Step 2 - Prepare a CVs from each team member and cover letter.'
+    description: 'Prepare a CVs from each team member and cover letter.'
 },
 {
     step: 3,
-    description: 'Step 3 - Fill out the participation survey. Available in January, stay tuned.'
+    description: 'Fill out the participation survey. Available in January, stay tuned.'
 },
 {
     step: 4,
-    description: 'Step 4 - Wait for the results. If the team is qualified book your flights and apply for a visa (if needed).'
+    description: 'Wait for the results. If the team is qualified book your flights and apply for a visa (if needed).'
 },
 {
     step: 5,
-    description: 'Step 5 - See you in Warsaw on April 19-21, 2024 during the final of the Warsaw Negotiation Round.'
+    description: 'See you in Warsaw on April 19-21, 2024 during the final of the Warsaw Negotiation Round.'
 }
 ]
 
