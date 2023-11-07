@@ -5,6 +5,7 @@ import { graphql } from "gatsby";
 import { makePhotosArray } from "../components/gallery/helpers/makePhotosArr";
 import { makeArrOfObj } from "../components/gallery/helpers/makeArrOfObj";
 import ShowGalleryImg from "../components/gallery/ShowGalleryImg";
+import "../scss/gallery.css"
 
 export default function Gallery({ data }) {
   const [isBigImg, setIsBigImg] = React.useState(false);
@@ -29,7 +30,7 @@ export default function Gallery({ data }) {
       <ComponentHeader>GALLERY</ComponentHeader>
       <main>
         <section className="gallery">
-          {allPhotosToDisplay}
+          {allPhotosToDisplay.slice(0, 8)}
 
           {isBigImg && (
             <ShowGalleryImg

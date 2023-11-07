@@ -13,11 +13,14 @@ export default function ShowGalleryImg({
       }}
       className="gallery__big-img"
     >
-      <Slider
-        slideData={allPhotosData}
-        imgProp={"image"}
-        activeImgIndex={activeImgIndex}
-      />
+    <div className="">
+        <Slider
+            slideData={allPhotosData}
+            imgProp={"image"}
+            activeImgIndex={activeImgIndex}
+        />
+    </div>
+
     </div>
   );
 }

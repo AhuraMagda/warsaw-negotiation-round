@@ -469,51 +469,6 @@
   }
 }
 
-//  GALLERY PAGE
-.gallery {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(2, 1fr);
-  height: fit-content;
-  // max-width: 2000px;
-  padding: 30px 0px;
-  position: relative;
-  width: 90vw;
-
-  @include small {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @include medium {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  @include big {
-    grid-template-columns: repeat(6, 1fr);
-  }
-
-  &__card {
-    aspect-ratio: 1;
-    width: auto;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    & > div {
-      position: static;
-    }
-  }
-  &__big-img {
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    height: 300px;
-    width: 300px;
-  }
-}
 
 // ABOUT US PAGE
 
