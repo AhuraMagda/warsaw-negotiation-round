@@ -1,7 +1,7 @@
 import * as React from "react";
 import Layout from "../components/Layout";
 import Slider from "../components/Slider";
-import Counter from "../components/Counter";
+import Counter from "../components/counter/Counter";
 import { graphql, Link } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { prevEditionsData } from "../../data/data";
