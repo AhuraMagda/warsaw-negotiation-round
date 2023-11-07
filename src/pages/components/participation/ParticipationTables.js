@@ -29,7 +29,16 @@ export default function ParticipationTables() {
         </Link>
       </div>
 
-      <div className="participation__tables participation__tables__terms">
+      <div className="participation__tables participation__tables__form">
+        <h2>PARTICIPATION FORM</h2>
+        <Link>
+          <span>
+            <p>download form</p>
+          </span>
+        </Link>
+      </div>
+
+      <div className="participation__tables participation__tables__scenarios">
         <h2>TERMS AND CONDITIONS</h2>
         <Link>
           <span>

@@ -41,6 +41,7 @@ section {
 }
 
 .participation {
+  margin: 50px 0px;
   width: 100%;
   max-width: 1200px;
   align-items: center;
@@ -108,15 +109,15 @@ section {
 .participation__tables__scenarios {
   background-color: #ffca29;
 }
-.participation__tables__terms {
+.participation__tables__form {
   background-color: black;
 }
-.participation__tables__terms h2 {
+.participation__tables__form h2 {
   color: white;
 }
-.participation__tables__terms p {
+.participation__tables__form p {
   color: white;
 }
-.participation__tables__terms a p {
+.participation__tables__form a p {
   color: black;
 }/*# sourceMappingURL=participations.css.map */
