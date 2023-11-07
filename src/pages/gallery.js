@@ -2,12 +2,13 @@ import React from "react";
 import Layout from "../components/Layout";
 import ComponentHeader from "../components/ComponentHeader";
 import { graphql } from "gatsby";
-import Slider from "../components/Slider";
 import { makePhotosArray } from "../components/gallery/helpers/makePhotosArr";
 import { makeArrOfObj } from "../components/gallery/helpers/makeArrOfObj";
+import ShowGalleryImg from "../components/gallery/ShowGalleryImg";
 
 export default function Gallery({ data }) {
   const [isBigImg, setIsBigImg] = React.useState(false);
+
   const [activeImgIndex, setActiveImgIndex] = React.useState(0);
 
   const showImg = (index) => {
@@ -31,18 +32,11 @@ export default function Gallery({ data }) {
           {allPhotosToDisplay}
 
           {isBigImg && (
-            <div
-              onClick={() => {
-                hideImg();
-              }}
-              className="gallery__big-img"
-            >
-              <Slider
-                slideData={allPhotosData}
-                imgProp={"image"}
-                activeImgIndex={activeImgIndex}
-              />
-            </div>
+            <ShowGalleryImg
+              activeImgIndex={activeImgIndex}
+              allPhotosData={allPhotosData}
+              hideImg={hideImg}
+            />
           )}
         </section>
       </main>
