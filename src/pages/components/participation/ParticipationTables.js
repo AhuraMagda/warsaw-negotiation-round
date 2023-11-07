@@ -5,7 +5,7 @@ export default function ParticipationTables() {
   return (
     <>
       <div className="participation__tables participation__tables__scenarios">
-        <h2>Scenarios</h2>
+        <h2>SCENARIOS</h2>
         <p>Previous scenarios</p>
         <Link>
           <span>
