@@ -1,10 +1,10 @@
 import React from "react";
-import Layout from "./components/Layout";
-import ComponentHeader from "./components/ComponentHeader";
+import Layout from "../components/Layout";
+import ComponentHeader from "../components/ComponentHeader";
 import { graphql } from "gatsby";
-import Slider from "./components/Slider";
-import { makePhotosArray } from "./helpers/gallery-helpers/makePhotosArr";
-import { makeArrOfObj } from "./helpers/gallery-helpers/makeArrOfObj";
+import Slider from "../components/Slider";
+import { makePhotosArray } from "../components/gallery/helpers/makePhotosArr";
+import { makeArrOfObj } from "../components/gallery/helpers/makeArrOfObj";
 
 export default function Gallery({ data }) {
   const [isBigImg, setIsBigImg] = React.useState(false);

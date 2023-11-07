@@ -1,12 +1,11 @@
 import React from "react";
-import Layout from "./components/Layout";
+import Layout from "../components/Layout";
 import examplePhoto from "../images/squirrel.jpg";
 import img1 from "../images/about-us-images/aboutus-students.jpg";
 import img2 from "../images/about-us-images/aboutus-negocjator.png";
 import img3 from "../images/about-us-images/aboutus-participants.jpg";
 import img4 from "../images/about-us-images/aboutus-venues.jpg";
-
-import ComponentHeader from "./components/ComponentHeader";
+import ComponentHeader from "../components/ComponentHeader";
 
 function Aboutus() {
   return (

@@ -1,6 +1,6 @@
 import { Link } from "gatsby";
 import React from "react";
-import logo from "../../images/logo-white.png";
+import logo from "../images/logo-white.png";
 
 function NavBar() {
   const [clicked, setClicked] = React.useState("");
