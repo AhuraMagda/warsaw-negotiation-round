@@ -1,14 +1,16 @@
 import React from "react";
 import Layout from "../components/Layout";
 import ComponentHeader from "../components/ComponentHeader";
-import { graphql } from "gatsby";
-import { makePhotosArray } from "../components/gallery/helpers/makePhotosArr";
-import { makeArrOfObj } from "../components/gallery/helpers/makeArrOfObj";
+import DisplayedPhotos from "../components/gallery/DisplayedPhotos";
 import ShowGalleryImg from "../components/gallery/ShowGalleryImg";
 import "../scss/gallery.css"
+import { graphql } from "gatsby";
+import { makeArrOfObj } from "../components/gallery/helpers/makeArrOfObj";
 
-export default function Gallery({ data }) {
+
+export default function Gallery({data}) {
   const [isBigImg, setIsBigImg] = React.useState(false);
+  const allPhotosData = makeArrOfObj(data);
 
   const [activeImgIndex, setActiveImgIndex] = React.useState(0);
 
@@ -21,17 +23,14 @@ export default function Gallery({ data }) {
     setIsBigImg(false);
   };
 
-  const allPhotosData = makeArrOfObj(data);
-
-  const allPhotosToDisplay = makePhotosArray(allPhotosData, showImg);
 
   return (
     <Layout>
       <ComponentHeader>GALLERY</ComponentHeader>
       <main>
         <section className="gallery">
-          {allPhotosToDisplay.slice(0, 8)}
-
+          <DisplayedPhotos showImg={showImg} allPhotosData={allPhotosData} />
+{/* TODO nice images slider */}
           {isBigImg && (
             <ShowGalleryImg
               activeImgIndex={activeImgIndex}
@@ -44,6 +43,7 @@ export default function Gallery({ data }) {
     </Layout>
   );
 }
+
 
 export const pageQuery = graphql`
   query {
