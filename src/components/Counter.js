@@ -1,5 +1,5 @@
 import React from "react";
-import iconCalendar from "../../images/icons/icon-calendar.png";
+import iconCalendar from "../images/icons/icon-calendar.png";
 
 function Counter() {
   //TODO make helpers

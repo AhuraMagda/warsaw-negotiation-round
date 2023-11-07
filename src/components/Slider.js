@@ -1,6 +1,6 @@
 import React from "react";
-import rightArrow from "../../images/icons/icon-slider-arrow-right.png";
-import leftArrow from "../../images/icons/icon-slider-arrow-left.png";
+import rightArrow from "../images/icons/icon-slider-arrow-right.png";
+import leftArrow from "../images/icons/icon-slider-arrow-left.png";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 function Slider({ slideData, h3Prop, pProp, imgProp, activeImgIndex }) {

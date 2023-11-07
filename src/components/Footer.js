@@ -1,7 +1,7 @@
 import React from "react";
-import iconFacebook from "../../images/icons/icon-facebook.png";
-import iconInstagram from "../../images/icons/icon-instagram.png";
-import iconLinkedin from "../../images/icons/icon-linkedin.png";
+import iconFacebook from "../images/icons/icon-facebook.png";
+import iconInstagram from "../images/icons/icon-instagram.png";
+import iconLinkedin from "../images/icons/icon-linkedin.png";
 
 //TODO make helper and import date
 const copyrightDate = `© ${new Date().getFullYear()} Warsaw Negotiation Round`;
