@@ -500,37 +500,6 @@ section {
   width: 100%;
 }
 
-.participation .participation__steps {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 50px 0px;
-}
-.participation .participation__steps__button {
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-  font-size: 2rem;
-  margin: 0px 10px;
-  cursor: pointer;
-}
-.participation .slider {
-  background-color: white;
-}
-.participation .slider__slide__h3 {
-  background-color: #ffca29;
-  padding: 20px 30px;
-  border-radius: 50%;
-}
-
-.active-step__button {
-  background-color: black;
-  color: white;
-}
-.active-step__text {
-  display: block;
-  color: red;
-}
-
 .gallery {
   display: grid;
   grid-gap: 10px;

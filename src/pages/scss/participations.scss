@@ -1,0 +1,56 @@
+// PARTICIPATION PAGE
+@import "./config";
+
+.participation {
+  #{&}__steps {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0px;
+
+    &__button {
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      font-size: 2rem;
+      margin: 0px 10px;
+      cursor: pointer;
+    }
+  }
+
+  .slider {
+    background-color: white;
+
+    &__slide__h3 {
+      background-color: $color-accent;
+      padding: 20px 30px;
+      border-radius: 50%;
+    }
+  }
+}
+
+// PARTICIPATION PAGE - big screen steps
+.active-step {
+  &__button {
+    background-color: black;
+    color: white;
+  }
+  &__text {
+    display: block;
+    color: red;
+  }
+}
+
+.scenarios {
+  background-color: $color-accent;
+  width: 100%;
+  max-width: 800px;
+  @include flexCenter(column);
+  margin: 100px 0px;
+  padding: 30px 10px;
+
+  a {
+    background-color: white;
+    margin: 10px 0px;
+    width: 80%;
+  }
+}

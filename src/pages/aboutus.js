@@ -8,7 +8,7 @@ import img4 from "../images/about-us-images/aboutus-venues.jpg";
 
 import ComponentHeader from "./components/ComponentHeader";
 
-function Aboutus(props) {
+function Aboutus() {
   return (
     <Layout>
       <ComponentHeader>

@@ -1,0 +1,89 @@
+/* Global */
+* {
+  border: none;
+  box-sizing: border-box;
+  color: black;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background-color: #ffca29;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  padding: 10px;
+}
+
+.site-wrapper {
+  min-height: 100vh;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content-wrapper {
+  margin-top: 10vh;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.participation .participation__steps {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 0px;
+}
+.participation .participation__steps__button {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  font-size: 2rem;
+  margin: 0px 10px;
+  cursor: pointer;
+}
+.participation .slider {
+  background-color: white;
+}
+.participation .slider__slide__h3 {
+  background-color: #ffca29;
+  padding: 20px 30px;
+  border-radius: 50%;
+}
+
+.active-step__button {
+  background-color: black;
+  color: white;
+}
+.active-step__text {
+  display: block;
+  color: red;
+}
+
+.scenarios {
+  background-color: #ffca29;
+  width: 100%;
+  max-width: 800px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 100px 0px;
+  padding: 30px 10px;
+}
+.scenarios a {
+  background-color: white;
+  margin: 10px 0px;
+  width: 80%;
+}/*# sourceMappingURL=participations.css.map */

@@ -13,7 +13,6 @@ export default function Gallery({ data }) {
   const showImg = (index) => {
     setActiveImgIndex(index);
     setIsBigImg(true);
-    console.log(index);
   };
 
   const hideImg = () => {

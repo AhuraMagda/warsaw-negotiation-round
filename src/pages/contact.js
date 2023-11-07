@@ -3,7 +3,7 @@ import Layout from "./components/Layout";
 import ContactForm from "./components/ContactForm";
 import ComponentHeader from "./components/ComponentHeader";
 
-function Contact(props) {
+function Contact() {
   return (
     <Layout>
       <ComponentHeader>CONTACT</ComponentHeader>

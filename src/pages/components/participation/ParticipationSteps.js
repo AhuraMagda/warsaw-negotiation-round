@@ -1,12 +1,9 @@
-
 import React from "react";
-import Slider from "../Slider"
+import Slider from "../Slider";
 import { useMediaQuery } from "react-responsive";
 import { participationData } from "../../../../data/data";
 import { makeStepsButtons } from "./helpers/makeStepsButtons";
 import { makeStepDescription } from "./helpers/makeStepsDescription";
-
-
 
 export default function ParticipationSteps() {
   const isSmallScreen = useMediaQuery({ maxWidth: 767 });
@@ -18,7 +15,7 @@ export default function ParticipationSteps() {
     setActiveStep(step);
   };
 
-  const buttonsToDisplay = makeStepsButtons(changeStep, activeStep)
+  const buttonsToDisplay = makeStepsButtons(changeStep, activeStep);
   const stepsDesc = makeStepDescription(participationData);
 
   return (
