@@ -28,5 +28,9 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "engines": {
+    "node": "v18.17.1",
+    "npm": "9.5.1"
   }
 }
