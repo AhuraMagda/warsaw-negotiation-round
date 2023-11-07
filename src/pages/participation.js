@@ -4,33 +4,21 @@ import Slider from "./components/Slider";
 import { participationData } from "../../data/data";
 import { useMediaQuery } from "react-responsive";
 import ComponentHeader from "./components/ComponentHeader";
+import { makeStepsButtons } from "./helpers/participation-helpers/makeStepsButtons";
+import { makeStepDescription } from "./helpers/participation-helpers/makeStepsDescription";
 
 function Participation() {
   const isSmallScreen = useMediaQuery({ maxWidth: 767 });
   const isMediumScreen = useMediaQuery({ minWidth: 768 });
 
-  const steps = [1, 2, 3, 4, 5];
-
-  const stepsDesc = participationData.map((step) => step.description);
-
   const [activeStep, setActiveStep] = React.useState(1);
+
   const changeStep = (step) => {
     setActiveStep(step);
   };
 
-  const buttons = steps.map((step) => {
-    return (
-      <button
-        key={step}
-        onClick={() => changeStep(step)}
-        className={`participation__steps__button ${
-          activeStep === step ? "active-step__button" : ""
-        }`}
-      >
-        {step}
-      </button>
-    );
-  });
+  const buttonsToDisplay = makeStepsButtons(changeStep, activeStep)
+  const stepsDesc = makeStepDescription(participationData);
 
   return (
     <Layout>
@@ -47,7 +35,7 @@ function Participation() {
 
           {isMediumScreen && (
             <>
-              <div className="participation__steps">{buttons}</div>
+              <div className="participation__steps">{buttonsToDisplay}</div>
               <div className="participation__scenarios">
                 <p>{stepsDesc[activeStep - 1]}</p>
               </div>
