@@ -15,7 +15,7 @@ function Contact() {
             you may have. Simply fill in the form, or select the department you
             would like to contact and write an e-mail.
           </p>
-          <ContactForm />
+          {/* <ContactForm /> */}
           <div className="contact__info">
             <p>
               <b>OUR DEPARTMENTS:</b>

@@ -6,46 +6,32 @@ export default function ParticipationTables() {
     <>
       <div className="participation__tables participation__tables__scenarios">
         <h2>SCENARIOS</h2>
-        <p>Previous scenarios</p>
         <Link>
-          <span>
-            <p>SOME SCENARIO</p>
-          </span>
+          SOME SCENARIO
         </Link>
         <Link>
-          <span>
-            <p>SOME SCENARIO</p>
-          </span>
+          SOME SCENARIO
         </Link>
         <Link>
-          <span>
-            <p>SOME SCENARIO</p>
-          </span>
+          SOME SCENARIO
         </Link>
         <Link>
-          <span>
-            <p>SOME SCENARIO</p>
-          </span>
+          SOME SCENARIO
         </Link>
       </div>
 
       <div className="participation__tables participation__tables__form">
         <h2>PARTICIPATION FORM</h2>
         <Link>
-          <span>
-            <p>download form</p>
-          </span>
+          download form
         </Link>
       </div>
 
       <div className="participation__tables participation__tables__scenarios">
         <h2>TERMS AND CONDITIONS</h2>
         <Link>
-          <span>
-            <p>download terms and conditions</p>
-          </span>
+          download terms and conditions
         </Link>
-
       </div>
     </>
   );
