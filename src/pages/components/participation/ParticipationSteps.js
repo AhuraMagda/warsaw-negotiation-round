@@ -19,7 +19,7 @@ export default function ParticipationSteps() {
   const stepsDesc = makeStepDescription(participationData);
 
   return (
-    <>
+    <div className="participation__steps__container">
       {isSmallScreen && (
         <Slider
           slideData={participationData}
@@ -30,12 +30,12 @@ export default function ParticipationSteps() {
 
       {isMediumScreen && (
         <>
-          <div className="participation__steps">{buttonsToDisplay}</div>
-          <div className="participation__scenarios">
+          <div className="participation__steps__container__buttons">{buttonsToDisplay}</div>
+          <div className="participation__steps__container__description">
             <p>{stepsDesc[activeStep - 1]}</p>
           </div>
         </>
       )}
-    </>
+    </div>
   );
 }

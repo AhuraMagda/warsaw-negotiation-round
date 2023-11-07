@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "./components/Layout";
 import ComponentHeader from "./components/ComponentHeader";
 import ParticipationSteps from "./components/participation/ParticipationSteps";
-import ParticipationScenarios from "./components/participation/ParticipationScenarios";
+import ParticipationTables from "./components/participation/ParticipationTables";
 import "./scss/participations.css";
 
 function Participation() {
@@ -11,7 +11,7 @@ function Participation() {
       <ComponentHeader>HOW TO PARTICIPATE</ComponentHeader>
       <main className="participation">
         <ParticipationSteps />
-        <ParticipationScenarios />
+        <ParticipationTables />
       </main>
     </Layout>
   );

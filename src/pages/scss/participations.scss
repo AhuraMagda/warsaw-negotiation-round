@@ -2,24 +2,37 @@
 @import "./config";
 
 .participation {
-  #{&}__steps {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 50px 0px;
+  width: 100%;
+  max-width: 1200px;
+  @include flexCenter(column);
 
-    &__button {
-      height: 100px;
-      width: 100px;
-      border-radius: 50%;
-      font-size: 2rem;
-      margin: 0px 10px;
-      cursor: pointer;
+  &__steps__container {
+    margin: 50px 0px;
+    max-width: 800px;
+    @include flexCenter(column);
+
+    &__buttons {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 50px 0px;
+  
+      button {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        font-size: 2rem;
+        margin: 0px 10px;
+        cursor: pointer;
+      }
     }
+    &__description {
+      width: 100%;
+    }
+
   }
 
   .slider {
     background-color: white;
-
     &__slide__h3 {
       background-color: $color-accent;
       padding: 20px 30px;
@@ -40,17 +53,33 @@
   }
 }
 
-.scenarios {
-  background-color: $color-accent;
+.participation__tables {
   width: 100%;
   max-width: 800px;
   @include flexCenter(column);
-  margin: 100px 0px;
+  margin: 50px 0px;
   padding: 30px 10px;
 
   a {
     background-color: white;
     margin: 10px 0px;
     width: 80%;
+  }
+
+  &__scenarios {
+    background-color: $color-accent;
+  }
+
+  &__terms {
+    background-color: black;
+    h2 {
+      color: white;
+    }
+    p {
+      color: white;
+    }
+    a p {
+      color: black;
+    }
   }
 }

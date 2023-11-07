@@ -7,7 +7,7 @@ export const makeStepsButtons = (changeStep, activeStep) => {
           <button
             key={step}
             onClick={() => changeStep(step)}
-            className={`participation__steps__button ${
+            className={` ${
               activeStep === step ? "active-step__button" : ""
             }`}
           >

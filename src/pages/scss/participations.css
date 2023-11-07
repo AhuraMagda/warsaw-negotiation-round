@@ -40,18 +40,37 @@ section {
   justify-content: center;
 }
 
-.participation .participation__steps {
+.participation {
+  width: 100%;
+  max-width: 1200px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.participation__steps__container {
+  margin: 50px 0px;
+  max-width: 800px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.participation__steps__container__buttons {
   display: flex;
   flex-wrap: wrap;
   padding: 50px 0px;
 }
-.participation .participation__steps__button {
+.participation__steps__container__buttons button {
   height: 100px;
   width: 100px;
   border-radius: 50%;
   font-size: 2rem;
   margin: 0px 10px;
   cursor: pointer;
+}
+.participation__steps__container__description {
+  width: 100%;
 }
 .participation .slider {
   background-color: white;
@@ -71,19 +90,33 @@ section {
   color: red;
 }
 
-.scenarios {
-  background-color: #ffca29;
+.participation__tables {
   width: 100%;
   max-width: 800px;
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 100px 0px;
+  margin: 50px 0px;
   padding: 30px 10px;
 }
-.scenarios a {
+.participation__tables a {
   background-color: white;
   margin: 10px 0px;
   width: 80%;
+}
+.participation__tables__scenarios {
+  background-color: #ffca29;
+}
+.participation__tables__terms {
+  background-color: black;
+}
+.participation__tables__terms h2 {
+  color: white;
+}
+.participation__tables__terms p {
+  color: white;
+}
+.participation__tables__terms a p {
+  color: black;
 }/*# sourceMappingURL=participations.css.map */
