@@ -1,0 +1,31 @@
+@import "../config";
+
+.gallery {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  height: fit-content;
+  padding: 30px 0px;
+  position: relative;
+  width: 90vw;
+
+  @include medium {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include big {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  &__card {
+    aspect-ratio: 1;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    width: auto;
+    & > div {
+      position: static;
+    }
+  }
+  
+}

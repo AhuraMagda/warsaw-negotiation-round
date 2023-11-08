@@ -6,6 +6,8 @@ export default function ShowGalleryImg({
   allPhotosData,
   hideImg,
 }) {
+
+  // TODO portrait image is cut when height is very low
   return (
     <div
       onClick={() => {

@@ -3,7 +3,7 @@ import Layout from "../components/Layout";
 import ComponentHeader from "../components/ComponentHeader";
 import ParticipationSteps from "../components/participation/ParticipationSteps";
 import ParticipationTables from "../components/participation/ParticipationTables";
-import "../scss/participations.css";
+import "../scss/participations-scss/participations.css";
 
 function Participation() {
   return (
