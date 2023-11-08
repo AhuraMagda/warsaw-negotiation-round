@@ -50,11 +50,6 @@ section {
   position: relative;
   width: 90vw;
 }
-@media (min-width: 400px) {
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 @media (min-width: 600px) {
   .gallery {
     grid-template-columns: repeat(3, 1fr);
@@ -76,7 +71,7 @@ section {
   position: static;
 }
 .gallery__big-img {
-  position: absolute;
+  position: fixed;
   background-color: rgba(255, 255, 255, 0.7);
   top: 0;
   bottom: 0;
@@ -87,6 +82,7 @@ section {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  z-index: 20;
 }
 .gallery__big-img .slider {
   cursor: pointer;
