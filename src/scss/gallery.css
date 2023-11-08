@@ -84,6 +84,22 @@ section {
   justify-content: center;
   z-index: 20;
 }
-.gallery__big-img .slider {
+.gallery__big-img__slider-container {
+  background-color: red;
+}
+.gallery__big-img__slider-container .slider {
+  background-color: orange;
   cursor: pointer;
+  width: 90vw;
+}
+.gallery__big-img__slider-container .slider__slide {
+  background-color: 0;
+  width: 100%;
+  max-width: 900px;
+}
+.gallery__big-img__slider-container .slider__slide__img {
+  background-color: blue;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
 }/*# sourceMappingURL=gallery.css.map */

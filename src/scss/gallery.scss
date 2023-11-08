@@ -38,17 +38,27 @@
         @include flexCenter();
         z-index: 20;
 
-      .slider {
-        cursor: pointer;
+        &__slider-container {
+          background-color: red;
 
-
-        &__slide {
-
-
-            &__img {
-
+          .slider {
+            background-color: orange;
+            cursor: pointer;
+            width: 90vw;
+    
+            &__slide {
+              background-color: green($color: #000000);
+              width: 100%;
+              max-width: 900px;
+    
+                &__img {
+                  background-color: blue;
+                  width: 100%;
+                  height: fit-content;
+                }
             }
+          }
         }
-      }
+
     }
   }
