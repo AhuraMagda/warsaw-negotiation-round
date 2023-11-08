@@ -90,14 +90,13 @@ section {
   z-index: 20;
 }
 .gallery__big-img__slider-container .slider {
-  padding: 0;
+  padding: 10px;
   background-color: white;
   border-radius: 10px;
   cursor: pointer;
   height: -moz-fit-content;
   height: fit-content;
   max-height: 90vh;
-  max-width: 90vw;
   width: -moz-fit-content;
   width: fit-content;
 }
