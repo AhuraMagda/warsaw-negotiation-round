@@ -3,12 +3,11 @@ import Layout from "../components/Layout";
 import ComponentHeader from "../components/ComponentHeader";
 import DisplayedPhotos from "../components/gallery/DisplayedPhotos";
 import ShowGalleryImg from "../components/gallery/ShowGalleryImg";
-import "../scss/gallery.css"
+import "../scss/gallery.css";
 import { graphql } from "gatsby";
 import { makeArrOfObj } from "../components/gallery/helpers/makeArrOfObj";
 
-
-export default function Gallery({data}) {
+export default function Gallery({ data }) {
   const [isBigImg, setIsBigImg] = React.useState(false);
   const allPhotosData = makeArrOfObj(data);
 
@@ -23,14 +22,12 @@ export default function Gallery({data}) {
     setIsBigImg(false);
   };
 
-
   return (
     <Layout>
       <ComponentHeader>GALLERY</ComponentHeader>
       <main>
         <section className="gallery">
           <DisplayedPhotos showImg={showImg} allPhotosData={allPhotosData} />
-{/* TODO nice images slider */}
           {isBigImg && (
             <ShowGalleryImg
               activeImgIndex={activeImgIndex}
@@ -43,7 +40,7 @@ export default function Gallery({data}) {
     </Layout>
   );
 }
-
+//TODO set the height to be 90vh not fixed
 
 export const pageQuery = graphql`
   query {
@@ -58,7 +55,7 @@ export const pageQuery = graphql`
           id
           base
           childImageSharp {
-            gatsbyImageData(layout: FULL_WIDTH)
+            gatsbyImageData(layout: CONSTRAINED, height: 900)
           }
         }
       }

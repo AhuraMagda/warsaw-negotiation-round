@@ -1,64 +1,57 @@
 @import "./config";
 //  GALLERY PAGE
 .gallery {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(2, 1fr);
-    height: fit-content;
-    padding: 30px 0px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  height: fit-content;
+  padding: 30px 0px;
+  position: relative;
+  width: 90vw;
+
+  @include medium {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include big {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  &__card {
+    aspect-ratio: 1;
+    cursor: pointer;
+    overflow: hidden;
     position: relative;
-    width: 90vw;
-
-    @include medium {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  
-    @include big {
-      grid-template-columns: repeat(6, 1fr);
-    }
-  
-    &__card {
-      aspect-ratio: 1;
-      width: auto;
-      position: relative;
-      overflow: hidden;
-      cursor: pointer;
-      & > div {
-        position: static;
-      }
-    }
-    &__big-img {
-        position: fixed;
-        background-color: rgba(255, 255, 255, .7);
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        @include flexCenter();
-        z-index: 20;
-
-        &__slider-container {
-          background-color: red;
-
-          .slider {
-            background-color: orange;
-            cursor: pointer;
-            width: 90vw;
-    
-            &__slide {
-              background-color: green($color: #000000);
-              width: 100%;
-              max-width: 900px;
-    
-                &__img {
-                  background-color: blue;
-                  width: 100%;
-                  height: fit-content;
-                }
-            }
-          }
-        }
-
+    width: auto;
+    & > div {
+      position: static;
     }
   }
+  &__big-img {
+    @include flexCenter();
+    background-color: rgba(255, 255, 255, 0.7);
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 20;
+
+    &__slider-container {
+      .slider {
+        background-color: white;
+        border-radius: 10px;
+        cursor: pointer;
+        height: fit-content;
+        max-height: 90vh;
+        max-width: 90vw;
+        width: fit-content;
+
+        &__slide {
+          max-width: 900px;
+        }
+      }
+    }
+  }
+}

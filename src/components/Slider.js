@@ -31,12 +31,10 @@ function Slider({ slideData, h3Prop, pProp, imgProp, activeImgIndex }) {
       {slideData && (
         <div className="slider__slide">
           {imgProp && (
-            <div className="slider__slide__img">
-              <GatsbyImage
-                image={slideData[activeSlide][imgProp]}
-                alt="students"
-              />
-            </div>
+            <GatsbyImage
+              image={slideData[activeSlide][imgProp]}
+              alt="students"
+            />
           )}
 
           {h3Prop && (
