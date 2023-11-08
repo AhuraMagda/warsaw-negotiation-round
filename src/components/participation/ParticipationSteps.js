@@ -6,8 +6,8 @@ import { makeStepsButtons } from "./helpers/makeStepsButtons";
 import { makeStepDescription } from "./helpers/makeStepsDescription";
 
 export default function ParticipationSteps() {
-  const isSmallScreen = useMediaQuery({ maxWidth: 767 });
-  const isMediumScreen = useMediaQuery({ minWidth: 768 });
+  const isSmallScreen = useMediaQuery({ maxWidth: 599 });
+  const isMediumScreen = useMediaQuery({ minWidth: 600 });
 
   const [activeStep, setActiveStep] = React.useState(1);
 
