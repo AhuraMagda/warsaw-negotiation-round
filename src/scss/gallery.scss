@@ -1,0 +1,57 @@
+@import "./config";
+//  GALLERY PAGE
+.gallery {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  height: fit-content;
+  padding: 30px 0px;
+  position: relative;
+  width: 90vw;
+
+  @include medium {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include big {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  &__card {
+    aspect-ratio: 1;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    width: auto;
+    & > div {
+      position: static;
+    }
+  }
+  &__big-img {
+    @include flexCenter();
+    background-color: rgba(255, 255, 255, 0.7);
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 20;
+
+    &__slider-container {
+      .slider {
+        background-color: white;
+        border-radius: 10px;
+        cursor: pointer;
+        height: fit-content;
+        max-height: 90vh;
+        max-width: 90vw;
+        width: fit-content;
+
+        &__slide {
+          max-width: 900px;
+        }
+      }
+    }
+  }
+}

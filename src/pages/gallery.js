@@ -1,13 +1,16 @@
 import React from "react";
 import Layout from "../components/Layout";
 import ComponentHeader from "../components/ComponentHeader";
+import DisplayedPhotos from "../components/gallery/DisplayedPhotos";
+import ShowGalleryImg from "../components/gallery/ShowGalleryImg";
+import "../scss/gallery.css";
 import { graphql } from "gatsby";
-import Slider from "../components/Slider";
-import { makePhotosArray } from "../components/gallery/helpers/makePhotosArr";
 import { makeArrOfObj } from "../components/gallery/helpers/makeArrOfObj";
 
 export default function Gallery({ data }) {
   const [isBigImg, setIsBigImg] = React.useState(false);
+  const allPhotosData = makeArrOfObj(data);
+
   const [activeImgIndex, setActiveImgIndex] = React.useState(0);
 
   const showImg = (index) => {
@@ -19,36 +22,25 @@ export default function Gallery({ data }) {
     setIsBigImg(false);
   };
 
-  const allPhotosData = makeArrOfObj(data);
-
-  const allPhotosToDisplay = makePhotosArray(allPhotosData, showImg);
-
   return (
     <Layout>
       <ComponentHeader>GALLERY</ComponentHeader>
       <main>
         <section className="gallery">
-          {allPhotosToDisplay}
-
+          <DisplayedPhotos showImg={showImg} allPhotosData={allPhotosData} />
           {isBigImg && (
-            <div
-              onClick={() => {
-                hideImg();
-              }}
-              className="gallery__big-img"
-            >
-              <Slider
-                slideData={allPhotosData}
-                imgProp={"image"}
-                activeImgIndex={activeImgIndex}
-              />
-            </div>
+            <ShowGalleryImg
+              activeImgIndex={activeImgIndex}
+              allPhotosData={allPhotosData}
+              hideImg={hideImg}
+            />
           )}
         </section>
       </main>
     </Layout>
   );
 }
+//TODO set the height to be 90vh not fixed
 
 export const pageQuery = graphql`
   query {
@@ -63,7 +55,7 @@ export const pageQuery = graphql`
           id
           base
           childImageSharp {
-            gatsbyImageData(layout: FULL_WIDTH)
+            gatsbyImageData(layout: CONSTRAINED, height: 900)
           }
         }
       }
