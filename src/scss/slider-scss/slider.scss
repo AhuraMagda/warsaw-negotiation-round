@@ -1,0 +1,64 @@
+@import "../config";
+
+.slider {
+    position: relative;
+    padding: 10px 60px;
+    @include flexCenter;
+  
+    &__slide {
+      @include flexCenter(column);
+
+      &__arrow-left {
+        bottom: 0;
+        height: 40px;
+        left: 0;
+        margin: auto 10px;
+        position: absolute;
+        top: 0;
+        width: 40px;
+        z-index: 2;
+      }
+    
+      &__arrow-right {
+        bottom: 0;
+        height: 40px;
+        margin: auto 10px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 40px;
+        z-index: 2;
+      }
+    }
+  }
+
+//   SLIDER IN GALLERY
+
+.gallery__big-img {
+    @include flexCenter();
+    background-color: rgba(255, 255, 255, 0.7);
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 20;
+
+    &__slider-container {
+      .slider {
+        padding: 0;
+        background-color: white;
+        border-radius: 10px;
+        cursor: pointer;
+        height: fit-content;
+        max-height: 90vh;
+        max-width: 90vw;
+        width: fit-content;
+
+        &__slide {
+          max-width: 900px;
+        }
+      }
+    }
+  }

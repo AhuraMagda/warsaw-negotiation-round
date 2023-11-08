@@ -1,4 +1,4 @@
- 
+@import "../config";
 
 // component header
 
@@ -353,55 +353,16 @@
   }
 }
 
-// SLIDER
 
-.slider {
-  position: relative;
-  padding: 10px 60px;
-  @include flexCenter;
-
-  &__slide {
-    max-width: 200px;
-    padding: 10px 10px;
-    @include flexCenter(column);
-
-    &__img {
-      width: 300px;
-      height: 200px;
-    }
-  }
-
-  &__arrow-left {
-    height: 40px;
-    left: 0;
-    margin: auto 10px;
-    position: absolute;
-    width: 40px;
-    top: 0;
-    bottom: 0;
-    z-index: 2;
-  }
-
-  &__arrow-right {
-    height: 40px;
-    margin: auto 10px;
-    position: absolute;
-    right: 0;
-    width: 40px;
-    top: 0;
-    bottom: 0;
-    z-index: 2;
-  }
-}
 
 // CONTACT PAGE
 
 .contact {
   &__wrapper {
     margin-top: 50px;
-    width: 100vw;
     max-width: 800px;
     padding: 20px;
+    width: 100vw;
 
     h2 {
       margin-bottom: 10px;
@@ -468,7 +429,6 @@
     width: 100%;
   }
 }
-
 
 // ABOUT US PAGE
 

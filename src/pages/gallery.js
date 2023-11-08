@@ -3,7 +3,7 @@ import Layout from "../components/Layout";
 import ComponentHeader from "../components/ComponentHeader";
 import DisplayedPhotos from "../components/gallery/DisplayedPhotos";
 import ShowGalleryImg from "../components/gallery/ShowGalleryImg";
-import "../scss/gallery.css";
+import "../scss/gallery-scss/gallery.css";
 import { graphql } from "gatsby";
 import { makeArrOfObj } from "../components/gallery/helpers/makeArrOfObj";
 
