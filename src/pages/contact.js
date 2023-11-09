@@ -11,18 +11,21 @@ function Contact() {
         <section className="contact__wrapper">
           <h2>Do you have any question about the Warsaw Negotiation Round?</h2>
           <p>
-            Feel free to contact us! We will be happy to answer any questions
-            you may have. Simply fill in the form, or select the department you
-            would like to contact and write an e-mail.
+            If you have any question, or want to find out more about
+            cooperation, participation or experts - feel free to contact us.
+          </p>
+          <p>
+            We would appreciate it if you choose the appropriate department and
+            write an email to us.
           </p>
           {/* <ContactForm /> */}
+          
           <div className="contact__info">
             <p>
               <b>OUR DEPARTMENTS:</b>
             </p>
-            <p>Cooperation Department: warsawnegotiations@gmail.com</p>
-            <p>Experts Department: wnr.experts@gmail.com</p>
-            <p>Participants Department: </p>
+            <p>Experts department: experts@warsawnegotiations.com</p>
+            <p>Logistic department logistyka@warsawnegotiations.com</p>
           </div>
         </section>
       </main>
