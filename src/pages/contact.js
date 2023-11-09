@@ -1,12 +1,12 @@
 import React from "react";
 import Layout from "../components/Layout";
 import ContactForm from "../components/ContactForm";
-import ComponentHeader from "../components/ComponentHeader";
+import PagesHeader from "../components/PagesHeader";
 
 function Contact() {
   return (
     <Layout>
-      <ComponentHeader>CONTACT</ComponentHeader>
+      <PagesHeader>CONTACT</PagesHeader>
       <main>
         <section className="contact__wrapper">
           <h2>Do you have any question about the Warsaw Negotiation Round?</h2>

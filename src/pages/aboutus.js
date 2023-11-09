@@ -5,14 +5,14 @@ import img1 from "../images/about-us-images/aboutus-students.jpg";
 import img2 from "../images/about-us-images/aboutus-negocjator.png";
 import img3 from "../images/about-us-images/aboutus-participants.jpg";
 import img4 from "../images/about-us-images/aboutus-venues.jpg";
-import ComponentHeader from "../components/ComponentHeader";
+import PagesHeader from "../components/PagesHeader";
 
 function Aboutus() {
   return (
     <Layout>
-      <ComponentHeader>
+      <PagesHeader>
         FIND OUT MORE ABOUT THE WARSAW NEGOTIATION ROUND
-      </ComponentHeader>
+      </PagesHeader>
       <main className="about-us">
         <article className="about-us__article">
           <img src={img1} />

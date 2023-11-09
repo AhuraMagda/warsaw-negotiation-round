@@ -176,7 +176,7 @@ section {
   color: #ffca29;
 }
 
-.component-header {
+.pages-header {
   align-items: center;
   display: flex;
   flex-direction: row;
@@ -184,15 +184,15 @@ section {
   position: relative;
   width: 100vw;
 }
-.component-header h1 {
+.pages-header h1 {
   background-color: white;
-  font-size: clamp(0.8rem, 5vw, 1.5rem);
-  padding: 10px;
+  font-size: clamp(0.8rem, 5vw, 2rem);
+  padding: 30px 10px;
   text-align: center;
   width: -moz-fit-content;
   width: fit-content;
 }
-.component-header h1::before {
+.pages-header h1::before {
   content: "";
   background-color: #ffca29;
   bottom: 0;

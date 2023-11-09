@@ -137,14 +137,14 @@
 
 // PAGES HEADER
 
-.component-header {
+.pages-header {
   @include flexCenter();
   position: relative;
   width: 100vw;
   h1 {
     background-color: white;
-    font-size: clamp(0.8rem, 5vw, 1.5rem);
-    padding: 10px;
+    font-size: clamp(0.8rem, 5vw, 2rem);
+    padding: 30px 10px;
     text-align: center;
     width: fit-content;
 
