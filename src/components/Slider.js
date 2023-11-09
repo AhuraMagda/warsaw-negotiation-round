@@ -1,10 +1,11 @@
 import React from "react";
-import rightArrow from "../images/icons/icon-slider-arrow-right.png";
-import leftArrow from "../images/icons/icon-slider-arrow-left.png";
+import { useEffect } from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
+import leftArrow from "../images/icons/icon-slider-arrow-left.png";
+import rightArrow from "../images/icons/icon-slider-arrow-right.png";
 import "../scss/slider-scss/slider.css"
 
-function Slider({ slideData, h3Prop, pProp, imgProp, activeImgIndex }) {
+export default function Slider({ slideData, h3Prop, pProp, imgProp, activeImgIndex }) {
   const [activeSlide, setActiveSlide] = React.useState(0);
 
   const changeSlide = (direction, array) => {
@@ -23,7 +24,7 @@ function Slider({ slideData, h3Prop, pProp, imgProp, activeImgIndex }) {
     }
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     setActiveSlide(activeImgIndex ? activeImgIndex : 0);
   }, [activeImgIndex]);
 
@@ -66,5 +67,3 @@ function Slider({ slideData, h3Prop, pProp, imgProp, activeImgIndex }) {
     </div>)
   );
 }
-
-export default Slider;
