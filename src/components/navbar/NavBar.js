@@ -1,6 +1,6 @@
 import { Link } from "gatsby";
 import React from "react";
-import logo from "../images/logo-white.png";
+import logo from "../../images/logo-white.png";
 
 function NavBar() {
   const [clicked, setClicked] = React.useState("");
@@ -17,7 +17,9 @@ function NavBar() {
 
   return (
     <nav className={`nav`}>
-      <img className="nav__logo" src={logo} />
+      <Link to="/">
+        <img className="nav__logo" src={logo} />
+      </Link>
 
       <div onClick={toggleBurger} className="hamburger">
         <div className={`hamburger__top-bun${clicked}`}></div>
