@@ -5,29 +5,18 @@ import Counter from "../components/counter/Counter";
 import { graphql, Link } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { prevEditionsData } from "../../data/data";
+import HomeHeader from "../components/homepage/HomeHeader";
 
-export default function Home({ data }) {
-  const warsawSkylinePhoto = data.warsawSkyline.childImageSharp.gatsbyImageData;
+export default function Home({ data }) {   
   const homepageStudentsPhoto =
     data.homepageStudents.childImageSharp.gatsbyImageData;
   const logoLetters = data.logoLetters.childImageSharp.gatsbyImageData;
+  const warsawSkylinePhoto = data.warsawSkyline.childImageSharp.gatsbyImageData;
 
   return (
     //TODO divide components
     <Layout page="home">
-      <header className="home__header">
-        <div className="home__header__text">
-          <h1>
-            WARSAW <br />
-            NEGOTIATION <br />
-            ROUND
-          </h1>
-          <h2>April, 19th - 21st 2024</h2>
-        </div>
-        <div className="home__header__photo">
-          <GatsbyImage image={warsawSkylinePhoto} alt="Warsaw skyline" />
-        </div>
-      </header>
+      <HomeHeader backgroundImage={warsawSkylinePhoto}/>
 
       <main>
         <section className="home__intro">

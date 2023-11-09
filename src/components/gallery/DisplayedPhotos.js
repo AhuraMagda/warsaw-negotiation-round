@@ -1,7 +1,6 @@
 import React from "react";
 import { useMediaQuery } from "react-responsive";
 import { makePhotosArray } from "./helpers/makePhotosArr";
-import { useState, useEffect } from "react";
 
 export default function DisplayedPhotos({ allPhotosData, showImg }) {
   const allPhotosToDisplay = makePhotosArray(allPhotosData, showImg);
