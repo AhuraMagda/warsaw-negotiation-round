@@ -1,9 +1,9 @@
 import * as React from "react";
-import Layout from "../components/Layout";
-import HomeCounter from "../components/counter/HomeCounter";
 import { graphql } from "gatsby";
+import Layout from "../components/Layout";
 import HomeHeader from "../components/homepage/HomeHeader";
 import HomeIntro from "../components/homepage/HomeIntro";
+import HomeCounter from "../components/counter/HomeCounter";
 import HomePrevEditions from "../components/homepage/HomePrevEditions";
 
 export default function Home({ data }) {
@@ -12,7 +12,6 @@ export default function Home({ data }) {
   const homePrevEditionImage = data.logoLetters.childImageSharp.gatsbyImageData;
 
   return (
-    //TODO divide components
     <Layout page="home">
       <HomeHeader backgroundImage={homeHeaderImage} />
       <main>
@@ -25,7 +24,7 @@ export default function Home({ data }) {
 }
 
 export const query = graphql`
-  query Layout {
+  query {
     warsawSkyline: file(relativePath: { eq: "homepage/warszawa2.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH)
