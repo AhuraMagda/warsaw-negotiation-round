@@ -1,8 +1,8 @@
 import * as React from "react";
 import Layout from "../components/Layout";
 import Slider from "../components/Slider";
-import Counter from "../components/counter/Counter";
-import { graphql, Link } from "gatsby";
+import HomeCounter from "../components/counter/HomeCounter";
+import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { prevEditionsData } from "../../data/data";
 import HomeHeader from "../components/homepage/HomeHeader";
@@ -21,10 +21,7 @@ export default function Home({ data }) {
 
       <main>
         <HomeIntro introImage={homepageStudentsPhoto}/>
-
-        <section className="home__counter">
-          <Counter />
-        </section>
+        <HomeCounter />
 
         <section className="home__prev-editions">
           <div className="home__prev-editions__text">
