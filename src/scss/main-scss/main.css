@@ -372,19 +372,6 @@ section {
   min-width: 100px;
   width: 40%;
 }
-.home__prev-editions__winners .slider {
-  align-items: start;
-  min-height: 160px;
-  width: 100%;
-}
-@media (min-width: 800px) {
-  .home__prev-editions__winners .slider {
-    max-width: 500px;
-  }
-}
-.home__prev-editions__winners .slider h3 {
-  padding-bottom: 15px;
-}
 
 @keyframes moveS {
   0% {

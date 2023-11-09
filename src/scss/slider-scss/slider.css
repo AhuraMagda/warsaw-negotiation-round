@@ -102,4 +102,19 @@ section {
 .gallery__big-img__slider-container .slider__slide {
   max-width: 900px;
   max-height: 90vh;
+}
+
+.home__prev-editions__winners .slider {
+  align-items: start;
+  min-height: 160px;
+  width: 100%;
+}
+@media (min-width: 800px) {
+  .home__prev-editions__winners .slider {
+    max-width: 500px;
+  }
+}
+.home__prev-editions__winners .slider__slide__h3 {
+  padding-bottom: 15px;
+  font-size: 2rem;
 }/*# sourceMappingURL=slider.css.map */

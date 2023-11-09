@@ -320,18 +320,6 @@
         min-width: 100px;
         width: 40%;
       }
-      .slider {
-        align-items: start;
-        min-height: 160px;
-        width: 100%;
-        @include big {
-          max-width: 500px;
-        }
-
-        h3 {
-          padding-bottom: 15px;
-        }
-      }
     }
   }
 }

@@ -24,6 +24,8 @@ export default function Slider({ slideData, h3Prop, pProp, imgProp, activeImgInd
     }
   };
 
+  //TODO make slide animation
+  
   useEffect(()=> {
     const intervalId = setInterval(()=> {
       changeSlide("right", slideData)
