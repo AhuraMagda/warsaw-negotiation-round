@@ -434,10 +434,10 @@
 
 .about-us {
   width: 100vw;
-  max-width: 900px;
+  max-width: 1100px;
 
   &__article {
-    padding: 20px;
+    padding: 40px 20px;
     @include flexCenter();
     flex-wrap: wrap;
     width: 100%;
@@ -445,13 +445,23 @@
 
     &__text {
       padding: 0px 10px;
-      max-width: 400px;
+      max-width: 500px;
       margin: 10px;
+
+      h3 {
+        font-size: 1.5rem;
+        font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 1.2rem;
+        font-size: clamp(1rem, 2vw, 1.2rem);
+      }
     }
 
     img {
       width: 90%;
-      max-width: 400px;
+      max-width: 500px;
       margin: 10px;
     }
   }
