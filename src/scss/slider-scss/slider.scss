@@ -72,11 +72,16 @@
     @include big {
       max-width: 500px;
     }
-
-    &__slide__h3 {
-      padding-bottom: 15px;
-      font-size: 2rem;
+    &__slide {
+      &__h3 {
+        padding-bottom: 15px;
+        font-size: 2rem;
+      }
+      &__p {
+        text-align: center;
+      }
     }
+
   }
 }
 

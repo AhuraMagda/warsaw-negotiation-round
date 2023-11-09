@@ -118,6 +118,9 @@ section {
   padding-bottom: 15px;
   font-size: 2rem;
 }
+.home__prev-editions__winners .slider__slide__p {
+  text-align: center;
+}
 
 .participation .slider {
   background-color: white;
