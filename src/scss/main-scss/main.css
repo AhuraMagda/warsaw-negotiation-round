@@ -41,6 +41,10 @@ section {
   justify-content: center;
 }
 
+main {
+  width: 100%;
+}
+
 .nav {
   align-items: center;
   display: flex;
@@ -321,7 +325,7 @@ section {
   background-color: #ffca29;
   color: white;
   padding: 30px;
-  width: 100vw;
+  width: 100%;
 }
 .home__counter__container {
   width: 90%;

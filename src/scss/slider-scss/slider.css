@@ -40,6 +40,10 @@ section {
   justify-content: center;
 }
 
+main {
+  width: 100%;
+}
+
 .slider {
   align-items: center;
   display: flex;
