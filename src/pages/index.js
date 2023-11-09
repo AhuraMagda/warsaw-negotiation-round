@@ -6,6 +6,7 @@ import { graphql, Link } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { prevEditionsData } from "../../data/data";
 import HomeHeader from "../components/homepage/HomeHeader";
+import HomeIntro from "../components/homepage/HomeIntro";
 
 export default function Home({ data }) {   
   const homepageStudentsPhoto =
@@ -19,25 +20,7 @@ export default function Home({ data }) {
       <HomeHeader backgroundImage={warsawSkylinePhoto}/>
 
       <main>
-        <section className="home__intro">
-          <div className="home__intro__photo">
-            <GatsbyImage image={homepageStudentsPhoto} alt="Working students" />
-          </div>
-
-          <div className="home__intro__text">
-            <p>
-              Warsaw Negotiation Round 2024 is the 15th edition of one of the
-              most prestigious international negotiation tournaments. The WNR
-              year after year unites students of top law, economics and business
-              schools from around the world.
-            </p>
-            <Link to="/participation">
-              <button className="home__intro__text__btn">
-                I WANT TO PARTICIPATE
-              </button>
-            </Link>
-          </div>
-        </section>
+        <HomeIntro introImage={homepageStudentsPhoto}/>
 
         <section className="home__counter">
           <Counter />
