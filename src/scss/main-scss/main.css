@@ -310,22 +310,29 @@ section {
   box-shadow: 0px 0px;
   margin: 8px 8px 4px 4px;
 }
-.home__counter .home__counter__container {
+.home__counter {
   background-color: #ffca29;
   color: white;
   padding: 30px;
+  width: 100vw;
+}
+.home__counter__container {
+  width: 90%;
+  max-width: 800px;
   align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 100vw;
 }
-.home__counter p {
-  font-size: clamp(1rem, 5vw, 3rem);
-}
-.home__counter img {
-  margin-left: 30px;
+.home__counter__container img {
+  margin-right: 30px;
   height: 60px;
+}
+.home__counter__container__text {
+  width: 70%;
+}
+.home__counter__container__text p {
+  font-size: clamp(1rem, 5vw, 3rem);
 }
 .home__prev-editions {
   align-items: center;
