@@ -1,12 +1,12 @@
 import React from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 import leftArrow from "../images/icons/icon-slider-arrow-left.png";
 import rightArrow from "../images/icons/icon-slider-arrow-right.png";
 import "../scss/slider-scss/slider.css"
 
 export default function Slider({ slideData, h3Prop, pProp, imgProp, activeImgIndex }) {
-  const [activeSlide, setActiveSlide] = React.useState(0);
+  const [activeSlide, setActiveSlide] = useState(0);
 
   const changeSlide = (direction, array) => {
     if (direction === "left") {
@@ -23,6 +23,14 @@ export default function Slider({ slideData, h3Prop, pProp, imgProp, activeImgInd
       }
     }
   };
+
+  useEffect(()=> {
+    const intervalId = setInterval(()=> {
+      changeSlide("right", slideData)
+    }, 2500)
+    return () => clearInterval(intervalId)
+  }, [activeSlide])
+
 
   useEffect(() => {
     setActiveSlide(activeImgIndex ? activeImgIndex : 0);
