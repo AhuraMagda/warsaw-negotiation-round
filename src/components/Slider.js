@@ -24,15 +24,26 @@ export default function Slider({ slideData, h3Prop, pProp, imgProp, activeImgInd
     }
   };
 
-  //TODO make slide animation
-  
-  useEffect(()=> {
-    const intervalId = setInterval(()=> {
-      changeSlide("right", slideData)
-    }, 2500)
-    return () => clearInterval(intervalId)
-  }, [activeSlide])
 
+  //TODO make slide animation
+
+  const [isInterval, setIsInterval] = useState(true)
+
+  let intervalId;
+
+  useEffect(()=> {
+    if (isInterval) {
+      intervalId = setInterval(()=> {
+        changeSlide("right", slideData)
+      }, 1000);
+    }
+    return () => clearInterval(intervalId)
+  }, [isInterval, activeSlide])
+
+  const deleteInterval = () => {
+    clearInterval(intervalId)
+    setIsInterval(false)
+  }
 
   useEffect(() => {
     setActiveSlide(activeImgIndex ? activeImgIndex : 0);
@@ -59,6 +70,7 @@ export default function Slider({ slideData, h3Prop, pProp, imgProp, activeImgInd
 
       <img
         onClick={(event) => {
+          deleteInterval();
           changeSlide("left", slideData);
           event.stopPropagation();
         }}
@@ -67,6 +79,7 @@ export default function Slider({ slideData, h3Prop, pProp, imgProp, activeImgInd
       />
       <img
         onClick={(event) => {
+          deleteInterval();
           changeSlide("right", slideData);
           event.stopPropagation();
         }}
