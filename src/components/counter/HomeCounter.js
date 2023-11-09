@@ -22,12 +22,12 @@ export default function Counter() {
   return (
     <section className="home__counter">
       <div className="home__counter__container">
-        <div>
+        <img src={iconCalendar} alt="calendar" />
+        <div className="home__counter__container__text">
           <h3>TOURNAMENT BEGINS IN... </h3>
           <p>{daysAndHours}</p>
           <p>{minutesAndSeconds}</p>
         </div>
-        <img src={iconCalendar} alt="calendar" />
       </div>
     </section>
   );

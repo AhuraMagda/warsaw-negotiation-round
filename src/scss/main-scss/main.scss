@@ -6,14 +6,19 @@
   @include flexCenter;
   background-color: $color-main;
   height: 10vh;
-  justify-content: space-around;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 10;
+  padding: 10px;
+  @include medium {
+    padding: 10px 30px;
+  }
 
   &__logo {
     width: 200px;
+    margin-left: 10px; 
   }
 
   &__menu {
@@ -137,14 +142,14 @@
 
 // PAGES HEADER
 
-.component-header {
+.pages-header {
   @include flexCenter();
   position: relative;
   width: 100vw;
   h1 {
     background-color: white;
-    font-size: clamp(0.8rem, 5vw, 1.5rem);
-    padding: 10px;
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    padding: 40px 10px;
     text-align: center;
     width: fit-content;
 
@@ -265,20 +270,31 @@
   }
 
   &__counter {
-    #{&}__container {
       background-color: $color-accent;
       color: $color-text--light;
       padding: 30px;
-      @include flexCenter();
       width: 100vw;
-    }
-    p {
-      font-size: clamp(1rem, 5vw, 3rem);
-    }
-    img {
-      margin-left: 30px;
-      height: 60px;
-    }
+
+      &__container {
+        width: 90%;
+        max-width: 800px;
+
+        @include flexCenter();
+        img {
+          margin-right: 30px;
+          height: 60px;
+        }
+    
+        &__text {
+          width: 70%;
+          p {
+            font-size: clamp(1rem, 5vw, 3rem);
+          }
+        }
+      }
+
+
+
   }
 
   &__prev-editions {
@@ -348,13 +364,18 @@
 
 .contact {
   &__wrapper {
-    margin-top: 50px;
-    max-width: 800px;
-    padding: 20px;
+    max-width: 700px;
     width: 100vw;
+    min-height: 65vh;
 
     h2 {
       margin-bottom: 10px;
+      font-size: clamp(1.2rem, 2.5vw, 1.5rem)
+    }
+
+    p {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      padding: 5px 0px;
     }
 
     &__form {
@@ -416,6 +437,7 @@
   }
   &__info {
     width: 100%;
+    padding-top: 100px;
   }
 }
 
@@ -423,10 +445,10 @@
 
 .about-us {
   width: 100vw;
-  max-width: 900px;
+  max-width: 1100px;
 
   &__article {
-    padding: 20px;
+    padding: 40px 20px;
     @include flexCenter();
     flex-wrap: wrap;
     width: 100%;
@@ -434,13 +456,23 @@
 
     &__text {
       padding: 0px 10px;
-      max-width: 400px;
+      max-width: 500px;
       margin: 10px;
+
+      h3 {
+        font-size: 1.5rem;
+        font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 1.2rem;
+        font-size: clamp(1rem, 2vw, 1.2rem);
+      }
     }
 
     img {
       width: 90%;
-      max-width: 400px;
+      max-width: 500px;
       margin: 10px;
     }
   }

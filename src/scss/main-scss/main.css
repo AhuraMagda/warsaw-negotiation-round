@@ -48,14 +48,21 @@ section {
   justify-content: center;
   background-color: black;
   height: 10vh;
-  justify-content: space-around;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 10;
+  padding: 10px;
+}
+@media (min-width: 600px) {
+  .nav {
+    padding: 10px 30px;
+  }
 }
 .nav__logo {
   width: 200px;
+  margin-left: 10px;
 }
 .nav__menu {
   align-items: center;
@@ -176,7 +183,7 @@ section {
   color: #ffca29;
 }
 
-.component-header {
+.pages-header {
   align-items: center;
   display: flex;
   flex-direction: row;
@@ -184,15 +191,15 @@ section {
   position: relative;
   width: 100vw;
 }
-.component-header h1 {
+.pages-header h1 {
   background-color: white;
-  font-size: clamp(0.8rem, 5vw, 1.5rem);
-  padding: 10px;
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  padding: 40px 10px;
   text-align: center;
   width: -moz-fit-content;
   width: fit-content;
 }
-.component-header h1::before {
+.pages-header h1::before {
   content: "";
   background-color: #ffca29;
   bottom: 0;
@@ -310,22 +317,29 @@ section {
   box-shadow: 0px 0px;
   margin: 8px 8px 4px 4px;
 }
-.home__counter .home__counter__container {
+.home__counter {
   background-color: #ffca29;
   color: white;
   padding: 30px;
+  width: 100vw;
+}
+.home__counter__container {
+  width: 90%;
+  max-width: 800px;
   align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 100vw;
 }
-.home__counter p {
-  font-size: clamp(1rem, 5vw, 3rem);
-}
-.home__counter img {
-  margin-left: 30px;
+.home__counter__container img {
+  margin-right: 30px;
   height: 60px;
+}
+.home__counter__container__text {
+  width: 70%;
+}
+.home__counter__container__text p {
+  font-size: clamp(1rem, 5vw, 3rem);
 }
 .home__prev-editions {
   align-items: center;
@@ -390,13 +404,17 @@ section {
   }
 }
 .contact__wrapper {
-  margin-top: 50px;
-  max-width: 800px;
-  padding: 20px;
+  max-width: 700px;
   width: 100vw;
+  min-height: 65vh;
 }
 .contact__wrapper h2 {
   margin-bottom: 10px;
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+}
+.contact__wrapper p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  padding: 5px 0px;
 }
 .contact__wrapper__form {
   background-color: #ffca29;
@@ -449,14 +467,15 @@ section {
 }
 .contact__info {
   width: 100%;
+  padding-top: 100px;
 }
 
 .about-us {
   width: 100vw;
-  max-width: 900px;
+  max-width: 1100px;
 }
 .about-us__article {
-  padding: 20px;
+  padding: 40px 20px;
   align-items: center;
   display: flex;
   flex-direction: row;
@@ -467,11 +486,20 @@ section {
 }
 .about-us__article__text {
   padding: 0px 10px;
-  max-width: 400px;
+  max-width: 500px;
   margin: 10px;
+}
+.about-us__article__text h3 {
+  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  margin-bottom: 10px;
+}
+.about-us__article__text p {
+  font-size: 1.2rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
 }
 .about-us__article img {
   width: 90%;
-  max-width: 400px;
+  max-width: 500px;
   margin: 10px;
 }/*# sourceMappingURL=main.css.map */

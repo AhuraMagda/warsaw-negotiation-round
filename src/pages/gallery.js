@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../components/Layout";
-import ComponentHeader from "../components/ComponentHeader";
+import PagesHeader from "../components/PagesHeader";
 import DisplayedPhotos from "../components/gallery/DisplayedPhotos";
 import ShowGalleryImg from "../components/gallery/ShowGalleryImg";
 import "../scss/gallery-scss/gallery.css";
@@ -24,7 +24,7 @@ export default function Gallery({ data }) {
 
   return (
     <Layout>
-      <ComponentHeader>GALLERY</ComponentHeader>
+      <PagesHeader>GALLERY</PagesHeader>
       <main>
         <section className="gallery">
           <DisplayedPhotos showImg={showImg} allPhotosData={allPhotosData} />
