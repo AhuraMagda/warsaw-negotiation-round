@@ -55,7 +55,7 @@ main {
 }
 
 .participation__steps__container {
-  margin: 50px 0px;
+  margin-bottom: 50px;
   max-width: 900px;
   align-items: center;
   display: flex;
@@ -85,8 +85,13 @@ main {
 }
 .participation__steps__container__description {
   width: 100%;
+  padding: 20px;
   font-size: 1.8rem;
   align-self: start;
+  min-height: 120px;
+}
+.participation__steps__container__description p {
+  text-align: center;
 }
 
 .participation__tables {

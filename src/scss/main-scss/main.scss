@@ -147,7 +147,7 @@
 .pages-header {
   @include flexCenter();
   position: relative;
-  width: 100vw;
+  width: 100%;
   h1 {
     background-color: white;
     font-size: clamp(1.4rem, 4vw, 2rem);
