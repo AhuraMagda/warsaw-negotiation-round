@@ -407,6 +407,12 @@ main {
     left: -100%;
   }
 }
+.contact {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .contact__wrapper {
   max-width: 700px;
   width: 100vw;

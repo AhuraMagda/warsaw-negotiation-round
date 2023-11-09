@@ -25,8 +25,8 @@ export default function Gallery({ data }) {
   return (
     <Layout>
       <PagesHeader>GALLERY</PagesHeader>
-      <main>
-        <section className="gallery">
+      <main className="gallery">
+        <section className="gallery__wrapper">
           <DisplayedPhotos showImg={showImg} allPhotosData={allPhotosData} />
           {isBigImg && (
             <ShowGalleryImg
@@ -40,7 +40,6 @@ export default function Gallery({ data }) {
     </Layout>
   );
 }
-//TODO set the height to be 90vh not fixed
 
 export const pageQuery = graphql`
   query {

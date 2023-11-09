@@ -7,7 +7,7 @@ export const makePhotosArray = (allPhotosData, showImg ) => {
           onClick={() => {
             showImg(id);
           }}
-          className="gallery__card"
+          className="gallery__wrapper__card"
           key={key}
         >
           <GatsbyImage image={image} alt="students" />

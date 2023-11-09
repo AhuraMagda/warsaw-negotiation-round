@@ -7,7 +7,7 @@ function Contact() {
   return (
     <Layout>
       <PagesHeader>CONTACT</PagesHeader>
-      <main>
+      <main className="contact">
         <section className="contact__wrapper">
           <h2>Do you have any question about the Warsaw Negotiation Round?</h2>
           <p>
@@ -19,13 +19,13 @@ function Contact() {
             write an email to us.
           </p>
           {/* <ContactForm /> */}
-          
+
           <div className="contact__info">
             <p>
               <b>OUR DEPARTMENTS:</b>
             </p>
             <p>Experts department: experts@warsawnegotiations.com</p>
-            <p>Logistic department logistyka@warsawnegotiations.com</p>
+            <p>Logistic department: logistyka@warsawnegotiations.com</p>
           </div>
         </section>
       </main>
