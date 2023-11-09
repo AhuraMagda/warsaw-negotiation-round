@@ -186,8 +186,8 @@ section {
 }
 .pages-header h1 {
   background-color: white;
-  font-size: clamp(0.8rem, 5vw, 1.6rem);
-  padding: 30px 10px;
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  padding: 40px 10px;
   text-align: center;
   width: -moz-fit-content;
   width: fit-content;
