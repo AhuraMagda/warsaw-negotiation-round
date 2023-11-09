@@ -58,7 +58,7 @@ section {
   bottom: 0;
   height: 40px;
   left: 0;
-  margin: auto 10px;
+  margin: auto 20px;
   position: absolute;
   top: 0;
   width: 40px;
@@ -67,7 +67,7 @@ section {
 .slider__slide__arrow-right {
   bottom: 0;
   height: 40px;
-  margin: auto 10px;
+  margin: auto 20px;
   position: absolute;
   right: 0;
   top: 0;
