@@ -5,7 +5,7 @@ import ParticipationSteps from "../components/participation/ParticipationSteps";
 import ParticipationTables from "../components/participation/ParticipationTables";
 import "../scss/participations-scss/participations.css";
 
-function Participation() {
+function Participation({data}) {
   return (
     <Layout>
       <PagesHeader>HOW TO PARTICIPATE</PagesHeader>
@@ -13,6 +13,8 @@ function Participation() {
         <ParticipationSteps />
         <ParticipationTables />
       </main>
+
+
     </Layout>
   );
 }

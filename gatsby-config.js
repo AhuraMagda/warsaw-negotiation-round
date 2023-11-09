@@ -17,7 +17,7 @@ module.exports = {
     name: `images`,
     path: `${__dirname}/src/images/`
   }
-},
+}
 ],
   siteMetadata: {
     title: 'Warsaw Negotiation Round',
