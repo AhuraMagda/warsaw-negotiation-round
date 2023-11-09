@@ -74,11 +74,11 @@ const participationData = [{
 },
 {
     step: 4,
-    description: 'Wait for the results. If the team is qualified book your flights and apply for a visa (if needed).'
+    description: 'Wait for the results. If the team is qualified book your flights and apply for a visa (if\u00A0needed).'
 },
 {
     step: 5,
-    description: 'See you in Warsaw on April 19-21, 2024 during the final of the Warsaw Negotiation Round.'
+    description: 'See you in Warsaw on April 19-21, 2024 during the final of\u00A0the Warsaw Negotiation\u00A0Round.'
 }
 ]
 

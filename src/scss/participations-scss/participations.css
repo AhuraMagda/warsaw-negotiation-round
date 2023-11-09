@@ -84,14 +84,6 @@ section {
   font-size: 1.8rem;
   align-self: start;
 }
-.participation__steps__container .slider {
-  background-color: white;
-}
-.participation__steps__container .slider__slide__h3 {
-  background-color: #ffca29;
-  padding: 20px 30px;
-  border-radius: 50%;
-}
 
 .participation__tables {
   width: 100%;

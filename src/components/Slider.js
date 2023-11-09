@@ -35,7 +35,7 @@ export default function Slider({ slideData, h3Prop, pProp, imgProp, activeImgInd
     if (isInterval) {
       intervalId = setInterval(()=> {
         changeSlide("right", slideData)
-      }, 1000);
+      }, 2500);
     }
     return () => clearInterval(intervalId)
   }, [isInterval, activeSlide])
@@ -66,7 +66,7 @@ export default function Slider({ slideData, h3Prop, pProp, imgProp, activeImgInd
             </h3>
           )}
 
-          {pProp && <p>{slideData[activeSlide][pProp]}</p>}
+          {pProp && <p className="slider__slide__p">{slideData[activeSlide][pProp]}</p>}
 
       <img
         onClick={(event) => {

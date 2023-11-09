@@ -117,4 +117,20 @@ section {
 .home__prev-editions__winners .slider__slide__h3 {
   padding-bottom: 15px;
   font-size: 2rem;
+}
+
+.participation .slider {
+  background-color: white;
+}
+.participation .slider__slide__h3 {
+  background-color: #ffca29;
+  border-radius: 50%;
+  font-size: 3rem;
+  margin-bottom: 50px;
+  padding: 40px 60px;
+}
+.participation .slider__slide__p {
+  font-size: 1.3rem;
+  text-align: center;
+  min-height: 120px;
 }/*# sourceMappingURL=slider.css.map */

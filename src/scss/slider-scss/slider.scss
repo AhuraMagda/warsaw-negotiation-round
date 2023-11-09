@@ -62,10 +62,9 @@
   }
 }
 
-// SLIDER IN HOME
+//  SLIDER IN HOME
 
 .home__prev-editions__winners {
-
   .slider {
     align-items: start;
     min-height: 160px;
@@ -77,6 +76,28 @@
     &__slide__h3 {
       padding-bottom: 15px;
       font-size: 2rem;
+    }
+  }
+}
+
+//  SLIDER IN PARTICIPATION
+
+.participation {
+  .slider {
+    background-color: white;
+    &__slide {
+      &__h3 {
+        background-color: $color-accent;
+        border-radius: 50%;
+        font-size: 3rem;
+        margin-bottom: 50px;
+        padding: 40px 60px;
+      }
+      &__p {
+        font-size: 1.3rem;
+        text-align: center;
+        min-height: 120px;
+      }
     }
   }
 }
