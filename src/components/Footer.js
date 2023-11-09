@@ -2,6 +2,7 @@ import React from "react";
 import iconFacebook from "../images/icons/icon-facebook.png";
 import iconInstagram from "../images/icons/icon-instagram.png";
 import iconLinkedin from "../images/icons/icon-linkedin.png";
+import iconYoutube from "../images/icons/icon-youtube.png";
 
 //TODO make helper and import date
 const copyrightDate = `© ${new Date().getFullYear()} Warsaw Negotiation Round`;
@@ -29,6 +30,13 @@ function Footer() {
             className="footer__socials__icon"
             src={iconLinkedin}
             alt="linkedin"
+          />
+        </a>
+        <a href="https://www.youtube.com/@WarsawNegotiationRound">
+          <img
+            className="footer__socials__icon"
+            src={iconYoutube}
+            alt="youtube"
           />
         </a>
       </div>
