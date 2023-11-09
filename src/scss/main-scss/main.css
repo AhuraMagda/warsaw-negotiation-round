@@ -48,14 +48,21 @@ section {
   justify-content: center;
   background-color: black;
   height: 10vh;
-  justify-content: space-around;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 10;
+  padding: 10px;
+}
+@media (min-width: 600px) {
+  .nav {
+    padding: 10px 30px;
+  }
 }
 .nav__logo {
   width: 200px;
+  margin-left: 10px;
 }
 .nav__menu {
   align-items: center;

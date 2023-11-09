@@ -6,14 +6,19 @@
   @include flexCenter;
   background-color: $color-main;
   height: 10vh;
-  justify-content: space-around;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 10;
+  padding: 10px;
+  @include medium {
+    padding: 10px 30px;
+  }
 
   &__logo {
     width: 200px;
+    margin-left: 10px; 
   }
 
   &__menu {
