@@ -12,7 +12,7 @@ export default function Home({ data }) {
   const homePrevEditionImage = data.logoLetters.childImageSharp.gatsbyImageData;
 
   return (
-    <Layout page="home">
+    <Layout>
       <HomeHeader backgroundImage={homeHeaderImage} />
       <main>
         <HomeIntro introImage={homeIntroImage} />

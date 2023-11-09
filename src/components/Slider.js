@@ -1,11 +1,18 @@
 import React from "react";
-import rightArrow from "../images/icons/icon-slider-arrow-right.png";
-import leftArrow from "../images/icons/icon-slider-arrow-left.png";
+import { useState, useEffect } from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
-import "../scss/slider-scss/slider.css"
+import leftArrow from "../images/icons/icon-slider-arrow-left.png";
+import rightArrow from "../images/icons/icon-slider-arrow-right.png";
+import "../scss/slider-scss/slider.css";
 
-function Slider({ slideData, h3Prop, pProp, imgProp, activeImgIndex }) {
-  const [activeSlide, setActiveSlide] = React.useState(0);
+export default function Slider({
+  slideData,
+  h3Prop,
+  pProp,
+  imgProp,
+  activeImgIndex,
+}) {
+  const [activeSlide, setActiveSlide] = useState(0);
 
   const changeSlide = (direction, array) => {
     if (direction === "left") {
@@ -23,13 +30,31 @@ function Slider({ slideData, h3Prop, pProp, imgProp, activeImgIndex }) {
     }
   };
 
-  React.useEffect(() => {
+  const [isInterval, setIsInterval] = useState(true);
+
+  let intervalId;
+
+  useEffect(() => {
+    if (isInterval) {
+      intervalId = setInterval(() => {
+        changeSlide("right", slideData);
+      }, 2500);
+    }
+    return () => clearInterval(intervalId);
+  }, [isInterval, activeSlide]);
+
+  const deleteInterval = () => {
+    clearInterval(intervalId);
+    setIsInterval(false);
+  };
+
+  useEffect(() => {
     setActiveSlide(activeImgIndex ? activeImgIndex : 0);
   }, [activeImgIndex]);
 
   return (
-    slideData && (<div className="slider">
-
+    slideData && (
+      <div className="slider">
         <div className="slider__slide">
           {imgProp && (
             <GatsbyImage
@@ -44,27 +69,30 @@ function Slider({ slideData, h3Prop, pProp, imgProp, activeImgIndex }) {
             </h3>
           )}
 
-          {pProp && <p>{slideData[activeSlide][pProp]}</p>}
+          {pProp && (
+            <p className="slider__slide__p">{slideData[activeSlide][pProp]}</p>
+          )}
 
-      <img
-        onClick={(event) => {
-          changeSlide("left", slideData);
-          event.stopPropagation();
-        }}
-        className="slider__slide__arrow-left"
-        src={leftArrow}
-      />
-      <img
-        onClick={(event) => {
-          changeSlide("right", slideData);
-          event.stopPropagation();
-        }}
-        className="slider__slide__arrow-right"
-        src={rightArrow}
-      />
-          </div>
-    </div>)
+          <img
+            onClick={(event) => {
+              deleteInterval();
+              changeSlide("left", slideData);
+              event.stopPropagation();
+            }}
+            className="slider__slide__arrow-left"
+            src={leftArrow}
+          />
+          <img
+            onClick={(event) => {
+              deleteInterval();
+              changeSlide("right", slideData);
+              event.stopPropagation();
+            }}
+            className="slider__slide__arrow-right"
+            src={rightArrow}
+          />
+        </div>
+      </div>
+    )
   );
 }
-
-export default Slider;

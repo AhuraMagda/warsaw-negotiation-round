@@ -58,7 +58,7 @@ section {
   bottom: 0;
   height: 40px;
   left: 0;
-  margin: auto 10px;
+  margin: auto 20px;
   position: absolute;
   top: 0;
   width: 40px;
@@ -67,7 +67,7 @@ section {
 .slider__slide__arrow-right {
   bottom: 0;
   height: 40px;
-  margin: auto 10px;
+  margin: auto 20px;
   position: absolute;
   right: 0;
   top: 0;
@@ -102,4 +102,38 @@ section {
 .gallery__big-img__slider-container .slider__slide {
   max-width: 900px;
   max-height: 90vh;
+}
+
+.home__prev-editions__winners .slider {
+  align-items: start;
+  min-height: 160px;
+  width: 100%;
+}
+@media (min-width: 800px) {
+  .home__prev-editions__winners .slider {
+    max-width: 500px;
+  }
+}
+.home__prev-editions__winners .slider__slide__h3 {
+  padding-bottom: 15px;
+  font-size: 2rem;
+}
+.home__prev-editions__winners .slider__slide__p {
+  text-align: center;
+}
+
+.participation .slider {
+  background-color: white;
+}
+.participation .slider__slide__h3 {
+  background-color: #ffca29;
+  border-radius: 50%;
+  font-size: 3rem;
+  margin-bottom: 50px;
+  padding: 40px 60px;
+}
+.participation .slider__slide__p {
+  font-size: 1.3rem;
+  text-align: center;
+  min-height: 120px;
 }/*# sourceMappingURL=slider.css.map */
