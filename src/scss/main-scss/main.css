@@ -347,6 +347,7 @@ section {
 @media (min-width: 800px) {
   .home__prev-editions__text {
     padding: 20px;
+    margin-right: 90px;
   }
 }
 .home__prev-editions__text h2 {
@@ -358,19 +359,23 @@ section {
 .home__prev-editions__winners {
   background-color: rgb(240, 240, 240);
   border-radius: 10px;
-  padding: 30px 10px 10px 10px;
-  width: 100%;
   height: 100%;
   max-width: 400px;
+  padding: 30px 10px 10px 10px;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .home__prev-editions__winners__img {
-  width: 100%;
-  padding: 0px 50px;
+  min-width: 100px;
+  width: 40%;
 }
 .home__prev-editions__winners .slider {
   align-items: start;
-  width: 100%;
   min-height: 160px;
+  width: 100%;
 }
 @media (min-width: 800px) {
   .home__prev-editions__winners .slider {
