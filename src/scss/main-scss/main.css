@@ -41,35 +41,6 @@ section {
   justify-content: center;
 }
 
-.component-header {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  position: relative;
-  width: 100vw;
-}
-.component-header h1 {
-  background-color: white;
-  font-size: clamp(0.8rem, 5vw, 1.5rem);
-  padding: 10px;
-  text-align: center;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-.component-header h1::before {
-  content: "";
-  background-color: #ffca29;
-  bottom: 0;
-  height: 2px;
-  left: 0;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: -1;
-}
-
 .nav {
   align-items: center;
   display: flex;
@@ -203,6 +174,35 @@ section {
 }
 .footer__details a:hover {
   color: #ffca29;
+}
+
+.component-header {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  width: 100vw;
+}
+.component-header h1 {
+  background-color: white;
+  font-size: clamp(0.8rem, 5vw, 1.5rem);
+  padding: 10px;
+  text-align: center;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.component-header h1::before {
+  content: "";
+  background-color: #ffca29;
+  bottom: 0;
+  height: 2px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
 }
 
 /* HOME PAGE - index.js */

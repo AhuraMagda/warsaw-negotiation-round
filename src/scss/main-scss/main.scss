@@ -1,33 +1,5 @@
 @import "../config";
 
-// component header
-
-.component-header {
-  @include flexCenter();
-  position: relative;
-  width: 100vw;
-  h1 {
-    background-color: white;
-    font-size: clamp(0.8rem, 5vw, 1.5rem);
-    padding: 10px;
-    text-align: center;
-    width: fit-content;
-
-    &::before {
-      content: "";
-      background-color: $color-accent;
-      bottom: 0;
-      height: 2px;
-      left: 0;
-      margin: auto;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      z-index: -1;
-    }
-  }
-}
-
 // NAVBAR
 
 .nav {
@@ -159,6 +131,34 @@
 
     a:hover {
       color: $color-accent;
+    }
+  }
+}
+
+// PAGES HEADER
+
+.component-header {
+  @include flexCenter();
+  position: relative;
+  width: 100vw;
+  h1 {
+    background-color: white;
+    font-size: clamp(0.8rem, 5vw, 1.5rem);
+    padding: 10px;
+    text-align: center;
+    width: fit-content;
+
+    &::before {
+      content: "";
+      background-color: $color-accent;
+      bottom: 0;
+      height: 2px;
+      left: 0;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: -1;
     }
   }
 }
