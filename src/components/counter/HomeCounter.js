@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import iconCalendar from "../../images/icons/icon-calendar.png";
 import { displayRemainingTime } from "./helpers/calculateRemainingTIme";
 
@@ -11,7 +12,7 @@ export default function Counter() {
     currentdate
   );
 
-  React.useEffect(() => {
+  useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentDate(new Date());
     }, 1000);
