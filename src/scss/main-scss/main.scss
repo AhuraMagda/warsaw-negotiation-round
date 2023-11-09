@@ -18,7 +18,7 @@
 
   &__logo {
     width: 200px;
-    margin-left: 10px; 
+    margin-left: 10px;
   }
 
   &__menu {
@@ -145,7 +145,7 @@
 .pages-header {
   @include flexCenter();
   position: relative;
-  width: 100vw;
+  width: 100%;
   h1 {
     background-color: white;
     font-size: clamp(1.4rem, 4vw, 2rem);
@@ -270,31 +270,28 @@
   }
 
   &__counter {
-      background-color: $color-accent;
-      color: $color-text--light;
-      padding: 30px;
-      width: 100vw;
+    background-color: $color-accent;
+    color: $color-text--light;
+    padding: 30px;
+    width: 100%;
 
-      &__container {
-        width: 90%;
-        max-width: 800px;
+    &__container {
+      width: 90%;
+      max-width: 800px;
 
-        @include flexCenter();
-        img {
-          margin-right: 30px;
-          height: 60px;
-        }
-    
-        &__text {
-          width: 70%;
-          p {
-            font-size: clamp(1rem, 5vw, 3rem);
-          }
-        }
+      @include flexCenter();
+      img {
+        margin-right: 30px;
+        height: 60px;
       }
 
-
-
+      &__text {
+        width: 70%;
+        p {
+          font-size: clamp(1rem, 5vw, 3rem);
+        }
+      }
+    }
   }
 
   &__prev-editions {
@@ -363,6 +360,7 @@
 // CONTACT PAGE
 
 .contact {
+  @include flexCenter(column);
   &__wrapper {
     max-width: 700px;
     width: 100vw;
@@ -370,7 +368,7 @@
 
     h2 {
       margin-bottom: 10px;
-      font-size: clamp(1.2rem, 2.5vw, 1.5rem)
+      font-size: clamp(1.2rem, 2.5vw, 1.5rem);
     }
 
     p {

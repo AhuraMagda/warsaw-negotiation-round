@@ -40,7 +40,17 @@ section {
   justify-content: center;
 }
 
+main {
+  width: 100%;
+}
+
 .gallery {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.gallery__wrapper {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(2, 1fr);
@@ -51,22 +61,22 @@ section {
   width: 90vw;
 }
 @media (min-width: 600px) {
-  .gallery {
+  .gallery__wrapper {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (min-width: 800px) {
-  .gallery {
+  .gallery__wrapper {
     grid-template-columns: repeat(6, 1fr);
   }
 }
-.gallery__card {
+.gallery__wrapper__card {
   aspect-ratio: 1;
   cursor: pointer;
   overflow: hidden;
   position: relative;
   width: auto;
 }
-.gallery__card > div {
+.gallery__wrapper__card > div {
   position: static;
 }/*# sourceMappingURL=gallery.css.map */

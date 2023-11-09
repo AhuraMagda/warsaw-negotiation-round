@@ -69,3 +69,7 @@ button {
 section {
   @include flexCenter(column);
 }
+
+main {
+  width: 100%;
+}

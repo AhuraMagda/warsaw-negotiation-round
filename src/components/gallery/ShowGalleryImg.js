@@ -13,9 +13,9 @@ export default function ShowGalleryImg({
       onClick={() => {
         hideImg();
       }}
-      className="gallery__big-img"
+      className="gallery__wrapper__big-img"
     >
-      <div className="gallery__big-img__slider-container">
+      <div className="gallery__wrapper__big-img__slider-container">
         <Slider
           slideData={allPhotosData}
           imgProp={"image"}

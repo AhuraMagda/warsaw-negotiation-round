@@ -10,7 +10,7 @@
 
 //STEPS GRAPHIC
 .participation__steps__container {
-  margin: 50px 0px;
+  margin-bottom: 50px;
   max-width: 900px; 
   @include flexCenter(column);
 
@@ -42,8 +42,14 @@
   }
   &__description {
     width: 100%;
+    padding: 20px;
     font-size: 1.8rem;
     align-self: start;
+    min-height: 120px;
+
+    p {
+      text-align: center;
+    }
   }
 }
 

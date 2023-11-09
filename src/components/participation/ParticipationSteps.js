@@ -6,8 +6,8 @@ import { makeStepsButtons } from "./helpers/makeStepsButtons";
 import { makeStepDescription } from "./helpers/makeStepsDescription";
 
 export default function ParticipationSteps() {
-  const isSmallScreen = useMediaQuery({ maxWidth: 599 });
-  const isMediumScreen = useMediaQuery({ minWidth: 600 });
+  const isSmallScreen = useMediaQuery({ maxWidth: 799 });
+  const isBigScreen = useMediaQuery({ minWidth: 800 });
 
   const [activeStep, setActiveStep] = React.useState(1);
 
@@ -28,7 +28,7 @@ export default function ParticipationSteps() {
         />
       )}
 
-      {isMediumScreen && (
+      {isBigScreen && (
         <>
           <div className="participation__steps__container__buttons">{buttonsToDisplay}</div>
           <div className="participation__steps__container__description">

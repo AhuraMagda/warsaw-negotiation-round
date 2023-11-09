@@ -15,8 +15,6 @@ export default function DisplayedPhotos({ allPhotosData, showImg }) {
     query: "(max-width: 599px)",
   });
 
-  let photos;
-
   return (
     <>
       {isBigScreen && allPhotosToDisplay}

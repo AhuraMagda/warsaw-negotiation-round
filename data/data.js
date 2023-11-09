@@ -63,11 +63,11 @@ const participationData = [
   {
     step: 1,
     description:
-      "Gather a team of three, consisting of at least 2 people from the same university.",
+      "Gather a team of three, consisting of at least 2 people from the\u00A0same university.",
   },
   {
     step: 2,
-    description: "Prepare a CVs from each team member and cover letter.",
+    description: "Prepare a CVs from each team member and a\u00A0cover letter.",
   },
   {
     step: 3,
