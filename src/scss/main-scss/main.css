@@ -224,7 +224,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 15vh;
+  padding-top: 20vh;
 }
 .home__header__text {
   align-items: center;
@@ -258,8 +258,14 @@ section {
 }
 @media (min-width: 600px) {
   .home__header__photo {
-    width: 200%;
+    width: 400%;
     animation: moveM 20s linear infinite;
+  }
+}
+@media (min-width: 800px) {
+  .home__header__photo {
+    width: 200%;
+    animation: moveL 20s linear infinite;
   }
 }
 .home__intro {
@@ -399,6 +405,14 @@ section {
   }
 }
 @keyframes moveM {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -200%;
+  }
+}
+@keyframes moveL {
   0% {
     left: 0;
   }

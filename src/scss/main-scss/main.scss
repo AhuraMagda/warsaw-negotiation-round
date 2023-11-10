@@ -181,7 +181,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 15vh;
+    padding-top: 20vh;
 
     &__text {
       @include flexCenter(column);
@@ -211,8 +211,12 @@
       opacity: 0.1;
       z-index: -1;
       @include medium {
-        width: 200%;
+        width: 400%;
         animation: moveM 20s linear infinite;
+      }
+      @include big {
+        width: 200%;
+        animation: moveL 20s linear infinite;
       }
     }
   }
@@ -351,6 +355,15 @@
 }
 
 @keyframes moveM {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -200%;
+  }
+}
+
+@keyframes moveL {
   0% {
     left: 0;
   }
