@@ -4,6 +4,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import leftArrow from "../images/icons/icon-slider-arrow-left.png";
 import rightArrow from "../images/icons/icon-slider-arrow-right.png";
 import "../scss/slider-scss/slider.css";
+import { handleEnter } from "./helpers/handleEnter";
 
 export default function Slider({
   slideData,
@@ -82,6 +83,8 @@ export default function Slider({
             className="slider__slide__arrow-left"
             src={leftArrow}
             alt="arrow icon"
+            tabIndex="0"
+            onKeyDown={(event)=> handleEnter(event, changeSlide("left", slideData))}
           />
           <img
             onClick={(event) => {
@@ -92,6 +95,8 @@ export default function Slider({
             className="slider__slide__arrow-right"
             src={rightArrow}
             alt="arrow icon"
+            tabIndex="0"
+            onKeyDown={(event)=> handleEnter(event, changeSlide("right", slideData))}
           />
         </div>
       </div>
