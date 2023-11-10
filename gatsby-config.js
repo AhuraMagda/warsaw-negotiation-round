@@ -31,6 +31,15 @@ module.exports = {
         icon: `src/images/icon.png`, 
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Lato\:300,400,500,700`, 
+        ],
+        display: 'swap',
+      },
+    },
   ],
   siteMetadata: {
     title: "Warsaw Negotiation Round",
