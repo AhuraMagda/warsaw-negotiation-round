@@ -239,16 +239,16 @@ section {
   padding-bottom: 2rem;
 }
 .home__header h2 {
-  background-color: black;
-  color: #ffca29;
+  background-color: #ffca29;
+  color: black;
   font-size: clamp(1rem, 5vw, 2rem);
   font-weight: 400;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 2px 5px;
+  padding: 4px 10px;
 }
 .home__header__photo {
-  width: 600%;
+  width: 800%;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -395,7 +395,7 @@ section {
     left: 0;
   }
   100% {
-    left: -300%;
+    left: -400%;
   }
 }
 @keyframes moveM {
