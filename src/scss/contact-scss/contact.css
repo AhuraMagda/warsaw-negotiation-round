@@ -46,7 +46,7 @@ section {
   max-width: 700px;
   min-height: 65vh;
   width: 100vw;
-  padding: 0px 20px;
+  padding: 50px 20px;
 }
 .contact__wrapper h2 {
   font-size: clamp(1.2rem, 2.5vw, 1.5rem);
@@ -104,5 +104,5 @@ section {
 }
 .contact__info {
   width: 100%;
-  padding-top: 100px;
+  padding-top: 50px;
 }/*# sourceMappingURL=contact.css.map */
