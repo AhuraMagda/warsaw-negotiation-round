@@ -16,21 +16,21 @@ button {
 }
 
 .site-wrapper {
-  min-height: 100vh;
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-height: 100vh;
 }
 
 .content-wrapper {
-  margin-top: 10vh;
-  width: 100%;
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   flex-grow: 1;
+  margin-top: 10vh;
+  width: 100%;
 }
 
 section {
@@ -135,7 +135,7 @@ section {
 }
 .participation .slider__slide__p {
   font-size: 1.3rem;
-  text-align: center;
-  min-height: 120px;
   max-width: 500px;
+  min-height: 120px;
+  text-align: center;
 }/*# sourceMappingURL=slider.css.map */

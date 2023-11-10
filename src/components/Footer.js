@@ -44,7 +44,7 @@ function Footer() {
         <p>{copyrightDate}</p>
         <p>
           Developed by{" "}
-          <a href="https://github.com/AhuraMagda" target="_blank">
+          <a href="https://github.com/AhuraMagda" target="_blank" rel="noopener noreferrer">
             M.Lubaszka
           </a>
         </p>

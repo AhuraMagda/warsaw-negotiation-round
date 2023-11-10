@@ -2,18 +2,17 @@
 
 // MAIN
 .participation {
-  margin: 50px 0px;
-  width: 100%;
-  max-width: 1200px;
   @include flexCenter(column);
-
+  margin: 50px 0px;
+  max-width: 1200px;
+  width: 100%;
 }
 
 //STEPS GRAPHIC
 .participation__steps__container {
+  @include flexCenter(column);
   margin-bottom: 50px;
   max-width: 900px; 
-  @include flexCenter(column);
 
   &__buttons {
     display: flex;
@@ -22,12 +21,12 @@
 
 
     button {
-      height: 100px;
-      width: 100px;
       border-radius: 50%;
-      font-size: 2rem;
-      margin: 0px 10px;
       cursor: pointer;
+      font-size: 2rem;
+      height: 100px;
+      margin: 0px 10px;
+      width: 100px;
     }
     .active-step {
       &__button {
@@ -35,18 +34,18 @@
         color: white;
       }
       &__text {
-        display: block;
         color: red;
+        display: block;
       }
     }
     
   }
   &__description {
-    width: 100%;
-    padding: 20px;
-    font-size: 1.8rem;
     align-self: start;
+    font-size: 1.8rem;
     min-height: 120px;
+    padding: 20px;
+    width: 100%;
 
     p {
       text-align: center;
@@ -58,18 +57,18 @@
 // TABLES SCENARIOS, FORMS
 
 .participation__tables {
-  width: 100%;
-  max-width: 900px;
   @include flexCenter(column);
   margin: 50px 0px;
+  max-width: 900px;
   padding: 30px 10px;
+  width: 100%;
 
   a {
     background-color: white;
-    margin: 10px 0px;
-    width: 80%;
-    padding: 10px 15px;
     cursor: pointer;
+    margin: 10px 0px;
+    padding: 10px 15px;
+    width: 80%;
   }
   h2 {
     padding: 10px 0px;

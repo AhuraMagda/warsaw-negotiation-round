@@ -1,5 +1,6 @@
 import React from "react";
 import Slider from "../Slider";
+import { handleEnter } from "../helpers/handleEnter";
 
 export default function ShowGalleryImg({
   activeImgIndex,
@@ -14,6 +15,8 @@ export default function ShowGalleryImg({
         hideImg();
       }}
       className="gallery__wrapper__big-img"
+      tabIndex="0"
+      onKeyDown={(event)=> handleEnter(event, hideImg)}
     >
       <div className="gallery__wrapper__big-img__slider-container">
         <Slider

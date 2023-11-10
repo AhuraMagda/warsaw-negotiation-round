@@ -1,6 +1,6 @@
 import React from "react";
 
-function ContactForm() {
+export default function ContactForm() {
   return (
     <form
       action="/functions/send-email.php"
@@ -9,7 +9,7 @@ function ContactForm() {
     >
       <div className="contact__wrapper__form__table">
         <div>
-          <label for="name">Full name</label>
+          <label htmlFor="name">Full name</label>
           <input
             type="text"
             id="name"
@@ -18,7 +18,7 @@ function ContactForm() {
           />
         </div>
         <div>
-          <label for="email">E-mail</label>
+          <label htmlFor="email">E-mail</label>
           <input
             type="text"
             id="email"
@@ -28,7 +28,7 @@ function ContactForm() {
           />
         </div>
         <div>
-          <label for="comment">Info</label>
+          <label htmlFor="comment">Info</label>
           <textarea
             name="contact__form__table__comment"
             id="comment"
@@ -43,5 +43,3 @@ function ContactForm() {
     </form>
   );
 }
-
-export default ContactForm;
