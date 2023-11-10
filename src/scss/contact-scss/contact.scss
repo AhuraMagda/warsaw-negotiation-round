@@ -3,9 +3,11 @@
 .contact {
 
     &__wrapper {
+      align-items: start;
       max-width: 700px;
       min-height: 65vh;
       width: 100vw;
+      padding: 0px 20px;
   
       h2 {
         font-size: clamp(1.2rem, 2.5vw, 1.5rem);
