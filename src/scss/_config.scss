@@ -50,7 +50,7 @@ $small: 400px;
 button {
   background-color: $color-accent;
   color: $color-text--light;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Lato", sans-serif;
   padding: 10px;
 }
 
@@ -68,4 +68,8 @@ button {
 
 section {
   @include flexCenter(column);
+}
+
+h1, h2, h3 {
+  font-family: "Lato", sans-serif;
 }

@@ -4,7 +4,6 @@ import iconInstagram from "../images/icons/icon-instagram.png";
 import iconLinkedin from "../images/icons/icon-linkedin.png";
 import iconYoutube from "../images/icons/icon-youtube.png";
 
-//TODO make helper and import date
 const copyrightDate = `© ${new Date().getFullYear()} Warsaw Negotiation Round`;
 
 function Footer() {
@@ -44,7 +43,11 @@ function Footer() {
         <p>{copyrightDate}</p>
         <p>
           Developed by{" "}
-          <a href="https://github.com/AhuraMagda" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://github.com/AhuraMagda"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             M.Lubaszka
           </a>
         </p>
