@@ -18,7 +18,7 @@ function NavBar() {
   return (
     <nav className={`nav`}>
       <Link to="/">
-        <img className="nav__logo" src={logo} />
+        <img className="nav__logo" src={logo} alt="WNR logo"/>
       </Link>
 
       <div onClick={toggleBurger} className="hamburger">
