@@ -81,6 +81,7 @@ export default function Slider({
             }}
             className="slider__slide__arrow-left"
             src={leftArrow}
+            alt="arrow icon"
           />
           <img
             onClick={(event) => {
@@ -90,6 +91,7 @@ export default function Slider({
             }}
             className="slider__slide__arrow-right"
             src={rightArrow}
+            alt="arrow icon"
           />
         </div>
       </div>

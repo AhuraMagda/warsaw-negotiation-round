@@ -1,6 +1,5 @@
 import React from "react";
 import Layout from "../components/Layout";
-import ContactForm from "../components/ContactForm";
 import PagesHeader from "../components/PagesHeader";
 import "../scss/contact-scss/contact.css"
 
@@ -19,7 +18,6 @@ function Contact() {
             We would appreciate it if you choose the appropriate department and
             write an email to us.
           </p>
-          {/* <ContactForm /> */}
 
           <div className="contact__info">
             <p>
