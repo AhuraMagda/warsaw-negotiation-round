@@ -34,33 +34,36 @@
 
 //   SLIDER IN GALLERY
 
-.gallery__big-img {
-  @include flexCenter();
-  background-color: rgba(255, 255, 255, 0.7);
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 20;
-
-  &__slider-container {
-    .slider {
-      background-color: white;
-      border-radius: 10px;
-      cursor: pointer;
-      height: fit-content;
-      padding: 10px;
-      width: fit-content;
-
-      &__slide {
-        max-width: 900px;
-        max-height: 90vh;
+.gallery {
+  &__wrapper__big-img {
+    @include flexCenter();
+    background-color: rgba(255, 255, 255, 0.7);
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 20;
+  
+    &__slider-container {
+      .slider {
+        background-color: white;
+        border-radius: 10px;
+        cursor: pointer;
+        height: fit-content;
+        padding: 10px;
+        width: fit-content;
+  
+        &__slide {
+          max-width: 900px;
+          max-height: 90vh;
+        }
       }
     }
   }
 }
+
 
 //  SLIDER IN HOME
 
