@@ -6,7 +6,7 @@ export default function HomeIntro({introImage}) {
     return (
         <section className="home__intro">
         <div className="home__intro__photo">
-          <GatsbyImage image={introImage} alt="Working students" />
+          <GatsbyImage image={introImage} alt="Students by the desk" />
         </div>
 
         <div className="home__intro__text">
@@ -16,10 +16,8 @@ export default function HomeIntro({introImage}) {
             year after year unites students of top law, economics and business
             schools from around the world.
           </p>
-          <Link to="/participation">
-            <button className="home__intro__text__btn">
+          <Link to="/participation" className="home__intro__text__btn">
               I WANT TO PARTICIPATE
-            </button>
           </Link>
         </div>
       </section>
