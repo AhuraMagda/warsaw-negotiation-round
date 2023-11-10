@@ -1,4 +1,5 @@
 import React from "react";
+import { handleEnter } from "../helpers/handleEnter";
 
 export default function NavBarBurger({ setMobileNavActive }) {
   const [clicked, setClicked] = React.useState("");
@@ -10,16 +11,10 @@ export default function NavBarBurger({ setMobileNavActive }) {
     );
   };
 
-  const handleKeyDown = (event) => {
-    if (event.key === "Enter") {
-      toggleBurger();
-    }
-  };
-
   return (
     <div
       onClick={toggleBurger}
-      onKeyDown={handleKeyDown}
+      onKeyDown={(event)=> handleEnter(event, toggleBurger)}
       className="hamburger"
       tabIndex="0"
     >

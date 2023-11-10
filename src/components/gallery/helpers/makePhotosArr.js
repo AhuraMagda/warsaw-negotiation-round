@@ -9,6 +9,7 @@ export const makePhotosArray = (allPhotosData, showImg ) => {
           }}
           className="gallery__wrapper__card"
           key={key}
+          tabIndex="0"
         >
           <GatsbyImage image={image} alt="students" />
         </div>
