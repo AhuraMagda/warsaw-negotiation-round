@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 import leftArrow from "../images/icons/icon-slider-arrow-left.png";
 import rightArrow from "../images/icons/icon-slider-arrow-right.png";
@@ -32,19 +32,19 @@ export default function Slider({
 
   const [isInterval, setIsInterval] = useState(true);
 
-  let intervalId;
+  const intervalIdRef = useRef(null);
 
   useEffect(() => {
     if (isInterval) {
-      intervalId = setInterval(() => {
+      intervalIdRef.current = setInterval(() => {
         changeSlide("right", slideData);
       }, 2500);
     }
-    return () => clearInterval(intervalId);
+    return () => clearInterval(intervalIdRef.current);
   }, [isInterval, activeSlide]);
 
   const deleteInterval = () => {
-    clearInterval(intervalId);
+    clearInterval(intervalIdRef.current);
     setIsInterval(false);
   };
 
