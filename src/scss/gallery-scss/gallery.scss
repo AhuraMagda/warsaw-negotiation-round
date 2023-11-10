@@ -1,7 +1,7 @@
 @import "../config";
 
 .gallery {
-  @include flexCenter(column);
+
   &__wrapper {
     display: grid;
     grid-gap: 10px;

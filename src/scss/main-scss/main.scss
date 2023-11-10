@@ -171,6 +171,8 @@
 /* HOME PAGE - index.js */
 
 .home {
+  width: 100%;
+  
   &__header {
     height: 90vh;
     width: 100%;
@@ -360,7 +362,7 @@
 // CONTACT PAGE
 
 .contact {
-  @include flexCenter(column);
+
   &__wrapper {
     max-width: 700px;
     width: 100vw;

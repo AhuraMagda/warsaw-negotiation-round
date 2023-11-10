@@ -41,10 +41,6 @@ section {
   justify-content: center;
 }
 
-main {
-  width: 100%;
-}
-
 .nav {
   align-items: center;
   display: flex;
@@ -217,6 +213,9 @@ main {
 }
 
 /* HOME PAGE - index.js */
+.home {
+  width: 100%;
+}
 .home__header {
   height: 90vh;
   width: 100%;
@@ -406,12 +405,6 @@ main {
   100% {
     left: -100%;
   }
-}
-.contact {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 .contact__wrapper {
   max-width: 700px;
