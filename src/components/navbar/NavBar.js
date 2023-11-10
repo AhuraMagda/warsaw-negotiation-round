@@ -11,6 +11,12 @@ function NavBar() {
     setActive((prevActive) => (prevActive === "" ? "nav__menu__active" : ""));
   };
 
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      toggleBurger();
+    }
+  };
+
   const activeStyle = {
     textDecoration: "underline",
   };
@@ -21,7 +27,7 @@ function NavBar() {
         <img className="nav__logo" src={logo} alt="WNR logo"/>
       </Link>
 
-      <div onClick={toggleBurger} className="hamburger">
+      <div onClick={toggleBurger} onKeyDown={handleKeyDown} className="hamburger" tabIndex="0">
         <div className={`hamburger__top-bun${clicked}`}></div>
         <div className={`hamburger__meat${clicked}`}></div>
         <div className={`hamburger__bottom-bun${clicked}`}></div>
