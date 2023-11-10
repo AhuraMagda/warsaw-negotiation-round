@@ -24,8 +24,11 @@ function Contact() {
             <p>
               <b>OUR DEPARTMENTS:</b>
             </p>
-            <p>Experts department: experts@warsawnegotiations.com</p>
-            <p>Logistic department: logistyka@warsawnegotiations.com</p>
+            <p>Contact: <a href="mailto:contact@warsawnegotiations.com">contact@warsawnegotiations.com</a></p>
+            <p>Collaboration department: <a href="mailto:wspolpraca@warsawnegotiations.com">wspolpraca@warsawnegotiations.com</a></p>
+            <p>Experts department: <a href="mailto:experts@warsawnegotiations.com">experts@warsawnegotiations.com</a></p>
+            <p>Participants department: <a href="mailto:participants@warsawnegotiations.com">participants@warsawnegotiations.com</a></p>
+            <p>Logistic department: <a href="mailto:logistyka@warsawnegotiations.com">logistyka@warsawnegotiations.com</a></p>
           </div>
         </section>
       </main>
