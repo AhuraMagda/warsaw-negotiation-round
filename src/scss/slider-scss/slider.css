@@ -40,10 +40,6 @@ section {
   justify-content: center;
 }
 
-main {
-  width: 100%;
-}
-
 .slider {
   align-items: center;
   display: flex;
@@ -79,7 +75,7 @@ main {
   z-index: 2;
 }
 
-.gallery__big-img {
+.gallery__wrapper__big-img {
   align-items: center;
   display: flex;
   flex-direction: row;
@@ -93,7 +89,7 @@ main {
   top: 0;
   z-index: 20;
 }
-.gallery__big-img__slider-container .slider {
+.gallery__wrapper__big-img__slider-container .slider {
   background-color: white;
   border-radius: 10px;
   cursor: pointer;
@@ -103,7 +99,7 @@ main {
   width: -moz-fit-content;
   width: fit-content;
 }
-.gallery__big-img__slider-container .slider__slide {
+.gallery__wrapper__big-img__slider-container .slider__slide {
   max-width: 900px;
   max-height: 90vh;
 }

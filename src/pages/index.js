@@ -14,7 +14,7 @@ export default function Home({ data }) {
   return (
     <Layout>
       <HomeHeader backgroundImage={homeHeaderImage} />
-      <main>
+      <main className="home">
         <HomeIntro introImage={homeIntroImage} />
         <HomeCounter />
         <HomePrevEditions logo={homePrevEditionImage} />

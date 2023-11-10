@@ -171,6 +171,8 @@
 /* HOME PAGE - index.js */
 
 .home {
+  width: 100%;
+  
   &__header {
     height: 90vh;
     width: 100%;
@@ -179,7 +181,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 15vh;
+    padding-top: 20vh;
 
     &__text {
       @include flexCenter(column);
@@ -192,16 +194,16 @@
     }
 
     h2 {
-      background-color: black;
-      color: $color-accent;
+      background-color: $color-accent;
+      color: black;
       font-size: clamp(1rem, 5vw, 2rem);
       font-weight: 400;
       width: fit-content;
-      padding: 2px 5px;
+      padding: 4px 10px;
     }
 
     &__photo {
-      width: 600%;
+      width: 800%;
       position: absolute;
       left: 0;
       bottom: 0;
@@ -209,8 +211,12 @@
       opacity: 0.1;
       z-index: -1;
       @include medium {
-        width: 200%;
+        width: 400%;
         animation: moveM 20s linear infinite;
+      }
+      @include big {
+        width: 200%;
+        animation: moveL 20s linear infinite;
       }
     }
   }
@@ -344,11 +350,20 @@
     left: 0;
   }
   100% {
-    left: -300%;
+    left: -400%;
   }
 }
 
 @keyframes moveM {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -200%;
+  }
+}
+
+@keyframes moveL {
   0% {
     left: 0;
   }
@@ -360,7 +375,7 @@
 // CONTACT PAGE
 
 .contact {
-  @include flexCenter(column);
+
   &__wrapper {
     max-width: 700px;
     width: 100vw;

@@ -40,16 +40,6 @@ section {
   justify-content: center;
 }
 
-main {
-  width: 100%;
-}
-
-.gallery {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 .gallery__wrapper {
   display: grid;
   grid-gap: 10px;
