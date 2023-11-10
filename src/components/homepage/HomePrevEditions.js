@@ -18,7 +18,7 @@ export default function HomePrevEditions({ logo }) {
       
       <div className="home__prev-editions__winners">
         <div className="home__prev-editions__winners__img">
-          <GatsbyImage image={logo} />
+          <GatsbyImage image={logo} alt="logo"/>
         </div>
 
         <Slider
