@@ -55,15 +55,15 @@ button {
 }
 
 .site-wrapper {
-  min-height: 100vh;
   @include flexCenter(column);
+  min-height: 100vh;
 }
 
 .content-wrapper {
-  margin-top: 10vh;
-  width: 100%;
   @include flexCenter(column);
   flex-grow: 1;
+  margin-top: 10vh;
+  width: 100%;
 }
 
 section {

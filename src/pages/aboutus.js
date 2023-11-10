@@ -5,6 +5,7 @@ import img2 from "../images/about-us-images/aboutus-negocjator.png";
 import img3 from "../images/about-us-images/aboutus-participants.jpg";
 import img4 from "../images/about-us-images/aboutus-venues.jpg";
 import PagesHeader from "../components/PagesHeader";
+import "../scss/aboutus-scss/aboutus.css";
 
 function Aboutus() {
   return (
