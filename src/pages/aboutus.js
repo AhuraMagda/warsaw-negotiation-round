@@ -15,7 +15,7 @@ function Aboutus() {
       </PagesHeader>
       <main className="about-us">
         <article className="about-us__article">
-          <img src={img1} alt="students' meeting" loading="lazy"/>
+          <img src={img1} alt="students' meeting"/>
           <div className="about-us__article__text">
             <h3>FOR STUDENTS FROM STUDENTS</h3>
             <p>
@@ -50,11 +50,11 @@ function Aboutus() {
               administration.
             </p>
           </div>
-          <img src={img2} alt="SKN NEGOCJATOR logo" loading="lazy"/>
+          <img src={img2} alt="SKN NEGOCJATOR logo"/>
         </article>
 
         <article className="about-us__article">
-          <img src={img3} alt="negotiation event" loading="lazy"/>
+          <img src={img3} alt="negotiation event"/>
           <div className="about-us__article__text">
             <h3>PARTICIPANTS & EXPERTS </h3>
             <p>
@@ -90,7 +90,7 @@ function Aboutus() {
               Warsaw School of Economics.
             </p>
           </div>
-          <img src={img4} alt="negotiation event" loading="lazy"/>
+          <img src={img4} alt="negotiation event"/>
         </article>
       </main>
     </Layout>
