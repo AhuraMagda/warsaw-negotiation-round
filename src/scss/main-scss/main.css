@@ -65,6 +65,7 @@ h1, h2, h3 {
 }
 .nav__logo {
   width: 200px;
+  height: auto;
   margin-left: 10px;
 }
 .nav__menu {
@@ -166,6 +167,7 @@ h1, h2, h3 {
 }
 .footer__socials__icon {
   height: 50px;
+  width: 50px;
   margin: 0px 10px;
 }
 .footer__details {
