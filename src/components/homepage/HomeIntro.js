@@ -11,10 +11,10 @@ export default function HomeIntro({introImage}) {
 
         <div className="home__intro__text">
           <p>
-            Warsaw Negotiation Round 2024 is the 15th edition of one of the
+            Warsaw Negotiation Round 2024 is the&nbsp;15th edition of one of the
             most prestigious international negotiation tournaments. The WNR
             year after year unites students of top law, economics and business
-            schools from around the world.
+            schools from around the&nbsp;world.
           </p>
           <Link to="/participation" className="home__intro__text__btn">
               I WANT TO PARTICIPATE

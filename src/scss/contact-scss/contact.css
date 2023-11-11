@@ -50,7 +50,7 @@ h1, h2, h3 {
   max-width: 700px;
   min-height: 65vh;
   width: 100vw;
-  padding: 50px 20px;
+  padding: 0px 30px 50px 30px;
 }
 .contact__wrapper h2 {
   font-size: clamp(1.2rem, 2.5vw, 1.5rem);

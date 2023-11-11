@@ -65,6 +65,7 @@ h1, h2, h3 {
 }
 .nav__logo {
   width: 200px;
+  height: auto;
   margin-left: 10px;
 }
 .nav__menu {
@@ -166,6 +167,7 @@ h1, h2, h3 {
 }
 .footer__socials__icon {
   height: 50px;
+  width: 50px;
   margin: 0px 10px;
 }
 .footer__details {
@@ -305,6 +307,7 @@ h1, h2, h3 {
   font-size: 1.2rem;
   max-width: 400px;
   padding: 70px 20px 30px 20px;
+  text-align: center;
   width: 100%;
 }
 @media (min-width: 800px) {
@@ -320,6 +323,7 @@ h1, h2, h3 {
   cursor: pointer;
   font-size: 1rem;
   margin: 6px;
+  text-decoration: none;
   padding: 20px;
 }
 .home__intro__text__btn:hover {
@@ -334,6 +338,7 @@ h1, h2, h3 {
   color: white;
   padding: 30px;
   width: 100%;
+  min-height: 200px;
 }
 .home__counter__container {
   width: 90%;
@@ -378,9 +383,11 @@ h1, h2, h3 {
 }
 .home__prev-editions__text h2 {
   padding-bottom: 20px;
+  text-align: center;
 }
 .home__prev-editions__text p {
   font-size: 1.2rem;
+  text-align: center;
 }
 .home__prev-editions__winners {
   background-color: rgb(240, 240, 240);
