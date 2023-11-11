@@ -34,14 +34,17 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Lato\:300,400,500,700`],
+        fonts: [
+          {
+            family: `Lato`,
+            variants: [`300`, `400`, `500`, `700`],
+          },
+        ],
         display: "swap",
       },
     },
   ],
   siteMetadata: {
-    title: "Warsaw Negotiation Round",
-    description: "information site",
     copyright: "This website is copyright 2023 Warsaw Negotiation Round",
   },
 };
