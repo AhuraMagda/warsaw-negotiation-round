@@ -1,13 +1,16 @@
 import React from "react";
 import Layout from "../components/Layout";
-import img1 from "../images/about-us-images/aboutus-students.jpg";
-import img2 from "../images/about-us-images/aboutus-negocjator.png";
-import img3 from "../images/about-us-images/aboutus-participants.jpg";
-import img4 from "../images/about-us-images/aboutus-venues.jpg";
 import PagesHeader from "../components/PagesHeader";
 import "../scss/aboutus-scss/aboutus.css";
+import { graphql } from "gatsby";
+import { GatsbyImage } from "gatsby-plugin-image";
 
-function Aboutus() {
+function Aboutus({ data }) {
+  const img1 = data.photo1.childImageSharp.gatsbyImageData;
+  const img2 = data.photo2.childImageSharp.gatsbyImageData;
+  const img3 = data.photo3.childImageSharp.gatsbyImageData;
+  const img4 = data.photo4.childImageSharp.gatsbyImageData;
+
   return (
     <Layout>
       <PagesHeader>
@@ -15,7 +18,10 @@ function Aboutus() {
       </PagesHeader>
       <main className="about-us">
         <article className="about-us__article">
-          <img src={img1} alt="students' meeting"/>
+          <div className="about-us__article__image">
+            <GatsbyImage image={img1} alt="students' meeting" />
+          </div>
+
           <div className="about-us__article__text">
             <h3>FOR STUDENTS FROM STUDENTS</h3>
             <p>
@@ -50,11 +56,15 @@ function Aboutus() {
               administration.
             </p>
           </div>
-          <img src={img2} alt="SKN NEGOCJATOR logo"/>
+          <div className="about-us__article__image">
+            <GatsbyImage image={img2} alt="SKN NEGOCJATOR logo" />
+          </div>
         </article>
 
         <article className="about-us__article">
-          <img src={img3} alt="negotiation event"/>
+          <div className="about-us__article__image">
+            <GatsbyImage image={img3} alt="negotiation event" />
+          </div>
           <div className="about-us__article__text">
             <h3>PARTICIPANTS & EXPERTS </h3>
             <p>
@@ -90,7 +100,9 @@ function Aboutus() {
               Warsaw School of Economics.
             </p>
           </div>
-          <img src={img4} alt="negotiation event"/>
+          <div className="about-us__article__image">
+            <GatsbyImage image={img4} alt="negotiation event" />
+          </div>
         </article>
       </main>
     </Layout>
@@ -98,3 +110,32 @@ function Aboutus() {
 }
 
 export default Aboutus;
+
+export const query = graphql`
+  query {
+    photo1: file(relativePath: { eq: "about-us-images/aboutus-students.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH)
+      }
+    }
+    photo2: file(
+      relativePath: { eq: "about-us-images/aboutus-negocjator.png" }
+    ) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH)
+      }
+    }
+    photo3: file(
+      relativePath: { eq: "about-us-images/aboutus-participants.jpg" }
+    ) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH)
+      }
+    }
+    photo4: file(relativePath: { eq: "about-us-images/aboutus-venues.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH)
+      }
+    }
+  }
+`;
