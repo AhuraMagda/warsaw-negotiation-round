@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "../Slider";
 import { useMediaQuery } from "react-responsive";
-import { participationData } from "../../../data/data";
+import { participationData } from "../../data/data";
 import { makeStepsButtons } from "./helpers/makeStepsButtons";
 import { makeStepDescription } from "./helpers/makeStepsDescription";
 
