@@ -156,7 +156,7 @@ h1, h2, h3 {
   padding: 5px;
   width: 100%;
 }
-.footer__socials {
+.footer__icons {
   align-items: center;
   display: flex;
   flex-direction: row;
@@ -165,7 +165,7 @@ h1, h2, h3 {
   padding: 20px;
   width: 100%;
 }
-.footer__socials__icon {
+.footer__icons__icon {
   height: 50px;
   width: 50px;
   margin: 0px 10px;

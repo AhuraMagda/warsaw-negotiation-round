@@ -1,6 +1,6 @@
 import React from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
-import { prevEditionsData } from "../../../data/data";
+import { prevEditionsData } from "../../data/data";
 import Slider from "../Slider";
 
 export default function HomePrevEditions({ logo }) {

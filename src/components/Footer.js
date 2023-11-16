@@ -9,31 +9,31 @@ const copyrightDate = `© ${new Date().getFullYear()} Warsaw Negotiation Round`;
 function Footer() {
   return (
     <footer className="footer">
-      <div className="footer__socials">
+      <div className="footer__icons">
         <a href="https://www.facebook.com/theWNR">
           <img
-            className="footer__socials__icon"
+            className="footer__icons__icon"
             src={iconFacebook}
             alt="facebook"
           />
         </a>
         <a href="https://www.instagram.com/warsawnegotiationround">
           <img
-            className="footer__socials__icon"
+            className="footer__icons__icon"
             src={iconInstagram}
             alt="instagram"
           />
         </a>
         <a href="https://www.linkedin.com/company/thewnr/">
           <img
-            className="footer__socials__icon"
+            className="footer__icons__icon"
             src={iconLinkedin}
             alt="linkedin"
           />
         </a>
         <a href="https://www.youtube.com/@WarsawNegotiationRound">
           <img
-            className="footer__socials__icon"
+            className="footer__icons__icon"
             src={iconYoutube}
             alt="youtube"
           />
