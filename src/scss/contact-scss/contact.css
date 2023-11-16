@@ -45,12 +45,19 @@ h1, h2, h3 {
   font-family: "Lato", sans-serif;
 }
 
+.contact {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  padding: 0px 30px 50px 30px;
+}
 .contact__wrapper {
   align-items: start;
-  max-width: 700px;
-  min-height: 65vh;
+  max-width: 600px;
+  min-height: 60vh;
   width: 100vw;
-  padding: 0px 30px 50px 30px;
 }
 .contact__wrapper h2 {
   font-size: clamp(1.2rem, 2.5vw, 1.5rem);
@@ -106,7 +113,19 @@ h1, h2, h3 {
   opacity: 1;
   text-indent: 0px;
 }
-.contact__info {
+.contact__wrapper__info {
   width: 100%;
   padding-top: 50px;
+}
+.contact__image {
+  display: none;
+  height: 100%;
+  margin-left: 30px;
+  max-width: 300px;
+  width: 50%;
+}
+@media (min-width: 800px) {
+  .contact__image {
+    display: block;
+  }
 }/*# sourceMappingURL=contact.css.map */
