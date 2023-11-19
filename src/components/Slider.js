@@ -84,7 +84,9 @@ export default function Slider({
             src={leftArrow}
             alt="arrow icon"
             tabIndex="0"
-            onKeyDown={(event)=> handleEnter(event, changeSlide("left", slideData))}
+            onKeyDown={(event) =>
+              handleEnter(event, changeSlide("left", slideData))
+            }
           />
           <img
             onClick={(event) => {
@@ -96,7 +98,9 @@ export default function Slider({
             src={rightArrow}
             alt="arrow icon"
             tabIndex="0"
-            onKeyDown={(event)=> handleEnter(event, changeSlide("right", slideData))}
+            onKeyDown={(event) =>
+              handleEnter(event, changeSlide("right", slideData))
+            }
           />
         </div>
       </div>

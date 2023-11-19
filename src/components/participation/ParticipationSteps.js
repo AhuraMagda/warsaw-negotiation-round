@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import Slider from "../Slider";
 import { useMediaQuery } from "react-responsive";
 import { participationData } from "../../data/data";
@@ -9,7 +10,7 @@ export default function ParticipationSteps() {
   const isSmallScreen = useMediaQuery({ maxWidth: 799 });
   const isBigScreen = useMediaQuery({ minWidth: 800 });
 
-  const [activeStep, setActiveStep] = React.useState(1);
+  const [activeStep, setActiveStep] = useState(1);
 
   const changeStep = (step) => {
     setActiveStep(step);
