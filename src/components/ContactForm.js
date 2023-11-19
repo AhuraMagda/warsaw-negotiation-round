@@ -1,5 +1,5 @@
 import React from "react";
-
+// TODO not active yet
 export default function ContactForm() {
   return (
     <form
