@@ -1,5 +1,4 @@
 export const calculateRemainingTime = (endDate, startDate) => {
-
   if (!(endDate instanceof Date) || isNaN(endDate)) {
     return { counterFinished: true };
   }
@@ -28,7 +27,10 @@ export const calculateRemainingTime = (endDate, startDate) => {
     secondsNumber === 1 ? "" : "s"
   }`;
 
-  const counterFinished = (daysNumber === 0 && hoursNumber === 0 && minutesNumber === 0 & secondsNumber === 0)
+  const counterFinished =
+    daysNumber === 0 &&
+    hoursNumber === 0 &&
+    (minutesNumber === 0) & (secondsNumber === 0);
 
   return { days, hours, minutes, seconds, counterFinished };
 };
