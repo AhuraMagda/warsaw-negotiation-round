@@ -10,16 +10,19 @@ export default function ContactForm() {
       fullName: "",
       email: "",
       comment: ""
+    },
+    onSubmit: (values) => {
+      console.log(values)
     }
   })
 
-  console.log(formik.values)
 
   return (
     <form
       action="/functions/send-email.php"
       method="POST"
       className="contact__wrapper__form"
+      onSubmit={formik.handleSubmit}
     >
       <div className="contact__wrapper__form__table">
         <div>
