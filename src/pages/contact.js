@@ -2,13 +2,13 @@ import React from "react";
 import Layout from "../components/Layout";
 import PagesHeader from "../components/PagesHeader";
 import "../scss/contact-scss/contact.css"
-import { graphql } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
+// import { graphql } from "gatsby";
+// import { GatsbyImage } from "gatsby-plugin-image";
 import ContactForm from "../components/ContactForm";
 
 function Contact({ data }) {
 
-  const shakeHandsImage = data.shakeHands.childImageSharp.gatsbyImageData;
+  // const shakeHandsImage = data.shakeHands.childImageSharp.gatsbyImageData;
   return (
     <Layout>
       <PagesHeader>CONTACT</PagesHeader>
@@ -33,11 +33,11 @@ function Contact({ data }) {
             <p>Participants department: <a href="mailto:participants@warsawnegotiations.com">participants@warsawnegotiations.com</a></p>
             <p>Logistic department: <a href="mailto:logistyka@warsawnegotiations.com">logistyka@warsawnegotiations.com</a></p>
           </div>
-      <ContactForm />
         </section>
-        <div className="contact__image">
+      <ContactForm />
+        {/* <div className="contact__image">
           <GatsbyImage image={shakeHandsImage} alt="students shaking hands" />
-        </div>
+        </div> */}
       </main>
     </Layout>
   );
@@ -46,12 +46,12 @@ function Contact({ data }) {
 export default Contact;
 
 
-export const query = graphql`
-  query {
-    shakeHands: file(relativePath: { eq: "contact-images/IMG_2937.jpeg" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH)
-      }
-    }
-  }
-`;
+// export const query = graphql`
+//   query {
+//     shakeHands: file(relativePath: { eq: "contact-images/IMG_2937.jpeg" }) {
+//       childImageSharp {
+//         gatsbyImageData(layout: FULL_WIDTH)
+//       }
+//     }
+//   }
+// `;

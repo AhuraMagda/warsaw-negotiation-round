@@ -48,40 +48,38 @@ h1, h2, h3 {
 .contact {
   align-items: center;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   width: 100%;
   padding: 0px 30px 50px 30px;
 }
-.contact__wrapper {
-  align-items: start;
-  max-width: 600px;
-  min-height: 60vh;
-  width: 100vw;
+@media (min-width: 800px) {
+  .contact {
+    flex-direction: row;
+  }
 }
-.contact__wrapper h2 {
-  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
-  margin-bottom: 10px;
-}
-.contact__wrapper__form {
+.contact__form {
   background-color: #ffca29;
   border-radius: 10px;
   padding: 20px;
   width: 100%;
+  max-width: 500px;
 }
-.contact__wrapper__form__table input,
-.contact__wrapper__form__table textarea {
-  border-radius: 5px;
-  width: 100%;
-}
-.contact__wrapper__form__table__input-wrapper {
+.contact__form__table__input-wrapper {
   margin-bottom: 10px;
 }
-.contact__wrapper__form__table__input-wrapper__error {
+.contact__form__table__input-wrapper input,
+.contact__form__table__input-wrapper textarea {
+  border-radius: 5px;
+  width: 100%;
+  padding: 5px;
+}
+.contact__form__table__input-wrapper__error {
   color: red;
   font-size: 0.8rem;
+  margin: 2px 0px 0px 6px;
 }
-.contact__wrapper__form__table button {
+.contact__form__table button {
   background-color: black;
   border-radius: 5px;
   color: #ffca29;
@@ -94,7 +92,7 @@ h1, h2, h3 {
   transition: all 0.2s linear 0s;
   width: 100px;
 }
-.contact__wrapper__form__table button::before {
+.contact__form__table button::before {
   align-items: center;
   content: "➡";
   display: flex;
@@ -108,26 +106,34 @@ h1, h2, h3 {
   transition: all 0.2s linear 0s;
   width: 40px;
 }
-.contact__wrapper__form__table button:hover {
+.contact__form__table button:hover {
   text-indent: -20px;
 }
-.contact__wrapper__form__table button:hover:before {
+.contact__form__table button:hover:before {
   opacity: 1;
   text-indent: 0px;
+}
+.contact__wrapper {
+  align-items: start;
+  max-width: 600px;
+  min-height: 60vh;
+  width: 100vw;
+  max-width: 500px;
+}
+@media (min-width: 800px) {
+  .contact__wrapper {
+    margin-right: 100px;
+  }
+}
+.contact__wrapper p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  padding: 5px 0;
+}
+.contact__wrapper h2 {
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  margin-bottom: 10px;
 }
 .contact__wrapper__info {
   width: 100%;
   padding-top: 50px;
-}
-.contact__image {
-  display: none;
-  height: 100%;
-  margin-left: 30px;
-  max-width: 300px;
-  width: 50%;
-}
-@media (min-width: 800px) {
-  .contact__image {
-    display: block;
-  }
 }/*# sourceMappingURL=contact.css.map */
