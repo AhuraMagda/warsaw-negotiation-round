@@ -33,12 +33,12 @@ function Contact({ data }) {
             <p>Participants department: <a href="mailto:participants@warsawnegotiations.com">participants@warsawnegotiations.com</a></p>
             <p>Logistic department: <a href="mailto:logistyka@warsawnegotiations.com">logistyka@warsawnegotiations.com</a></p>
           </div>
+      <ContactForm />
         </section>
         <div className="contact__image">
           <GatsbyImage image={shakeHandsImage} alt="students shaking hands" />
         </div>
       </main>
-      <ContactForm />
     </Layout>
   );
 }

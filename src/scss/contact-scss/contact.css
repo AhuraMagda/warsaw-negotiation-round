@@ -63,14 +63,9 @@ h1, h2, h3 {
   font-size: clamp(1.2rem, 2.5vw, 1.5rem);
   margin-bottom: 10px;
 }
-.contact__wrapper p {
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  padding: 5px 0px;
-}
 .contact__wrapper__form {
   background-color: #ffca29;
   border-radius: 10px;
-  margin: 20px 10px;
   padding: 20px;
   width: 100%;
 }
@@ -78,6 +73,13 @@ h1, h2, h3 {
 .contact__wrapper__form__table textarea {
   border-radius: 5px;
   width: 100%;
+}
+.contact__wrapper__form__table__input-wrapper {
+  margin-bottom: 10px;
+}
+.contact__wrapper__form__table__input-wrapper__error {
+  color: red;
+  font-size: 0.8rem;
 }
 .contact__wrapper__form__table button {
   background-color: black;

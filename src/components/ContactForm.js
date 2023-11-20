@@ -32,7 +32,7 @@ export default function ContactForm() {
       onSubmit={formik.handleSubmit}
     >
       <div className="contact__wrapper__form__table">
-        <div>
+        <div className="contact__wrapper__form__table__input-wrapper">
           <label htmlFor="fullName">Full name</label>
           <input
             type="text"
@@ -43,9 +43,9 @@ export default function ContactForm() {
             value={formik.values.fullName}
             required
           />
-          {formik.touched.fullName && formik.errors.fullName && <p>{formik.errors.fullName}</p>}
+          {formik.touched.fullName && formik.errors.fullName && <p className="contact__wrapper__form__table__input-wrapper__error">{formik.errors.fullName}</p>}
         </div>
-        <div>
+        <div className="contact__wrapper__form__table__input-wrapper">
           <label htmlFor="email">E-mail</label>
           <input
             type="email"
@@ -57,9 +57,9 @@ export default function ContactForm() {
             value={formik.values.email}
             required
           />
-          {formik.touched.email && formik.errors.email && <p>{formik.errors.email}</p>}
+          {formik.touched.email && formik.errors.email && <p className="contact__wrapper__form__table__input-wrapper__error">{formik.errors.email}</p>}
         </div>
-        <div>
+        <div className="contact__wrapper__form__table__input-wrapper">
           <label htmlFor="comment">Info</label>
           <textarea
             name="comment"
@@ -70,7 +70,7 @@ export default function ContactForm() {
             onChange={formik.handleChange}
             value={formik.values.comment}
           ></textarea>
-          {formik.touched.comment && formik.errors.comment && <p>{formik.errors.comment}</p>}
+          {formik.touched.comment && formik.errors.comment && <p className="contact__wrapper__form__table__input-wrapper__error">{formik.errors.comment}</p>}
         </div>
         <div>
           <button type="submit">Submit</button>
