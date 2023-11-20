@@ -39,10 +39,11 @@ export default function ContactForm() {
             id="fullName"
             name="fullName"
             onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
             value={formik.values.fullName}
             required
           />
-          {formik.errors.fullName && <p>{formik.errors.fullName}</p>}
+          {formik.touched.fullName && formik.errors.fullName && <p>{formik.errors.fullName}</p>}
         </div>
         <div>
           <label htmlFor="email">E-mail</label>
@@ -51,11 +52,12 @@ export default function ContactForm() {
             id="email"
             name="email"
             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+            onBlur={formik.handleBlur}
             onChange={formik.handleChange}
             value={formik.values.email}
             required
           />
-          {formik.errors.email && <p>{formik.errors.email}</p>}
+          {formik.touched.email && formik.errors.email && <p>{formik.errors.email}</p>}
         </div>
         <div>
           <label htmlFor="comment">Info</label>
@@ -64,10 +66,11 @@ export default function ContactForm() {
             id="comment"
             cols="30"
             rows="10"
+            onBlur={formik.handleBlur}
             onChange={formik.handleChange}
             value={formik.values.comment}
           ></textarea>
-          {formik.errors.comment && <p>{formik.errors.comment}</p>}
+          {formik.touched.comment && formik.errors.comment && <p>{formik.errors.comment}</p>}
         </div>
         <div>
           <button type="submit">Submit</button>
