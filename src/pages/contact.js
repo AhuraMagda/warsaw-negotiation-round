@@ -4,6 +4,7 @@ import PagesHeader from "../components/PagesHeader";
 import "../scss/contact-scss/contact.css"
 import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
+import ContactForm from "../components/ContactForm";
 
 function Contact({ data }) {
 
@@ -37,6 +38,7 @@ function Contact({ data }) {
           <GatsbyImage image={shakeHandsImage} alt="students shaking hands" />
         </div>
       </main>
+      <ContactForm />
     </Layout>
   );
 }

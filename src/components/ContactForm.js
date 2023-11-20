@@ -1,6 +1,20 @@
 import React from "react";
-// TODO not active yet
+import { Formik, useFormik } from 'formik';
+
+// TODO backend
+
 export default function ContactForm() {
+
+  const formik = useFormik({
+    initialValues: {
+      fullName: "",
+      email: "",
+      comment: ""
+    }
+  })
+
+  console.log(formik.values)
+
   return (
     <form
       action="/functions/send-email.php"
@@ -9,11 +23,13 @@ export default function ContactForm() {
     >
       <div className="contact__wrapper__form__table">
         <div>
-          <label htmlFor="name">Full name</label>
+          <label htmlFor="fullName">Full name</label>
           <input
             type="text"
-            id="name"
-            name="contact__form__table__name"
+            id="fullName"
+            name="fullName"
+            onChange={formik.handleChange}
+            value={formik.values.fullName}
             required
           />
         </div>
@@ -22,18 +38,22 @@ export default function ContactForm() {
           <input
             type="text"
             id="email"
-            name="contact__form__table__email"
+            name="email"
             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+            onChange={formik.handleChange}
+            value={formik.values.email}
             required
           />
         </div>
         <div>
           <label htmlFor="comment">Info</label>
           <textarea
-            name="contact__form__table__comment"
+            name="comment"
             id="comment"
             cols="30"
             rows="10"
+            onChange={formik.handleChange}
+            value={formik.values.comment}
           ></textarea>
         </div>
         <div>
