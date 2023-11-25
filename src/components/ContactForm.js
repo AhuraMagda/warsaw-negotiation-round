@@ -26,7 +26,7 @@ export default function ContactForm() {
       axios.defaults.headers.post["Content-Type"] = "application/json";
       axios
         .post(
-          "https://formsubmit.co/ajax/bb20869254405cd6094a0972a4746f36",
+          "https://formsubmit.co/ajax/e261d3bd64f51da632fc3391a7389846",
           values
         )
         .then((response) => {
