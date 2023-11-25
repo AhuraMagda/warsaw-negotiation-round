@@ -67,7 +67,7 @@ const participationData = [
   },
   {
     step: 2,
-    description: "Prepare a CVs from each team member and a\u00A0cover letter.",
+    description: "Prepare each team member's resume and a\u00A0cover letter.",
   },
   {
     step: 3,
