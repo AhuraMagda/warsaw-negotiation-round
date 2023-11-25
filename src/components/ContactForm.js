@@ -76,11 +76,11 @@ export default function ContactForm() {
           </div>
         </>
       )}
-
       <form
         className="contact__form-wrapper__form"
         onSubmit={formik.handleSubmit}
       >
+        <h2 className="contact__form-wrapper__title">Contact Form</h2>
         <div className="contact__form-wrapper__form__table">
           <div className="contact__form-wrapper__form__table__input-wrapper">
             <label htmlFor="name">Full name</label>
@@ -100,7 +100,7 @@ export default function ContactForm() {
             )}
           </div>
           <div className="contact__form-wrapper__form__table__input-wrapper">
-            <label htmlFor="email">E-mail</label>
+            <label htmlFor="email">E-mail Address</label>
             <input
               type="email"
               id="email"
@@ -117,7 +117,7 @@ export default function ContactForm() {
             )}
           </div>
           <div className="contact__form-wrapper__form__table__input-wrapper">
-            <label htmlFor="comment">Info</label>
+            <label htmlFor="comment">Message</label>
             <textarea
               name="comment"
               id="comment"

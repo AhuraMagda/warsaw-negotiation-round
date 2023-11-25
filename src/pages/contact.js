@@ -1,57 +1,61 @@
 import React from "react";
 import Layout from "../components/Layout";
 import PagesHeader from "../components/PagesHeader";
-import "../scss/contact-scss/contact.css"
-// import { graphql } from "gatsby";
-// import { GatsbyImage } from "gatsby-plugin-image";
+import "../scss/contact-scss/contact.css";
 import ContactForm from "../components/ContactForm";
 
-function Contact({ data }) {
-
-  // const shakeHandsImage = data.shakeHands.childImageSharp.gatsbyImageData;
+function Contact() {
   return (
     <Layout>
       <PagesHeader>CONTACT</PagesHeader>
       <main className="contact">
         <section className="contact__wrapper">
-          <h2>Do you have any question about<br/>the Warsaw Negotiation Round?</h2>
+          <h2>Do you have any inquiries about the Warsaw Negotiation Round?</h2>
           <p>
-            If you have any question, or want to find out more about
-            cooperation, participation or experts - feel free to contact us.
+            Feel free to reach out to us! We're here to assist with any
+            questions you may have. You can either fill out the form or select a
+            specific department to contact and send us an email.
           </p>
-          <p>
-            We would appreciate it if you choose the appropriate department and
-            write an email to us.
-          </p>
+          <p>We look forward to hearing from you!</p>
 
           <div className="contact__wrapper__info">
-          <h3>OUR DEPARTMENTS:</h3>
-
-            <p>Contact: <a href="mailto:contact@warsawnegotiations.com">contact@warsawnegotiations.com</a></p>
-            <p>Collaboration department: <a href="mailto:wspolpraca@warsawnegotiations.com">wspolpraca@warsawnegotiations.com</a></p>
-            <p>Experts department: <a href="mailto:experts@warsawnegotiations.com">experts@warsawnegotiations.com</a></p>
-            <p>Participants department: <a href="mailto:participants@warsawnegotiations.com">participants@warsawnegotiations.com</a></p>
-            <p>Logistic department: <a href="mailto:logistyka@warsawnegotiations.com">logistyka@warsawnegotiations.com</a></p>
+            <h2>Our departments:</h2>
+            <p>
+              Contact:{" "}
+              <a href="mailto:contact@warsawnegotiations.com">
+                contact@warsawnegotiations.com
+              </a>
+            </p>
+            <p>
+              Collaboration department:{" "}
+              <a href="mailto:wspolpraca@warsawnegotiations.com">
+                wspolpraca@warsawnegotiations.com
+              </a>
+            </p>
+            <p>
+              Experts department:{" "}
+              <a href="mailto:experts@warsawnegotiations.com">
+                experts@warsawnegotiations.com
+              </a>
+            </p>
+            <p>
+              Participants department:{" "}
+              <a href="mailto:participants@warsawnegotiations.com">
+                participants@warsawnegotiations.com
+              </a>
+            </p>
+            <p>
+              Logistic department:{" "}
+              <a href="mailto:logistyka@warsawnegotiations.com">
+                logistyka@warsawnegotiations.com
+              </a>
+            </p>
           </div>
         </section>
-      <ContactForm />
-        {/* <div className="contact__image">
-          <GatsbyImage image={shakeHandsImage} alt="students shaking hands" />
-        </div> */}
+        <ContactForm />
       </main>
     </Layout>
   );
 }
 
 export default Contact;
-
-
-// export const query = graphql`
-//   query {
-//     shakeHands: file(relativePath: { eq: "contact-images/IMG_2937.jpeg" }) {
-//       childImageSharp {
-//         gatsbyImageData(layout: FULL_WIDTH)
-//       }
-//     }
-//   }
-// `;

@@ -3,9 +3,14 @@
 .contact {
   @include flexCenter(column);
   width: 100%;
-  padding: 0px 30px 50px 30px;
+  padding: 50px 30px 50px 30px;
+  min-height: 68vh;
   @include big {
     flex-direction: row;
+  }
+  h2 {
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    margin-bottom: 10px;
   }
   &__form-wrapper {
     background-color: $color-accent;
@@ -14,6 +19,9 @@
     width: 100%;
     position: relative;
     max-width: 500px;
+    @include big {
+      height: 100%;
+    }
 
     &__sending {
       @include flexCenter(column);
@@ -41,6 +49,9 @@
       }
     }
     &__form {
+      &__title {
+        padding-bottom: 20px;
+      }
       &__table {
         &__input-wrapper {
           margin-bottom: 10px;
@@ -99,9 +110,7 @@
   }
   &__wrapper {
     align-items: start;
-    max-width: 600px;
-    min-height: 60vh;
-    width: 100vw;
+    width: 100%;
     max-width: 500px;
     @include big {
       margin-right: 100px;
@@ -112,13 +121,12 @@
       padding: 5px 0;
     }
 
-    h2 {
-      font-size: clamp(1.2rem, 2.5vw, 1.5rem);
-      margin-bottom: 10px;
-    }
     &__info {
       width: 100%;
-      padding-top: 50px;
+      padding: 50px 0px;
+      @include big {
+        padding-bottom: 0px;
+      }
     }
   }
   // &__image {
