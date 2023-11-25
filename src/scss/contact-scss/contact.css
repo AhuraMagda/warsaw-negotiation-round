@@ -58,28 +58,55 @@ h1, h2, h3 {
     flex-direction: row;
   }
 }
-.contact__form {
+.contact__form-wrapper {
   background-color: #ffca29;
   border-radius: 10px;
   padding: 20px;
   width: 100%;
+  position: relative;
   max-width: 500px;
 }
-.contact__form__table__input-wrapper {
+.contact__form-wrapper__sending {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgb(122, 119, 119);
+  border-radius: 10px;
+  height: 100%;
+  left: 0;
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+.contact__form-wrapper__sending__close {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+.contact__form-wrapper__sending__close:hover {
+  font-weight: 800;
+}
+.contact__form-wrapper__form__table__input-wrapper {
   margin-bottom: 10px;
 }
-.contact__form__table__input-wrapper input,
-.contact__form__table__input-wrapper textarea {
+.contact__form-wrapper__form__table__input-wrapper input,
+.contact__form-wrapper__form__table__input-wrapper textarea {
   border-radius: 5px;
   width: 100%;
   padding: 5px;
 }
-.contact__form__table__input-wrapper__error {
+.contact__form-wrapper__form__table__input-wrapper__error {
   color: red;
   font-size: 0.8rem;
   margin: 2px 0px 0px 6px;
 }
-.contact__form__table button {
+.contact__form-wrapper__form__table button {
   background-color: black;
   border-radius: 5px;
   color: #ffca29;
@@ -92,7 +119,7 @@ h1, h2, h3 {
   transition: all 0.2s linear 0s;
   width: 100px;
 }
-.contact__form__table button::before {
+.contact__form-wrapper__form__table button::before {
   align-items: center;
   content: "➡";
   display: flex;
@@ -106,10 +133,10 @@ h1, h2, h3 {
   transition: all 0.2s linear 0s;
   width: 40px;
 }
-.contact__form__table button:hover {
+.contact__form-wrapper__form__table button:hover {
   text-indent: -20px;
 }
-.contact__form__table button:hover:before {
+.contact__form-wrapper__form__table button:hover:before {
   opacity: 1;
   text-indent: 0px;
 }
