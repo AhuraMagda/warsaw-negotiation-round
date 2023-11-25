@@ -14,9 +14,9 @@ export default function ParticipationTables() {
         <h2>SCENARIOS</h2>
         <p>Examples of scripts from last year's editions written by members of SKN Negotiator.</p>
         <a href={scenario6} download="WNR-2023-The-Endgame.pdf">WNR 2023 - The Endgame</a>
-        <a href={scenario5} download="WNR-2023-A-velvet-Marriage-or-a-Velvet-Divorce.pdf">WNR 2023 - A Velver Marriage or a Velvet Divorce</a>
+        <a href={scenario5} download="WNR-2023-A-velvet-Marriage-or-a-Velvet-Divorce.pdf">WNR 2023 - A Velvet Marriage or a Velvet Divorce</a>
         <a href={scenario4} download="WNR-2022-In-the-MetaVerse-of-Madness.pdf">WNR 2022 - In the MetaVerse of Madness</a>
-        <a href={scenario3} download="WNR-2022-Hot-Seat-The-Greek-Questioners-Side.pdf">WNR 2022 - Hot Seat the Greek Questioners Side</a>
+        <a href={scenario3} download="WNR-2022-Hot-Seat-The-Greek-Questioners-Side.pdf">WNR 2022 - Hot Seat</a>
         <a href={scenario2} download="WNR-2020-Restoring-the-glory.pdf">WNR 2020 - Restoring the Glory</a>
         <a href={scenario1} download="WNR-2019-1989-sad-Polish-reality.pdf">WNR 2019 - 1989 Sad Polish Reality</a>
       </div>

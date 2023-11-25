@@ -1,45 +1,143 @@
 import React from "react";
-// TODO not active yet
+import { useState } from "react";
+import { Formik, useFormik } from "formik";
+import * as Yup from "yup";
+import axios from "axios";
+
 export default function ContactForm() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [isFailure, setIsFailure] = useState(false);
+
+  const handleClose = () => {
+    setIsSubmitting(false);
+    setIsSuccess(false);
+    setIsFailure(false);
+  };
+
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+      email: "",
+      comment: "",
+    },
+    onSubmit: (values, { resetForm }) => {
+      setIsSubmitting(true);
+      axios.defaults.headers.post["Content-Type"] = "application/json";
+      axios
+        .post(
+          "https://formsubmit.co/ajax/e261d3bd64f51da632fc3391a7389846",
+          values
+        )
+        .then((response) => {
+          setIsSubmitting(false);
+          setIsSuccess(true);
+          resetForm();
+        })
+        .catch((error) => {
+          console.log(error);
+          setIsSubmitting(false);
+          setIsFailure(true);
+          resetForm();
+        });
+    },
+
+    validationSchema: Yup.object({
+      name: Yup.string()
+        .max(30, "Must be 30 characters or less")
+        .required("Required"),
+      email: Yup.string().email("Invalid email address").required("Required"),
+      comment: Yup.string()
+        .max(300, "Must be 300 characters or less.")
+        .required("Required"),
+    }),
+  });
+
   return (
-    <form
-      action="/functions/send-email.php"
-      method="POST"
-      className="contact__wrapper__form"
-    >
-      <div className="contact__wrapper__form__table">
-        <div>
-          <label htmlFor="name">Full name</label>
-          <input
-            type="text"
-            id="name"
-            name="contact__form__table__name"
-            required
-          />
+    <div className="contact__form-wrapper">
+      {isSubmitting && (
+        <div className="contact__form-wrapper__sending">
+          <h2>SENDING...</h2>
+          <p>please wait</p>
         </div>
-        <div>
-          <label htmlFor="email">E-mail</label>
-          <input
-            type="text"
-            id="email"
-            name="contact__form__table__email"
-            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-            required
-          />
+      )}
+
+      {(isSuccess || isFailure) && (
+        <>
+          <div className="contact__form-wrapper__sending">
+            {isSuccess && <h2 style={{ color: "green" }}>FORM SUBMITTED</h2>}
+            {isFailure && <h2 style={{ color: "red" }}>ERROR</h2>}
+            <button
+              onClick={handleClose}
+              className="contact__form-wrapper__sending__close"
+            >
+              close ✖
+            </button>
+          </div>
+        </>
+      )}
+      <form
+        className="contact__form-wrapper__form"
+        onSubmit={formik.handleSubmit}
+      >
+        <h2 className="contact__form-wrapper__title">Contact Form</h2>
+        <div className="contact__form-wrapper__form__table">
+          <div className="contact__form-wrapper__form__table__input-wrapper">
+            <label htmlFor="name">Full name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.name}
+              required
+            />
+            {formik.touched.name && formik.errors.name && (
+              <p className="contact__form-wrapper__form__table__input-wrapper__error">
+                {formik.errors.name}
+              </p>
+            )}
+          </div>
+          <div className="contact__form-wrapper__form__table__input-wrapper">
+            <label htmlFor="email">E-mail Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              onBlur={formik.handleBlur}
+              onChange={formik.handleChange}
+              value={formik.values.email}
+              required
+            />
+            {formik.touched.email && formik.errors.email && (
+              <p className="contact__form-wrapper__form__table__input-wrapper__error">
+                {formik.errors.email}
+              </p>
+            )}
+          </div>
+          <div className="contact__form-wrapper__form__table__input-wrapper">
+            <label htmlFor="comment">Message</label>
+            <textarea
+              name="comment"
+              id="comment"
+              cols="30"
+              rows="10"
+              onBlur={formik.handleBlur}
+              onChange={formik.handleChange}
+              value={formik.values.comment}
+            ></textarea>
+            {formik.touched.comment && formik.errors.comment && (
+              <p className="contact__form-wrapper__form__table__input-wrapper__error">
+                {formik.errors.comment}
+              </p>
+            )}
+          </div>
+          <div>
+            <button type="submit">Submit</button>
+          </div>
         </div>
-        <div>
-          <label htmlFor="comment">Info</label>
-          <textarea
-            name="contact__form__table__comment"
-            id="comment"
-            cols="30"
-            rows="10"
-          ></textarea>
-        </div>
-        <div>
-          <button type="submit">Submit</button>
-        </div>
-      </div>
-    </form>
+      </form>
+    </div>
   );
 }
