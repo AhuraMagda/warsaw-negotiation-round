@@ -12,7 +12,7 @@ This is a website made for Warsaw Negotiation Round.
 
 ## Overview
 ### Links
-- Link to the website: [https://warsawnegotiations.com/](https://warsawnegotiations.com/)]
+- Link to the website: [https://warsawnegotiations.com/](https://warsawnegotiations.com/)
 ## My process
 ### Built with
 - GatsbyJS
