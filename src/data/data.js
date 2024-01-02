@@ -72,7 +72,7 @@ const participationData = [
   {
     step: 3,
     description:
-      "Fill out the participation survey. Available in January, stay tuned.",
+      "Fill out the participation survey available below.",
   },
   {
     step: 4,

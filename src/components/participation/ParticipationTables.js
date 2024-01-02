@@ -10,6 +10,12 @@ import terms from "../../files/WNR-Terms-and-Conditions-2024.pdf"
 export default function ParticipationTables() {
   return (
     <>
+      <div className="participation__tables participation__tables__form">
+        <h2>PARTICIPATION FORM</h2>
+        <p>Complete the application form to participate in the tournament</p>
+        <a href="https://docs.google.com/forms/d/16jmCTSy2CG1sgLbSzmWD2ewAIZHo6PtzGydDZS4rdPQ/viewform?edit_requested=true" target="_blank" rel="noreferrer">Proceed to the survey</a>
+      </div>
+
       <div className="participation__tables participation__tables__scenarios">
         <h2>SCENARIOS</h2>
         <p>Examples of scripts from last year's editions written by members of SKN Negotiator.</p>
@@ -19,13 +25,6 @@ export default function ParticipationTables() {
         <a href={scenario3} download="WNR-2022-Hot-Seat-The-Greek-Questioners-Side.pdf">WNR 2022 - Hot Seat</a>
         <a href={scenario2} download="WNR-2020-Restoring-the-glory.pdf">WNR 2020 - Restoring the Glory</a>
         <a href={scenario1} download="WNR-2019-1989-sad-Polish-reality.pdf">WNR 2019 - 1989 Sad Polish Reality</a>
-      </div>
-
-      <div className="participation__tables participation__tables__form">
-        <h2>PARTICIPATION FORM</h2>
-        <p>The form used to register for the tournament will be available in January.</p>
-
-
       </div>
 
       <div className="participation__tables participation__tables__scenarios">
