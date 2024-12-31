@@ -27,10 +27,8 @@ export const calculateRemainingTime = (endDate, startDate) => {
     secondsNumber === 1 ? "" : "s"
   }`;
 
-  const counterFinished =
-    daysNumber === 0 &&
-    hoursNumber === 0 &&
-    (minutesNumber === 0) & (secondsNumber === 0);
+  const counterFinished = timeRemaining > 0 ? false : true;
+
 
   return { days, hours, minutes, seconds, counterFinished };
 };

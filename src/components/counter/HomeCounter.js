@@ -5,7 +5,7 @@ import { calculateRemainingTime } from "./helpers/calculateRemainingTIme";
 
 export default function Counter() {
   const [currentDate, setCurrentDate] = React.useState(new Date());
-  const eventDate = new Date("2024-04-19T17:00:00");
+  const eventDate = new Date("2024-04-19T07:00:00");
 
   const { days, hours, minutes, seconds, counterFinished } = calculateRemainingTime(
     eventDate,
@@ -26,7 +26,7 @@ export default function Counter() {
         <div className="home__counter__container__text">
           {counterFinished ?
           (
-            <h2>April, 19th - 21st 2024</h2>
+            <p>April, 19th - 21st 2024</p>
           ) : (
             <>
               <h3>TOURNAMENT BEGINS IN... </h3>
