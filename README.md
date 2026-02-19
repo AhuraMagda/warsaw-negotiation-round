@@ -1,5 +1,5 @@
 # Warsaw Negotiation Round Website
-This is a website made for Warsaw Negotiation Round for yera 2024
+This is a website made for Warsaw Negotiation Round for year 2024
 
 ## Table of contents
 - [Overview](#overview)
